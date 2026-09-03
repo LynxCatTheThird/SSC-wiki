@@ -10,7 +10,7 @@ description: 阿努比斯之狼的 SSCA 终局形态：领域、灵魂能量与�
 
 ## 进入方式
 
-从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚；两条分支的完整路线见[形态目录](forms-catalog)，道具条件与失败后果见[进化系统](evolution)。
+从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚；两条分支的完整路线见[形态目录](../../../forms-catalog)，道具条件与失败后果见[进化系统](../../../evolution)。
 
 ## 资源和被动
 
