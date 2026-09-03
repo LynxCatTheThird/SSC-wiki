@@ -35,7 +35,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
-          editUrl: 'https://github.com/ssc-community/ssc-wiki/edit/main/',
+          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
@@ -60,7 +60,7 @@ const config: Config = {
       items: [
         {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档'},
         {to: '/reference/versions', label: '版本与兼容性', position: 'left'},
-        {href: 'https://github.com/ssc-community/ssc-wiki', label: 'GitHub', position: 'right'},
+        {href: 'https://github.com/LynxCatTheThird/SSC-wiki', label: 'GitHub', position: 'right'},
       ],
     },
     footer: {
@@ -71,7 +71,7 @@ const config: Config = {
           {label: 'SSCA GitHub', href: 'https://github.com/MangZai-120/shape-shifter-curse-addon'},
         ]},
         {title: '反馈', items: [
-          {label: '提交 Issue', href: 'https://github.com/ssc-community/ssc-wiki/issues'},
+          {label: '提交 Issue', href: 'https://github.com/LynxCatTheThird/SSC-wiki/issues'},
         ]},
       ],
       copyright: 'SSC Wiki 是社区维护的非官方文档。',
