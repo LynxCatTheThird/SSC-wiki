@@ -4,7 +4,7 @@ sidebar_position: 2
 description: SSC 与 SSCA 当前配置文件、默认值和服务端生效范围
 ---
 
-# 配置与兼容性
+# 配置与兼容性[^source]
 
 本页对应 SSC commit `c0f0bbb9` 和 SSCA commit `d84a18ca`。设置前先判断自己遇到的是哪一类问题：世界规则由服务器决定，界面位置和按键只影响本机，技能伤害与范围目前大多写在技能本身。
 
@@ -132,4 +132,4 @@ flowchart TD
   L --> C
 ```
 
-来源：SSC `CommonConfig.java`、`ClientConfig.java`；SSCA `SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。状态：`verified`。
+[^source]: 源码核对：SSC `CommonConfig.java`、`ClientConfig.java`；SSCA `SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。

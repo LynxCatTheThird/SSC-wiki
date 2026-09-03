@@ -4,7 +4,7 @@ sidebar_position: 1
 description: SSCA 的定位、内容边界和进入方式
 ---
 
-# SSCA 扩展总览
+# SSCA 扩展总览[^source]
 
 Shape Shifter Curse Addon（SSCA）是独立社区项目，不是 SSC 官方组件。它建立在 SSC 的形态、动画和资源系统之上，增加终局形态、进化路线、战斗技能、专属资源、装备、故事和实用界面。
 
@@ -42,4 +42,4 @@ SSCA 的历史命名空间仍是 `my_addon`，模组 ID 则是 `ssc_addon`。命
 本站首发基线是 Minecraft 1.20.1、SSC 1.10.0、SSCA 8.0.0-beta.2。SSCA 本身较成熟，但这个构建仍以 beta 发布；整合包服主应锁定确切文件，不要只写“最新版”。
 :::
 
-来源：SSCA `fabric.mod.json`、`SscAddonForms.java`、`EvolutionRegistry.java` 与资源注册，commit `d84a18ca`。状态：`verified`（注册与系统边界）；具体技能平衡：`partial`。
+[^source]: 源码核对：SSCA `fabric.mod.json`、`SscAddonForms.java`、`EvolutionRegistry.java` 与资源注册，commit `d84a18ca`。注册与系统边界已核对；具体技能数值以形态页为准。

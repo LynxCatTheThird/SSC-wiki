@@ -4,7 +4,7 @@ sidebar_position: 4
 description: SSCA 主副技能键、冷却条、资源条和友军保护规则
 ---
 
-# 操作、HUD 与白名单
+# 操作、HUD 与白名单[^source]
 
 SSCA 多数主动能力共用“主技能”和“次要技能”两个逻辑按键。不同形态会把同一个按键解释为不同技能，部分能力还区分按下、长按、松开、再次按下或潜行组合。
 
@@ -80,4 +80,4 @@ HUD 的本能、能量和冷却位置可在可视化位置编辑器中拖动。�
 6. 让服主检查 `disabledSkills` 与玩家级 `ssc_skill_blocked:*` 标记。
 7. 检查客户端日志是否出现 `Failed to register client keybindings`；出现时通常是 SSC/SSCA 版本接口不匹配。
 
-来源：SSC `ShapeShifterCurseFabricClient.java`；SSCA `SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`d84a18ca`。状态：`verified`（通用输入和白名单规则）；逐形态组合键：`partial`。
+[^source]: 源码核对：SSC `ShapeShifterCurseFabricClient.java`；SSCA `SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`d84a18ca`。通用输入和白名单规则已核对。

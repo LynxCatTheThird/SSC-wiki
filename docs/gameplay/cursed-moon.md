@@ -3,7 +3,7 @@ title: 诅咒之月
 sidebar_position: 1
 ---
 
-# 诅咒之月
+# 诅咒之月[^source]
 
 诅咒之月是 SSC 变身流程的核心世界机制。源码中的 `CursedMoon` 逻辑会读取公共配置，处理月相、触发转化、结束和治愈相关事件，并根据配置决定是否允许在诅咒之月期间睡觉。
 
@@ -48,4 +48,4 @@ SSC 提供 `shape_shifter_curse jump_to_next_cursed_moon` 管理命令，用于�
 命令名称和权限来自当前 SSC 源码；触发后的具体结果仍取决于玩家形态、公共配置和世界状态。
 :::
 
-来源：SSC `cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。状态：`verified`。
+[^source]: 源码核对：SSC `cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。

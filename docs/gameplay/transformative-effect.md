@@ -4,7 +4,7 @@ sidebar_position: 1
 description: 转化效果的获得、持续、覆盖、激活和清除规则
 ---
 
-# 转化效果
+# 转化效果[^source]
 
 转化效果是“感染目标形态”与“真正开始变身”之间的临时状态。它与已经取得的玩家形态不同，也不是诅咒之月本身。
 
@@ -61,4 +61,4 @@ SSC 同一时间只按一个转化效果处理。施加新效果前会清理已�
 服务端使用自定义 `TransformativeStatusInstance` 保存目标信息，客户端看到的是状态效果表现。跨模组修改状态效果、死亡继承或睡眠事件时，应以服务端实际形态结果为准。
 :::
 
-来源：SSC `RegTStatusEffect.java`、`EffectManager.java`、`TransformativeStatusInstance.java`、`TransformRelatedItems.java` 与 `CommonConfig.java`，commit `c0f0bbb9`。状态：`verified`。
+[^source]: 源码核对：SSC `RegTStatusEffect.java`、`EffectManager.java`、`TransformativeStatusInstance.java`、`TransformRelatedItems.java` 与 `CommonConfig.java`，commit `c0f0bbb9`。

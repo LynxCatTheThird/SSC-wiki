@@ -4,7 +4,7 @@ sidebar_position: 6
 description: SP 悦灵的 Mana、净化、群体治疗和友军保护
 ---
 
-# SP 悦灵
+# SP 悦灵[^source]
 
 SP 悦灵是 SSCA 的团队辅助形态。它的价值集中在范围治疗、净化药效、音乐增益和友军保护，输出能力相对有限，装备腿甲和鞋也会受到形态限制。
 
@@ -72,4 +72,4 @@ flowchart TD
 群疗能力 JSON 底部仍保留“20 点治疗、30 秒冷却”的旧描述，英文语言文件也写着 30 秒；实际执行分支使用最大生命值的 75% 和 300 tick（15 秒）。本页采用执行代码，中文语言文件已与它一致。
 :::
 
-来源：SSCA `AllaySPGroupHeal.java`、`AllaySPJukebox.java`、`AllaySPPortableBeacon.java`、`form_allay_sp_group_heal.json` 与 `form_allay_sp_purify.json`，commit `d84a18ca`。状态：`verified`。
+[^source]: 源码核对：SSCA `AllaySPGroupHeal.java`、`AllaySPJukebox.java`、`AllaySPPortableBeacon.java`、`form_allay_sp_group_heal.json` 与 `form_allay_sp_purify.json`，commit `d84a18ca`。

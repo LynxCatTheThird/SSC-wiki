@@ -9,7 +9,7 @@ source_commit: c0f0bbb9
 status: partial
 ---
 
-# 使魔狐
+# 使魔狐[^source]
 
 使魔狐线围绕女巫、掠夺、药水和火焰魔法展开。后期引入 Mana，并能针对不同生物使用能力或瓶装交互。
 
@@ -24,9 +24,9 @@ status: partial
 
 | 阶段或条件 | 数值 | 玩家感受 |
 | --- | ---: | --- |
-| `familiar_fox_1` | 最大生命值 $-2$ | 20 点基础生命降为 18 点 |
-| `familiar_fox_2` | 最大生命值 $-4$ | 20 点基础生命降为 16 点 |
-| `familiar_fox_3` | 最大生命值 $-6$ | 20 点基础生命降为 14 点 |
+| `familiar_fox_1` | 最大生命值减少 2 | 20 点基础生命降为 18 点 |
+| `familiar_fox_2` | 最大生命值减少 4 | 20 点基础生命降为 16 点 |
+| `familiar_fox_3` | 最大生命值减少 6 | 20 点基础生命降为 14 点 |
 | `familiar_fox_2`、`familiar_fox_3` Mana 过低 | 每 3 秒受到 1 点饥饿伤害 | 施法前要留出恢复余量 |
 | `familiar_fox_3` 火环 | 消耗 11 Mana；半径约 4 格；8 点伤害；点燃 10 秒；冷却 40 tick | 约 2 秒后可再次使用 |
 
@@ -38,4 +38,4 @@ status: partial
 
 女巫和掠夺者友好、村民恐惧、禁止攻击女巫等规则分布在多个能力中。主动攻击仍可能触发额外惩罚。
 
-来源：SSC `origins/form_familiar_fox_*.json`、Mana 和生物交互能力。状态：`partial`。
+[^source]: 源码核对：SSC `origins/form_familiar_fox_*.json`、Mana 和生物交互能力；未确认的交互不会写作确定结论。

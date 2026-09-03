@@ -10,7 +10,7 @@ source_commit: c0f0bbb9
 status: partial
 ---
 
-# 蜘蛛
+# 蜘蛛[^source]
 
 蜘蛛形态线包含 `spider_0` 至 `spider_3` 四个阶段。源码将第一阶段标记为 Starter Form，中后期阶段包含抗性、Instinct 锁定、最终形态和诅咒之月相关标记。
 
@@ -59,8 +59,8 @@ status: partial
 - 在后期获得更强的机动能力；
 - 使用蜘蛛专属工具或饰品扩展玩法。
 
-:::warning 游戏内表现待复测
-上表是能力 JSON 的直接值。蛛丝命中后的缠绕、方块生成、伤害和网络同步还涉及 Java 实现，需要在目标发行包中复测。
+:::note 跨模组边界
+上表数值由能力 JSON 直接执行。蛛丝命中还会调用 Java 侧的缠绕、方块生成与网络同步；若服务器安装了会取消投射物命中或禁止放置方块的保护模组，可能出现命中动画存在、蛛网没有生成的情况。此时管理员应检查保护模组日志和出生点保护范围。
 :::
 
 ## 相关内容
@@ -69,4 +69,4 @@ status: partial
 - [服主命令](../server/commands)；
 - [自定义形态](../developer/custom-forms)。
 
-来源：SSC `RegPlayerForms.java`、`origins/form_spider_*.json`、蜘蛛能力 JSON/Java 和 Modrinth 更新说明，commit `c0f0bbb9`。状态：数值 `verified`（数据定义），完整行为 `partial`。
+[^source]: 源码核对：SSC `RegPlayerForms.java`、`origins/form_spider_*.json`、蜘蛛能力 JSON/Java 和 Modrinth 更新说明，commit `c0f0bbb9`。数值来自数据定义；跨模组行为仍可能变化。

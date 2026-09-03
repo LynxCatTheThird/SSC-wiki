@@ -4,7 +4,7 @@ sidebar_position: 3
 description: Instinct 的增长、抑制、阈值和阶段推进规则
 ---
 
-# 本能值
+# 本能值[^source]
 
 本能值（Instinct）是常规形态的长期阶段推进机制。它从 `0` 开始，达到 `100` 时尝试将玩家变为同一形态组的下一阶段，随后清零。
 
@@ -24,7 +24,7 @@ $$
 I(t)=\min\left(100,\;I_0+\sum_{k=1}^{t}(r_0+r_k)\right),\qquad r_0=\frac{100}{9000\times20}
 $$
 
-其中 $I_0$ 是开始计算时的本能值，$t$ 是经过的游戏 tick 数，$r_0$ 是每 tick 的基础增长，$r_k$ 是第 $k$ 个 tick 的环境或行为修正。诅咒之月期间，增长率直接变为 $0$。
+其中 $I_0$ 是开始计算时的本能值，$t$ 是经过的游戏 tick 数，$r_0$ 是每 tick 的基础增长，$r_k$ 是第 $k$ 个 tick 的环境或行为修正。诅咒之月期间，增长率直接变为 0。
 
 ```mermaid
 flowchart TD
@@ -67,7 +67,7 @@ flowchart TD
 
 ## HUD 怎么读
 
-本能条显示范围为 $0\le I\le100$，并根据当前净增长率使用不同状态。数值达到 $80$、但尚未接近 $100$ 时，客户端会在玩家附近显示附魔粒子，提示变化正在逼近。
+本能条显示范围为 $0\le I\le100$，并根据当前净增长率使用不同状态。数值达到 80、但尚未接近 100 时，客户端会在玩家附近显示附魔粒子，提示变化正在逼近。
 
 HUD 位置可在客户端配置中调整；本能值和增长率由服务端保存并同步，重登不等于重置。
 
@@ -75,4 +75,4 @@ HUD 位置可在客户端配置中调整；本能值和增长率由服务端保�
 能力 JSON 的 `value` 是每次或每 tick 写入系统的原始修正，不能直接当成“每秒百分比”。持续时间、触发类型和服务器 tick 都会影响最终速度。
 :::
 
-来源：SSC `InstinctUtils.java`、`StaticParams.java`、`FormUtils.java`、各形态 Origin 与 instinct power JSON，commit `c0f0bbb9`。状态：`verified`（系统规则）；完整行为数值表：`partial`。
+[^source]: 源码核对：SSC `InstinctUtils.java`、`StaticParams.java`、`FormUtils.java`、各形态 Origin 与 instinct power JSON，commit `c0f0bbb9`。系统规则已核对；尚未发现数值定义的行为不会据此推测。

@@ -4,7 +4,7 @@ sidebar_position: 4
 description: 手册、月之尘、催化剂和抑制剂的用途与配方
 ---
 
-# 关键物品
+# 关键物品[^source]
 
 SSC 的形态推进物品以未加工月之尘和月尘基质为基础。本页列出当前 1.10.0 资源文件可直接确认的配方与用途。
 
@@ -28,7 +28,7 @@ SSC 的形态推进物品以未加工月之尘和月尘基质为基础。本页�
 普通催化剂不是“随机换形态”道具。它根据当前形态及 `Item` 变身原因查询下一形态；若形态抗拒、免疫、已经到顶或没有合法目标，物品仍可能被吃掉但不发生变化。
 
 :::danger 最终形态通常不可逆
-共鸣催化剂的游戏内提示明确把最终推进描述为永久变化。使用前先确认对应形态的第 4 阶段限制和恢复方法。
+共鸣催化剂会把蝙蝠、美西螈、豹猫、使魔狐、雪狐、阿努比斯之狼或蜘蛛的第 3 阶段推进到第 4 阶段。七条常规路线的第 4 阶段都免疫普通抑制剂和强效抑制剂；生存模式没有返回上一阶段的物品。只有创造模式专用抑制剂或管理员强制改形态可以恢复为原始变形者。多人世界使用前应先决定是否接受永久改变。
 :::
 
 ## 抑制剂
@@ -49,4 +49,4 @@ SSC 的形态推进物品以未加工月之尘和月尘基质为基础。本页�
 - 创造模式不会消耗物品；
 - 它们被加入 SSC/Origins 的饮食忽略标签，形态食性不应阻止使用。
 
-来源：SSC `recipes/*.json`、`RegCustomItem.java`、`Catalyst.java`、`Inhibitor.java`、`TransformRelatedItems.java` 与 `LivingEntityMixin.java`，commit `c0f0bbb9`。状态：`verified`（配方和代码行为）；击杀掉落兼容性：`partial`。
+[^source]: 源码核对：SSC `recipes/*.json`、`RegCustomItem.java`、`Catalyst.java`、`Inhibitor.java`、`TransformRelatedItems.java` 与 `LivingEntityMixin.java`，commit `c0f0bbb9`。配方与物品行为已核对；跨模组击杀掉落仍受事件覆盖影响。

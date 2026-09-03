@@ -20,6 +20,7 @@ const sidebars: SidebarsConfig = {
       'ssc/snow-fox',
       'ssc/anubis-wolf',
       'ssc/spider',
+      'ssc/special-forms',
     ]},
     {type: 'category', label: 'SSCA 扩展', items: [
       'ssca/overview',

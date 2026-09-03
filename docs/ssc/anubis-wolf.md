@@ -9,7 +9,7 @@ source_commit: c0f0bbb9
 status: partial
 ---
 
-# 阿努比斯之狼
+# 阿努比斯之狼[^source]
 
 阿努比斯之狼线围绕凋零、亡灵、腐肉和狼群展开。阶段越高，玩家越接近亡灵属性，并获得召唤、灵魂沙移动和不死相关能力。
 
@@ -38,4 +38,4 @@ status: partial
 
 中后期存在将肉转为腐肉、将作物转为沙的能力。具体触发方式应查对应物品交互页面，避免在珍贵物品上直接试验。
 
-来源：SSC `origins/form_anubis_wolf_*.json`、召唤和伤害能力。状态：`partial`。
+[^source]: 源码核对：SSC `origins/form_anubis_wolf_*.json`、召唤和伤害能力；未确认的交互不会写作确定结论。

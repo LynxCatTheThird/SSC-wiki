@@ -4,7 +4,9 @@ sidebar_position: 3
 description: 加点路线、月髓十字环、进化石和灵能宝珠的完整规则
 ---
 
-# 进化系统
+import {EvolutionExperienceChart} from '@site/src/components/SystemCharts';
+
+# 进化系统[^source]
 
 SSCA 把“进化”用于三套有关联、但规则不同的机制：加点路线负责成长，月髓十字环和进化石负责终局分支。先确认手中道具和当前形态，再决定路线。
 
@@ -31,28 +33,9 @@ flowchart TD
 
 ### 经验和点数
 
-进化经验只记录进入路线后新获得的原版总经验正增量。附魔、铁砧消费或死亡造成的经验减少不会倒扣进化经验。设进入路线后累计获得的原版经验为 $X$，换算使用 $lfloor X/2\rfloor$，再按原版等级曲线得到进化等级 $L$，上限为 $50$。
+进化经验只记录进入路线后新获得的原版总经验正增量。附魔、铁砧消费或死亡造成的经验减少不会倒扣进化经验。系统先把累计获得的原版经验除以 2 并向下取整，再按原版经验曲线换算为进化等级，上限 50 级。也就是说，进化等级 50 需要在进入路线后累计获得 10,690 点原版经验。
 
-达到进化等级 $L$ 所需的原版经验总量为：
-
-$$
-X(L)=2\begin{cases}
-L^2+6L, & 0\le L\le16\\
-\frac{5}{2}L^2-\frac{81}{2}L+360, & 17\le L\le31\\
-\frac{9}{2}L^2-\frac{325}{2}L+2220, & L\ge32
-\end{cases}
-$$
-
-| 进化等级 | 累计获得的原版经验 | 使魔累计点数 | 美西螈累计点数 |
-| ---: | ---: | ---: | ---: |
-| 5 | 110 | 1 | 1 |
-| 10 | 320 | 2 | 2 |
-| 15 | 630 | 3 | 3 |
-| 20 | 1,100 | 4 | 4 |
-| 30 | 2,790 | 5 | 5 |
-| 40 | 5,840 | 6 | 6 |
-| 45 | 8,040 | 7 | 6 |
-| 50 | 10,690 | 7 | 6 |
+<EvolutionExperienceChart />
 
 | 路线 | 发放加点点数的等级里程碑 | 满级自动分支 |
 | --- | --- | ---: |
@@ -83,14 +66,14 @@ flowchart LR
 | 节点 | 直接得到的能力 | 关键数值 |
 | --- | --- | --- |
 | Mana 系统 | 吸附生物能量、食性与 Mana 护盾 | 初始上限 33；脱战 5 秒后每秒恢复 1；Mana 高于一半时减伤 15% |
-| 火花 | 近身范围火焰攻击 | 消耗 11 Mana；半径约 3 格；4 点伤害；点燃 5 秒；Mana 上限 $+10$ |
-| 火箭 | 箭矢火箭与符纸火球 | 符纸火球 9 点伤害；Mana 上限 $+10$ |
-| Buff 免疫 | 状态免疫、耗 Mana 的火焰与岩浆免疫 | Mana 上限 $+10$；与炼药合计提供 50% 魔法减伤 |
-| 炼药 | 制作治疗、伤害和毒药 | Mana 上限 $+10$ |
-| 灵视 | 令附近生物发光 | Mana 上限 $+10$；自然回复速度 $+10\%$ |
-| 火环 | 取代火花的完整范围攻击 | 消耗 11 Mana；半径约 4 格；8 点伤害；点燃 10 秒；Mana 上限 $+20$；自然回复速度 $+20\%$ |
+| 火花 | 近身范围火焰攻击 | 消耗 11 Mana；半径约 3 格；4 点伤害；点燃 5 秒；Mana 上限增加 10 |
+| 火箭 | 箭矢火箭与符纸火球 | 符纸火球 9 点伤害；Mana 上限增加 10 |
+| Buff 免疫 | 状态免疫、耗 Mana 的火焰与岩浆免疫 | Mana 上限增加 10；与炼药合计提供 50% 魔法减伤 |
+| 炼药 | 制作治疗、伤害和毒药 | Mana 上限增加 10 |
+| 灵视 | 令附近生物发光 | Mana 上限增加 10；自然回复速度提高 10% |
+| 火环 | 取代火花的完整范围攻击 | 消耗 11 Mana；半径约 4 格；8 点伤害；点燃 10 秒；Mana 上限增加 20；自然回复速度提高 20% |
 
-全部上限节点解锁后，Mana 上限从 $33$ 增至 $103$。自然回复加成合计 $30\%$，基础每秒 1 点因此变为每秒 1.3 点。
+全部上限节点解锁后，Mana 上限从 33 增至 103。自然回复加成合计 30%，基础每秒 1 点因此变为每秒 1.3 点。
 
 ### 进化美西螈
 
@@ -175,8 +158,8 @@ flowchart LR
 
 ## 管理与排障
 
-`/ssc_addon evolution unlock_all [player]` 为目标玩家设置全解锁标记；`reset [player]` 会清空路线、经验、点数、节点和分支。测试前备份玩家数据。
+`/ssc_addon evolution unlock_all [player]` 为目标玩家设置全解锁标记；`reset [player]` 会清空路线、进化经验、进化等级、剩余点数、已解锁节点、待确认节点和终局分支。测试前备份玩家数据。
 
 若加点界面没有出现，依次检查当前形态是否为进化路线起点、客户端与服务端 SSCA 文件是否一致、route JSON 是否成功加载。若终局物品提示分支未解锁，达到 50 级还不够，还必须满足最终节点的全部前置。
 
-来源：SSCA `EvolutionComponent.java`、`EvolutionManager.java`、route JSON、`SpUpgradeItem.java`、`EvolutionStoneItem.java`、`PsionicOrbItem.java` 与 `EvolutionItemsLoot.java`，commit `d84a18ca`。状态：`verified`（代码与数据路径）；旧存档迁移和多人环境：`partial`。
+[^source]: 路线名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/)，规则与数值经 `EvolutionComponent.java`、`EvolutionManager.java`、route JSON、`SpUpgradeItem.java`、`EvolutionStoneItem.java`、`PsionicOrbItem.java` 和 `EvolutionItemsLoot.java` 核对，commit `d84a18ca`。旧存档迁移仍需按发行包测试。

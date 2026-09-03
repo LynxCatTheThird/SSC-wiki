@@ -4,7 +4,7 @@ sidebar_position: 5
 description: 阿努比斯之狼的 SSCA 终局形态：领域、灵魂能量与冥狼
 ---
 
-# 冥裁者
+# 冥裁者[^source]
 
 冥裁者是阿努比斯之狼的 SSCA 终局形态。它把战斗分成两段：先用普通击杀积攒灵魂能量，再用死亡领域把积攒的能量转成更强的区域控制。
 
@@ -55,4 +55,4 @@ flowchart LR
 上述范围、时间、数量和能量数值来自 SSCA Java 常量。饰品可以改变冥狼属性和数量，不能据此推断所有整合包中结果完全一致。
 :::
 
-来源：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `d84a18ca`。状态：`verified`。
+[^source]: 源码核对：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `d84a18ca`。
