@@ -1,0 +1,25 @@
+# Local planning and research notes
+PLAN.md
+/research/
+/notes/
+
+# Node / Docusaurus
+node_modules/
+.docusaurus/
+build/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Local git metadata used when the host mounts .git read-only
+.git-local/
