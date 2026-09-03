@@ -18,7 +18,7 @@ Shape Shifter Curse Addon（SSCA）是独立社区项目，不是 SSC 官方组�
 - 技能白名单、冷却 HUD、资源条位置编辑和形态配色分享；
 - 能量网络、容器、转换设备、专属饰品和剧情书籍。
 
-具体形态先查[形态目录](forms-catalog)，成长与终局分支查[进化系统](evolution)。服务器命令和配置分别收录在[命令参考](../server/commands)与[配置参考](../server/configuration)。
+具体形态先查[形态目录](forms-catalog)，成长与终局分支查[进化系统](evolution)。第一次使用技能前请阅读[操作、HUD 与白名单](controls-and-safety)。服务器命令和配置分别收录在[命令参考](../server/commands)与[配置参考](../server/configuration)。
 
 ## 与 SSC 的边界
 

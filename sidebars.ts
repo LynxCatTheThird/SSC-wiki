@@ -21,7 +21,12 @@ const sidebars: SidebarsConfig = {
       'ssc/anubis-wolf',
       'ssc/spider',
     ]},
-    {type: 'category', label: 'SSCA 扩展', items: ['ssca/overview', 'ssca/forms-catalog', 'ssca/evolution']},
+    {type: 'category', label: 'SSCA 扩展', items: [
+      'ssca/overview',
+      'ssca/forms-catalog',
+      'ssca/evolution',
+      'ssca/controls-and-safety',
+    ]},
     {type: 'category', label: '服主手册', items: ['server/commands', 'server/configuration']},
     {type: 'category', label: '开发者', items: ['developer/custom-forms']},
     {type: 'category', label: '参考', items: ['reference/versions', 'reference/sources']},
