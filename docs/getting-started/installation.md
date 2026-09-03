@@ -15,14 +15,37 @@ sidebar_position: 1
 | Loader | Fabric Loader |
 | SSC | 1.10.0 |
 | SSCA | 8.0.0-beta.2 |
-| Java | 按 Fabric/Minecraft 启动器要求配置 |
+| Java | 17 或更高 |
 
 SSCA 依赖 SSC。两个模组的版本必须匹配；SSCA README 明确提醒 beta 构建可能基于 SSC 测试版开发，下载前应核对对应版本。
+
+## SSC 必需依赖
+
+SSC 1.10.0 的 `fabric.mod.json` 声明：
+
+| 依赖 | 最低版本/范围 | 类型 |
+| --- | --- | --- |
+| Fabric Loader | `>=0.12.3` | 必需 |
+| Fabric API | `>=0.83.0` | 必需 |
+| Pehkui | `>=3.7.8` | 必需 |
+| Satin | `>=1.14.0` | 必需 |
+| GeckoLib | `>=4.0.0` 且 `<5.0.0` | 必需 |
+| Rich Translatable Text | `>=1.0.2` | 推荐 |
+| First-person Model | 任意兼容版 | 推荐 |
+| Trinkets | `>=3.7.2` | 推荐 |
+
+:::warning Origins 冲突
+SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包含或改造其所需部分，不要仅凭旧教程额外安装 Origins。`EnchantedLib >0.3.0`、OptiFabric、Identity `<1.14.2-beta` 和 GeckoLib 5 也被列入冲突范围。
+:::
+
+## SSCA 必需依赖
+
+SSCA 8.0.0-beta.2 声明需要 Fabric Loader `>=0.14.21`、Fabric API `>=0.83.0`、SSC `>=1.10.0` 和 GeckoLib `>=4.8.4`。Trinkets、Mod Menu、LambDynamicLights 与 AsyncParticles 是建议安装项，不是硬依赖。
 
 ## 安装步骤
 
 1. 安装 Minecraft 1.20.1 的 Fabric 实例。
-2. 安装 SSC 所需的 Fabric API、Origins/Apoli、Trinkets、Cloth Config、Mod Menu 等依赖。以发布页的依赖列表为准。
+2. 安装上表列出的 SSC 必需依赖；不要额外安装被声明冲突的 Origins。
 3. 将 SSC 的 `.jar` 文件放入实例的 `mods` 文件夹。
 4. 将匹配版本的 SSCA `.jar` 文件放入同一文件夹。
 5. 启动游戏，确认没有依赖缺失或版本冲突。
@@ -42,4 +65,4 @@ SSCA README 提醒：请在游戏设置中启用粒子显示，否则部分技�
 
 ## 来源与状态
 
-本页根据 SSC/SSCA README、`gradle.properties` 和 Modrinth 项目资料整理；具体依赖版本应以你下载的发行版为准。状态：`partial`。
+本页根据 SSC/SSCA README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 项目资料整理；具体依赖版本应以你下载的发行版为准。状态：`verified`（代码基线），发行包组合仍应实测。
