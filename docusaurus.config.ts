@@ -28,7 +28,7 @@ const config: Config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          showLastUpdateTime: true,
+          showLastUpdateTime: process.env.NODE_ENV === 'production',
           editUrl: 'https://github.com/ssc-community/ssc-wiki/edit/main/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],

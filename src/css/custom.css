@@ -1,5 +1,32 @@
 @import 'katex/dist/katex.min.css';
 
+.katex-display {
+  position: relative;
+  padding-top: 0.35rem;
+}
+
+.katex-copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-background-surface-color);
+  cursor: pointer;
+}
+
+.katex-copy-button:hover,
+.katex-copy-button:focus-visible {
+  color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
 :root {
   --ifm-color-primary: #8b3d63;
   --ifm-color-primary-dark: #7d3759;
