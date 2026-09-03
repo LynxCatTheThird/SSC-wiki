@@ -10,7 +10,9 @@ const config: Config = {
   organizationName: 'ssc-community',
   projectName: 'ssc-wiki',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+  markdown: {
+    hooks: {onBrokenMarkdownLinks: 'throw'},
+  },
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN', 'en'],
