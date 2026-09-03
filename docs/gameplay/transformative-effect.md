@@ -4,9 +4,9 @@ sidebar_position: 1
 description: 转化效果的获得、持续、覆盖、激活和清除规则
 ---
 
-# 转化效果[^source]
+# 转化效果
 
-转化效果是“感染目标形态”与“真正开始变身”之间的临时状态。它与已经取得的玩家形态不同，也不是诅咒之月本身。
+转化效果是“感染目标形态”与“真正开始变身”之间的临时状态。它与已经取得的玩家形态不同，也不是诅咒之月本身。[^source]
 
 ## 生命周期
 
@@ -28,18 +28,18 @@ SSC 同一时间只按一个转化效果处理。施加新效果前会清理已�
 
 当前注册的目标包括七条常规形态线、两个特殊形态和一个自定义形态入口：
 
-| 效果 ID | 目标形态 |
-| --- | --- |
-| `to_bat_0_effect` | `bat_0` |
-| `to_axolotl_0_effect` | `axolotl_0` |
-| `to_ocelot_0_effect` | `ocelot_0` |
+| 效果 ID                    | 目标形态         |
+| -------------------------- | ---------------- |
+| `to_bat_0_effect`          | `bat_0`          |
+| `to_axolotl_0_effect`      | `axolotl_0`      |
+| `to_ocelot_0_effect`       | `ocelot_0`       |
 | `to_familiar_fox_0_effect` | `familiar_fox_0` |
-| `to_snow_fox_0_effect` | `snow_fox_0` |
-| `to_anubis_wolf_0_effect` | `anubis_wolf_0` |
-| `to_spider_0_effect` | `spider_0` |
-| `to_allay_sp_effect` | `allay_sp` |
-| `to_feral_cat_sp_effect` | `feral_cat_sp` |
-| `to_custom_statue_effect` | 由自定义数据决定 |
+| `to_snow_fox_0_effect`     | `snow_fox_0`     |
+| `to_anubis_wolf_0_effect`  | `anubis_wolf_0`  |
+| `to_spider_0_effect`       | `spider_0`       |
+| `to_allay_sp_effect`       | `allay_sp`       |
+| `to_feral_cat_sp_effect`   | `feral_cat_sp`   |
+| `to_custom_statue_effect`  | 由自定义数据决定 |
 
 完整资源 ID 还应加上命名空间 `shape-shifter-curse:`。注册有效果不代表原版生存流程一定提供对应的自然感染来源。
 

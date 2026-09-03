@@ -51,3 +51,48 @@
   padding: 0.75rem 1rem;
   background: var(--ifm-color-emphasis-100);
 }
+
+[data-footnotes] {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+[data-footnotes] .footnotes-title {
+  margin: 0 0 0.75rem;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+[data-footnotes] ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+[data-footnotes] li {
+  padding-left: 0.25rem;
+}
+
+[data-footnotes] li::marker {
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+[data-footnotes] li > p {
+  margin: 0;
+}
+
+[data-footnote-ref] {
+  margin-left: 0.12em;
+  font-size: 0.72em;
+  font-weight: 650;
+}
+
+[data-footnote-backref] {
+  margin-left: 0.35rem;
+  text-decoration: none;
+}

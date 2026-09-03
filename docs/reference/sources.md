@@ -11,20 +11,10 @@ sidebar_position: 2
 - [SSC GitHub](https://github.com/onixary/shape-shifter-curse-fabric)
 - [SSCA Modrinth](https://modrinth.com/mod/shape-shifter-curse-addon)
 - [SSCA GitHub](https://github.com/MangZai-120/shape-shifter-curse-addon)
-- [SSC 旧 Wiki](https://ssc-wiki.readthedocs.io/en/latest/)
-- [SSCA 旧 Wiki](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/)
+- [SSC 官方 Wiki](https://ssc-wiki.readthedocs.io/en/latest/)
+- [SSCA 官方 Wiki](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/)
 
-## 内容核验规则
-
-源代码、资源和目标版本的游戏测试优先于旧 Wiki。旧 Wiki 只在内容与当前版本一致、且没有更直接的代码证据时引用。
-
-页面状态分为：
-
-- `verified`：已经对照代码或游戏测试；
-- `partial`：只有部分内容确认；
-- `outdated`：仅供旧版本参考；
-- `experimental`：测试功能；
-- `community`：社区移植或附属内容。
+源码与官方 Wiki 出现冲突时，玩法说明以当前支持版本的源码为准；中文名称和设计背景优先参考作者公开说明。无法从两者确认的内容会明确标注仍待验证。
 
 ## 许可证边界
 

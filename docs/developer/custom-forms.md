@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # 自定义形态
 
-SSC 支持用 Data Pack 和 Resource Pack 创建动态形态。推荐先运行官方仓库中的 `custom_form_pack_example`，再逐项替换 ID、模型、纹理和能力。
+SSC 支持用 Data Pack 和 Resource Pack 创建动态形态。推荐先运行官方仓库中的 `custom_form_pack_example`，再逐项替换 ID、模型、纹理和能力。[^source]
 
 ## 基本组成
 
@@ -27,4 +27,4 @@ SSC 支持用 Data Pack 和 Resource Pack 创建动态形态。推荐先运行�
 
 动态形态的 JSON schema 和可用能力会随 SSC 版本变化。不要直接把 Java 类名、旧 Wiki 字段或其他版本示例当作有效字段；应以目标版本源码、示例包和资源加载日志核验。
 
-状态：`partial`。后续将加入完整 JSON schema、可下载最小示例和字段参考。
+[^source]: 结构依据 SSC 官方仓库的 `custom_form_pack_example`、动态形态加载代码与 [官方自定义形态文档](https://ssc-wiki.readthedocs.io/en/latest/custom_forms/overview/)；不同 SSC 版本的数据字段可能变化。

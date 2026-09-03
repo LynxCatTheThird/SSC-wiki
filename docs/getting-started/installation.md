@@ -5,17 +5,17 @@ sidebar_position: 1
 
 # 安装与依赖
 
-本页针对 Minecraft 1.20.1 Fabric 的 SSC 主线和 SSCA 社区附属模组。
+本页针对 Minecraft 1.20.1 Fabric 的 SSC 主线和 SSCA 社区附属模组。[^source]
 
 ## 推荐组合
 
-| 项目 | 首发基线 |
-| --- | --- |
-| Minecraft | 1.20.1 |
-| Loader | Fabric Loader |
-| SSC | 1.10.0 |
-| SSCA | 8.0.0-beta.2 |
-| Java | 17 或更高 |
+| 项目      | 首发基线      |
+| --------- | ------------- |
+| Minecraft | 1.20.1        |
+| Loader    | Fabric Loader |
+| SSC       | 1.10.0        |
+| SSCA      | 8.0.0-beta.2  |
+| Java      | 17 或更高     |
 
 SSCA 依赖 SSC。两个模组的版本必须匹配；SSCA README 明确提醒 beta 构建可能基于 SSC 测试版开发，下载前应核对对应版本。
 
@@ -23,16 +23,16 @@ SSCA 依赖 SSC。两个模组的版本必须匹配；SSCA README 明确提醒 b
 
 SSC 1.10.0 的 `fabric.mod.json` 声明：
 
-| 依赖 | 最低版本/范围 | 类型 |
-| --- | --- | --- |
-| Fabric Loader | `>=0.12.3` | 必需 |
-| Fabric API | `>=0.83.0` | 必需 |
-| Pehkui | `>=3.7.8` | 必需 |
-| Satin | `>=1.14.0` | 必需 |
-| GeckoLib | `>=4.0.0` 且 `<5.0.0` | 必需 |
-| Rich Translatable Text | `>=1.0.2` | 推荐 |
-| First-person Model | 任意兼容版 | 推荐 |
-| Trinkets | `>=3.7.2` | 推荐 |
+| 依赖                   | 最低版本/范围         | 类型 |
+| ---------------------- | --------------------- | ---- |
+| Fabric Loader          | `>=0.12.3`            | 必需 |
+| Fabric API             | `>=0.83.0`            | 必需 |
+| Pehkui                 | `>=3.7.8`             | 必需 |
+| Satin                  | `>=1.14.0`            | 必需 |
+| GeckoLib               | `>=4.0.0` 且 `<5.0.0` | 必需 |
+| Rich Translatable Text | `>=1.0.2`             | 推荐 |
+| First-person Model     | 任意兼容版            | 推荐 |
+| Trinkets               | `>=3.7.2`             | 推荐 |
 
 :::warning Origins 冲突
 SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包含或改造其所需部分，不要仅凭旧教程额外安装 Origins。`EnchantedLib >0.3.0`、OptiFabric、Identity `<1.14.2-beta` 和 GeckoLib 5 也被列入冲突范围。
@@ -63,6 +63,4 @@ SSCA README 提醒：请在游戏设置中启用粒子显示，否则部分技�
 
 存在非官方的 1.21.1 社区移植，但成熟度和兼容性不能与本页的 1.20.1 基线等同。本站只在[版本与兼容性](../reference/versions)中简要记录，不为其建立完整玩法文档。
 
-## 来源与状态
-
-本页根据 SSC/SSCA README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 项目资料整理；具体依赖版本应以你下载的发行版为准。状态：`verified`（代码基线），发行包组合仍应实测。
+[^source]: 版本与依赖来自 SSC、SSCA 的 README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 发布页。表格对应 SSC 1.10.0 与 SSCA 8.0.0-beta.2；其他发行包组合需要分别核对依赖声明。

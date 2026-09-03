@@ -15,6 +15,11 @@ const config: Config = {
   markdown: {
     hooks: {onBrokenMarkdownLinks: 'throw'},
     mermaid: true,
+    remarkRehypeOptions: {
+      footnoteLabel: '资料来源',
+      footnoteBackLabel: '返回正文',
+      footnoteLabelProperties: {className: ['footnotes-title']},
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
   i18n: {

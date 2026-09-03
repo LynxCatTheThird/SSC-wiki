@@ -9,9 +9,9 @@ source_commit: c0f0bbb9
 status: verified
 ---
 
-# 悦灵与野猫[^source]
+# 悦灵与野猫
 
-悦灵和野猫各自只有一个 SSC 形态，没有本能阶段，也不会受诅咒之月推进。两者都属于可恢复的特殊形态：喝普通抑制剂即可回到原始变形者。它们也是 SSCA 悦灵与野猫两组终局分支的起点。
+悦灵和野猫各自只有一个 SSC 形态，没有本能阶段，也不会受诅咒之月推进。两者都属于可恢复的特殊形态：喝普通抑制剂即可回到原始变形者。它们也是 SSCA 悦灵与野猫两组终局分支的起点。[^source]
 
 ## 如何进入
 
@@ -44,6 +44,6 @@ flowchart LR
 
 ## 进入 SSCA 分支
 
-悦灵使用月髓十字环会进入 SP 堕落悦灵，使用进化石会进入 SP 悦灵。野猫使用月髓十字环会进入食梦魔，使用进化石会进入野猫 SP（月光魅影）。月髓十字环仍要求诅咒之月夜晚，进化石没有月相要求；两种 SSCA 结果都会免疫抑制剂。
+安装 SSCA 后，悦灵和野猫都有两条终局分支。全部目标集中列在[SSCA 形态目录](../ssca/forms-catalog)，进化道具、月相条件和失败后果见[进化系统](../ssca/evolution)。
 
 [^source]: 获取与恢复规则参考 [SSC 官方 Form Types](https://ssc-wiki.readthedocs.io/en/latest/mod_content/form_types/) 并经 `RegCustomPotions.java`、`RegPlayerForms.java`、`form_allay_sp.json`、`form_feral_cat_sp.json` 与对应 power JSON 核对，commit `c0f0bbb9`。正文为重新归纳的中文说明。
