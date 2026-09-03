@@ -2,6 +2,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import LocalSearch from '@easyops-cn/docusaurus-search-local';
 
 const config: Config = {
   title: 'SSC Wiki',
@@ -45,6 +46,20 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+  ],
+  plugins: [
+    [LocalSearch, {
+      indexDocs: true,
+      indexBlog: false,
+      docsRouteBasePath: '/',
+      language: ['zh', 'en'],
+      hashed: 'filename',
+      highlightSearchTermsOnTargetPage: true,
+      searchResultLimits: 12,
+      searchResultContextMaxLength: 80,
+      explicitSearchResultPath: true,
+      searchBarShortcutKeymap: 'mod+k',
+    }],
   ],
   themeConfig: {
     image: 'img/ssc-social-card.svg',
