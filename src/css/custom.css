@@ -1,3 +1,5 @@
+@import 'katex/dist/katex.min.css';
+
 :root {
   --ifm-color-primary: #8b3d63;
   --ifm-color-primary-dark: #7d3759;

@@ -26,6 +26,8 @@ const sidebars: SidebarsConfig = {
       'ssca/forms-catalog',
       'ssca/evolution',
       'ssca/controls-and-safety',
+      'ssca/anubis-wolf-sp',
+      'ssca/allay-sp',
     ]},
     {type: 'category', label: '服主手册', items: ['server/commands', 'server/configuration']},
     {type: 'category', label: '开发者', items: ['developer/custom-forms']},

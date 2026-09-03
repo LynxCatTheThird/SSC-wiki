@@ -1,5 +1,7 @@
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'SSC Wiki',
@@ -12,6 +14,7 @@ const config: Config = {
   onBrokenLinks: 'throw',
   markdown: {
     hooks: {onBrokenMarkdownLinks: 'throw'},
+    mermaid: true,
   },
   i18n: {
     defaultLocale: 'zh-CN',
@@ -27,6 +30,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: true,
           editUrl: 'https://github.com/ssc-community/ssc-wiki/edit/main/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
@@ -34,6 +39,7 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+    ['@docusaurus/theme-mermaid', {}],
   ],
   themeConfig: {
     image: 'img/ssc-social-card.svg',
