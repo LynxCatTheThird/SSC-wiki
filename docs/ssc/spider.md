@@ -45,28 +45,15 @@ status: partial
 |    2 |   14 |        0 |
 |    3 |   22 |        1 |
 
-## 制作能力
+## 制作与获取
 
-- 两根线在物品交互中合成一个蛛网，消耗 5 Mana；
-- 一个蛛网与一个堆肥桶交互可制作蛛网堆肥桶，消耗 20 Mana；
-- Mana 被动恢复注册为每 10 tick 增加 `0.1`。
+第 3 阶段可以通过能力交互制作蛛网和蛛网堆肥桶：两根线合成蛛网，消耗 5 Mana；蛛网与堆肥桶交互制作蛛网堆肥桶，消耗 20 Mana。Mana 每 10 tick 恢复 0.1。
 
-蜘蛛线还包含：
-
-- 发射蛛丝投射物；
-- 建造可攀爬的蛛网结构；
-- 限制敌人移动；
-- 在后期获得更强的机动能力；
-- 使用蜘蛛专属工具或饰品扩展玩法。
+未加工月之尘用 2 个青金石和 2 个紫水晶碎片按 `LA / AL` 排列，产出 4 个；露水蛛网用蛛网、未加工月之尘和丝露无序合成，产出 1 个。蜘蛛击杀目标实体时有 50% 基础概率掉落 1 个丝露，抢夺每级额外增加 10 个百分点。[^items]
 
 :::note 跨模组边界
 上表数值由能力 JSON 直接执行。蛛丝命中还会调用 Java 侧的缠绕、方块生成与网络同步；若服务器安装了会取消投射物命中或禁止放置方块的保护模组，可能出现命中动画存在、蛛网没有生成的情况。此时管理员应检查保护模组日志和出生点保护范围。
 :::
 
-## 相关内容
-
-- [形态与阶段](../gameplay/forms-and-stages)；
-- [服主命令](../server/commands)；
-- [自定义形态](../developer/custom-forms)。
-
 [^source]: 源码核对：SSC `RegPlayerForms.java`、`origins/form_spider_*.json`、蜘蛛能力 JSON/Java 和 Modrinth 更新说明，commit `c0f0bbb9`。数值来自数据定义；跨模组行为仍可能变化。
+[^items]: 配方与掉落来自 SSC `recipes/untreated_moondust.json`、`recipes/dew_covered_cobweb.json` 与 `loot_tables/entities/t_spider.json`，commit `c0f0bbb9`。

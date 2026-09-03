@@ -25,6 +25,7 @@ const sidebars: SidebarsConfig = {
     {type: 'category', label: 'SSCA 扩展', items: [
       'ssca/overview',
       'ssca/forms-catalog',
+      'ssca/story',
       {type: 'category', label: '进化路线', items: [
         {type: 'category', label: '使魔狐', items: [
           'ssca/forms/routes/familiar-fox/upgrade',

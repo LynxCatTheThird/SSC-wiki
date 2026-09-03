@@ -35,10 +35,22 @@ const recoveryOption: EChartsOption = {
   series: [{type: 'bar', name: '恢复时间', data: [26.7, 33.3, 20, 50, 80], label: {show: true, position: 'right', formatter: '{c} 秒'}}],
 };
 
+const tickTimeOption: EChartsOption = {
+  tooltip: {trigger: 'axis', axisPointer: {type: 'shadow'}, valueFormatter: (value) => `${value} 秒`},
+  grid: {left: 68, right: 28, top: 30, bottom: 48},
+  xAxis: {type: 'category', name: '游戏 tick', data: ['6', '20', '60', '100', '300', '600']},
+  yAxis: {type: 'value', name: '现实秒数', min: 0},
+  series: [{type: 'bar', name: '换算时间', data: [0.3, 1, 3, 5, 15, 30], label: {show: true, position: 'top', formatter: '{c} 秒'}}],
+};
+
 export function EvolutionExperienceChart() {
   return <DocChart ariaLabel="进化等级所需累计原版经验折线图" option={experienceOption} />;
 }
 
 export function ResourceRecoveryChart() {
   return <DocChart ariaLabel="五种资源从空到满的理论恢复时间条形图" option={recoveryOption} />;
+}
+
+export function TickTimeChart() {
+  return <DocChart ariaLabel="游戏 tick 与现实秒数换算图" option={tickTimeOption} />;
 }
