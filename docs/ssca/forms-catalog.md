@@ -65,9 +65,9 @@ flowchart LR
 
 上表 SSCA 目标 ID 均使用 `my_addon:` 命名空间，表中为节省宽度省略了前缀；SSC 起点使用 `shape-shifter-curse:`。
 
-## 22 个形态速查
+## 22 个形态与技能速查
 
-下表把每个注册形态翻译成玩家能直接判断的战斗循环。数值优先采用 Java 常量和当前中文能力描述；带有“约”的项目仍会受目标属性、装备或距离影响。
+下表把每个注册形态翻译成玩家能直接判断的战斗循环，并把官方发布页中已经公开的技能方向纳入同一张表。数值优先采用 Java 常量和当前中文能力描述；带有“约”的项目仍会受目标属性、装备或距离影响。
 
 | 形态        | 进入方式                 | 核心循环                                                  | 已确认数值                                                      |
 | ----------- | ------------------------ | --------------------------------------------------------- | --------------------------------------------------------------- |
@@ -96,4 +96,4 @@ flowchart LR
 
 “月髓环/进化石”表示成功路线的标准入口。`allay_sp` 和 `feral_cat_sp` 本身已经是独立形态，使用对应道具时会依照 SSCA 固定映射处理；失败后果见[进化系统](evolution)。
 
-[^source]: 名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/)，注册与路线另经 `SscAddonForms.java`、`FormIdentifiers.java`、`EvolutionStoneItem.java`、`SpUpgradeItem.java` 和 `zh_cn.json` 核对，commit `d84a18ca`。能力摘要只收录已能从执行代码确认的数值。
+[^source]: 名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/) 和 [官方 Modrinth 发布说明](https://modrinth.com/mod/shape-shifter-curse-addon)，注册与路线另经 `SscAddonForms.java`、`FormIdentifiers.java`、`EvolutionStoneItem.java`、`SpUpgradeItem.java` 和 `zh_cn.json` 核对，commit `d84a18ca`。能力摘要只收录已能从执行代码确认的数值。
