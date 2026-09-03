@@ -5,25 +5,24 @@
   "description": "Unofficial Shape Shifter Curse and Shape Shifter Curse Addon documentation",
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "docusaurus build && node scripts/compress-build.mjs",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "typecheck": "tsc"
+    "clear": "docusaurus clear"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
     "@docusaurus/preset-classic": "3.10.2",
-    "@mdx-js/react": "3.0.1",
+    "@mdx-js/react": "3.1.1",
     "clsx": "2.1.1",
     "prism-react-renderer": "2.4.1",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "typescript": "~5.6.3"
+    "typescript": "~7.0.2"
   },
   "browserslist": {
     "production": [

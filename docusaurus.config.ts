@@ -37,6 +37,12 @@ const config: Config = {
   ],
   themeConfig: {
     image: 'img/ssc-social-card.svg',
+    colorMode: {
+      // Docusaurus requires a light/dark fallback; this flag follows OS preference.
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'SSC Wiki',
       logo: {alt: 'SSC Wiki', src: 'img/logo.svg'},

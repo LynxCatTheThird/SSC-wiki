@@ -1,0 +1,10 @@
+# Cloudflare Pages serves Brotli/gzip automatically at the edge. These headers
+# keep generated static assets cacheable without caching HTML forever.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
