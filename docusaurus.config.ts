@@ -16,6 +16,7 @@ const config: Config = {
     hooks: {onBrokenMarkdownLinks: 'throw'},
     mermaid: true,
   },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN', 'en'],
@@ -39,7 +40,6 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
-    ['@docusaurus/theme-mermaid', {}],
   ],
   themeConfig: {
     image: 'img/ssc-social-card.svg',
