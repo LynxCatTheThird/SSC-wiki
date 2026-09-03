@@ -4,7 +4,13 @@ const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     'index',
     {type: 'category', label: '入门', items: ['getting-started/installation', 'getting-started/first-transformation']},
-    {type: 'category', label: '核心玩法', items: ['gameplay/cursed-moon', 'gameplay/forms-and-stages']},
+    {type: 'category', label: '核心玩法', items: [
+      'gameplay/transformative-effect',
+      'gameplay/cursed-moon',
+      'gameplay/forms-and-stages',
+      'gameplay/instinct',
+      'gameplay/key-items',
+    ]},
     {type: 'category', label: 'SSC 形态', items: [
       'ssc/forms-overview',
       'ssc/bat',
