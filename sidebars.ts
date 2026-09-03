@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
     {type: 'category', label: 'SSCA 扩展', items: [
       'ssca/overview',
       'ssca/forms-catalog',
+      'ssca/numeric-systems',
       'ssca/evolution',
       'ssca/controls-and-safety',
       'ssca/anubis-wolf-sp',
