@@ -93,4 +93,4 @@ flowchart LR
 
 同一能力中的加法、总乘区和最终倍率可能处于不同计算阶段。两个 20% 效果相加时得到 40%，连续相乘时为 $1.2\times1.2=1.44$。本站只在源码能确认运算位置时给出合并后的结果；单个效果仍按自身数值陈述。
 
-[^source]: 源码核对：SSCA `ResourceBars.java`、`BarKeys.java`、各资源 power JSON、`BatDesmodusBloodThirst.java`、`ParasiticSeedEnergyRegen.java`、`NineLivesManager.java` 与相关技能类，commit `d84a18ca`。基础值已核对；饰品叠加与跨模组伤害链可能改变最终结果。
+[^source]: 源码核对：SSCA `ResourceBars.java`、`BarKeys.java`、各资源 power JSON、`BatDesmodusBloodThirst.java`、`ParasiticSeedEnergyRegen.java`、`NineLivesManager.java` 与相关技能类，commit `e42a62aa`。基础值已核对；饰品叠加与跨模组伤害链可能改变最终结果。

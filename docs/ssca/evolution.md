@@ -162,4 +162,4 @@ flowchart LR
 
 若加点界面没有出现，依次检查当前形态是否为进化路线起点、客户端与服务端 SSCA 文件是否一致、route JSON 是否成功加载。若终局物品提示分支未解锁，达到 50 级还不够，还必须满足最终节点的全部前置。
 
-[^source]: 路线名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/)，规则与数值经 `EvolutionComponent.java`、`EvolutionManager.java`、route JSON、`SpUpgradeItem.java`、`EvolutionStoneItem.java`、`PsionicOrbItem.java` 和 `EvolutionItemsLoot.java` 核对，commit `d84a18ca`。旧存档迁移仍需按发行包测试。
+[^source]: 路线名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/)，规则与数值经 `EvolutionComponent.java`、`EvolutionManager.java`、route JSON、`SpUpgradeItem.java`、`EvolutionStoneItem.java`、`PsionicOrbItem.java` 和 `EvolutionItemsLoot.java` 核对，commit `e42a62aa`。旧存档迁移仍需按发行包测试。

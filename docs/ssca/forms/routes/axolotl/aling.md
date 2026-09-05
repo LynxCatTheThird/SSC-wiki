@@ -7,4 +7,4 @@ title: 阿澪
 
 获得方式可能由剧情或整合包配置决定。
 
-[^source]: SSCA `AxolotlAling` 变体能力代码，commit `d84a18ca`。
+[^source]: SSCA `AxolotlAling` 变体能力代码，commit `e42a62aa`。

@@ -7,4 +7,4 @@ title: 灵界之主
 
 入口条件与失败后果见[进化系统](../../../evolution)。
 
-[^source]: SSCA `FamiliarFoxSp` 相关能力代码，commit `d84a18ca`。
+[^source]: SSCA `FamiliarFoxSp` 相关能力代码，commit `e42a62aa`。
