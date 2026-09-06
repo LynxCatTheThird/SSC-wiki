@@ -25,6 +25,7 @@ const sidebars: SidebarsConfig = {
     {type: 'category', label: 'SSCA 扩展', items: [
       'ssca/overview',
       'ssca/forms-catalog',
+      'ssca/forms-complete',
       'ssca/story',
       {type: 'category', label: '进化路线', items: [
         {type: 'category', label: '使魔狐', items: [
@@ -76,6 +77,12 @@ const sidebars: SidebarsConfig = {
         'ssca/numeric-systems',
         'ssca/evolution',
         'ssca/controls-and-safety',
+      ]},
+      {type: 'category', label: '物品与装备', items: [
+        'ssca/items/evolution-items',
+        'ssca/items/materials',
+        'ssca/items/tools',
+        'ssca/items/trinkets',
       ]},
     ]},
     {type: 'category', label: '服主手册', items: ['server/commands', 'server/configuration']},

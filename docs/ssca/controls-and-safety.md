@@ -80,4 +80,4 @@ HUD 的本能、能量和冷却位置可在可视化位置编辑器中拖动。�
 6. 让服主检查 `disabledSkills` 与玩家级 `ssc_skill_blocked:*` 标记。
 7. 检查客户端日志是否出现 `Failed to register client keybindings`；出现时通常是 SSC/SSCA 版本接口不匹配。
 
-[^source]: 源码核对：SSC `ShapeShifterCurseFabricClient.java`；SSCA `SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`d84a18ca`。通用输入和白名单规则已核对。
+[^source]: 源码核对：SSC `ShapeShifterCurseFabricClient.java`；SSCA `SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`e42a62aa`。通用输入和白名单规则已核对。

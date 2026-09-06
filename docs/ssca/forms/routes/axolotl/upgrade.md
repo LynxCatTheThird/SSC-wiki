@@ -7,4 +7,4 @@ title: 进化美西螈
 
 路线规则见[进化系统](../../../evolution)。
 
-[^source]: SSCA 进化路线 JSON 与 `EvolutionComponent.java`，commit `d84a18ca`。
+[^source]: SSCA 进化路线 JSON 与 `EvolutionComponent.java`，commit `e42a62aa`。

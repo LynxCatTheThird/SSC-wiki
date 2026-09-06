@@ -55,4 +55,4 @@ flowchart LR
 上述范围、时间、数量和能量数值来自 SSCA Java 常量。饰品可以改变冥狼属性和数量，不能据此推断所有整合包中结果完全一致。
 :::
 
-[^source]: 源码核对：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `d84a18ca`。
+[^source]: 源码核对：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `e42a62aa`。

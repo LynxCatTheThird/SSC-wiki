@@ -7,4 +7,4 @@ title: SP 悦灵
 
 详细的白名单和技能操作见[操作、HUD 与白名单](../../../controls-and-safety)。
 
-[^source]: SSCA 悦灵进化石分支代码与注册表，commit `d84a18ca`。
+[^source]: SSCA 悦灵进化石分支代码与注册表，commit `e42a62aa`。

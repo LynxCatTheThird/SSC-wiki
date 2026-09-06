@@ -21,7 +21,7 @@ Shape Shifter Curse（SSC）与 Shape Shifter Curse Addon（SSCA）的社区维�
 
 ## 文档范围
 
-首发内容以 Minecraft 1.20.1 Fabric、SSC 1.10.0 和 SSCA 8.0.0-beta.2 为基线。每页会标注验证状态、验证日期和来源 commit。
+首发内容以 Minecraft 1.20.1 Fabric、SSC 1.10.0 和 SSCA 8.0.0-beta.3 为基线。每页会标注验证状态、验证日期和来源 commit。
 
 ## 文档状态
 

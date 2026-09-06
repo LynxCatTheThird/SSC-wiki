@@ -177,4 +177,4 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 4. SSCA 命令缺失时，先确认 SSCA 是否因 SSC 版本不匹配而加载失败。
 5. 数据修复前备份世界目录。
 
-[^source]: 源码核对：SSC `ShapeShifterCurseCommand.java`、`FormArgumentType.java`；SSCA `SscAddonCommands.java`，分别对应 commit `c0f0bbb9`、`d84a18ca`。命令树与参数已经逐项核对；权限插件仍可能改变服务器上的实际可用范围。
+[^source]: 源码核对：SSC `ShapeShifterCurseCommand.java`、`FormArgumentType.java`；SSCA `SscAddonCommands.java`，分别对应 commit `c0f0bbb9`、`e42a62aa`。命令树与参数已经逐项核对；权限插件仍可能改变服务器上的实际可用范围。

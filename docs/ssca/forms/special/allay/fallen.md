@@ -5,4 +5,4 @@ title: SP 堕落悦灵
 
 悦灵使用月髓十字环后的终局形态。标记目标后召唤恼鬼，暗影尖啸负责清理空中威胁；通常召唤 2 只恼鬼，存在 35 秒。[^source]
 
-[^source]: SSCA 堕落悦灵代码与注册表，commit `d84a18ca`。
+[^source]: SSCA 堕落悦灵代码与注册表，commit `e42a62aa`。

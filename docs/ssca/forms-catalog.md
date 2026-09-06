@@ -1,7 +1,7 @@
 ---
 title: SSCA 形态目录
 sidebar_position: 2
-description: SSCA 8.0.0-beta.2 注册形态、内部 ID 与主要来源
+description: SSCA 8.0.0-beta.3 注册形态、内部 ID 与主要来源
 ---
 
 # SSCA 形态目录
@@ -73,7 +73,7 @@ flowchart LR
 | ----------- | ------------------------ | --------------------------------------------------------- | --------------------------------------------------------------- |
 | 进化使魔    | 起始手册选路线           | 经验换点数，逐步解锁 Mana、火花、火箭、炼药、灵视和火环   | 7 个普通节点；45 级拿齐点数，50 级开终局出口                    |
 | SP 使魔     | 进化路线 + 月髓环        | 苍蓝火环持续耗 Mana，击杀回 Mana，Mana 高于 50 时护盾减伤 | 护盾减伤 50%；火环用于持续范围压制，Mana 降到门槛后护盾停止生效 |
-| 契灵        | 进化路线 + 进化石        | 瞄准建立黄/红烙印，斩杀补满抗伤与传送，村庄敲钟触发袭击   | 常驻 2 层抗伤；脱战 5 秒后每 15 秒恢复 1 层                     |
+| 契灵        | 进化路线 + 进化石        | 瞄准建立黄/红烙印，斩杀补满抗伤与传送，村庄敲钟触发袭击   | 黄烙印当前生命值 20%，红烙印当前生命值 50%；两者均为 2–37 点；常驻 2 层抗伤 |
 | 使魔 (Red)  | 特殊变体                 | 苍蓝火环与穿透狐火球，兼具爆炸和连锁伤害                  | 狐火球直击 8 点魔法伤害，碰撞爆炸 6 点，半径 6 格               |
 | 进化美西螈  | 起始手册选路线           | 经验换点数，水生适应与水流技能汇合后进入终局分支          | 6 个普通节点；40 级拿齐点数，50 级开终局出口                    |
 | SP 美西螈   | 进化路线 + 月髓环        | 水矛制作、涡流冲击、假死和湿润度管理                      | 涡流最长蓄力 4 秒；假死约恢复 15 点生命，期间减伤 60%           |
@@ -96,4 +96,4 @@ flowchart LR
 
 “月髓环/进化石”表示成功路线的标准入口。`allay_sp` 和 `feral_cat_sp` 本身已经是独立形态，使用对应道具时会依照 SSCA 固定映射处理；失败后果见[进化系统](evolution)。
 
-[^source]: 名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/) 和 [官方 Modrinth 发布说明](https://modrinth.com/mod/shape-shifter-curse-addon)，注册与路线另经 `SscAddonForms.java`、`FormIdentifiers.java`、`EvolutionStoneItem.java`、`SpUpgradeItem.java` 和 `zh_cn.json` 核对，commit `d84a18ca`。能力摘要只收录已能从执行代码确认的数值。
+[^source]: 名称参考 [SSCA 官方形态概述](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/sp_forms/overview/)、[MC 百科条目](https://www.mcmod.cn/class/24327.html) 和 [官方 Modrinth 发布说明](https://modrinth.com/mod/shape-shifter-curse-addon)，注册与路线另经 `SscAddon.java`、`FormIdentifiers.java`、`EvolutionStoneItem.java`、`SpUpgradeItem.java` 和资源文件核对，当前 commit `e42a62aa`。能力摘要只收录已能从执行代码确认的数值。

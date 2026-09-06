@@ -14,7 +14,7 @@ sidebar_position: 1
 | Minecraft | 1.20.1        |
 | Loader    | Fabric Loader |
 | SSC       | 1.10.0        |
-| SSCA      | 8.0.0-beta.2  |
+| SSCA      | 8.0.0-beta.3  |
 | Java      | 17 或更高     |
 
 SSCA 依赖 SSC。两个模组的版本必须匹配；SSCA README 明确提醒 beta 构建可能基于 SSC 测试版开发，下载前应核对对应版本。
@@ -40,7 +40,7 @@ SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包
 
 ## SSCA 必需依赖
 
-SSCA 8.0.0-beta.2 声明需要 Fabric Loader `>=0.14.21`、Fabric API `>=0.83.0`、SSC `>=1.10.0` 和 GeckoLib `>=4.8.4`。Trinkets、Mod Menu、LambDynamicLights 与 AsyncParticles 是建议安装项，不是硬依赖。
+SSCA 8.0.0-beta.3 声明需要 Fabric Loader `>=0.14.21`、Fabric API `>=0.83.0`、SSC `>=1.10.0` 和 GeckoLib `>=4.8.4`。Trinkets、Mod Menu、LambDynamicLights 与 AsyncParticles 是建议安装项，不是硬依赖。上游 README 还特别提醒开启粒子显示，否则部分技能的视觉表现会缺失。[^source]
 
 ## 安装步骤
 
@@ -63,4 +63,4 @@ SSCA README 提醒：请在游戏设置中启用粒子显示，否则部分技�
 
 存在非官方的 1.21.1 社区移植，但成熟度和兼容性不能与本页的 1.20.1 基线等同。本站只在[版本与兼容性](../reference/versions)中简要记录，不为其建立完整玩法文档。
 
-[^source]: 版本与依赖来自 SSC、SSCA 的 README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 发布页。表格对应 SSC 1.10.0 与 SSCA 8.0.0-beta.2；其他发行包组合需要分别核对依赖声明。
+[^source]: 版本与依赖来自 SSC、SSCA 的 README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 发布页。表格对应 SSC 1.10.0 与 SSCA 8.0.0-beta.3；其他发行包组合需要分别核对依赖声明。

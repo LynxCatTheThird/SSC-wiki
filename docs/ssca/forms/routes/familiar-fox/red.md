@@ -7,4 +7,4 @@ title: 使魔（Red）
 
 它不属于普通终局出口，获得方式以对应剧情或整合包配置为准。
 
-[^source]: SSCA Red 变体的能力与资源 JSON，commit `d84a18ca`。
+[^source]: SSCA Red 变体的能力与资源 JSON，commit `e42a62aa`。
