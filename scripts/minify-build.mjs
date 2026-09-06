@@ -1,15 +1,15 @@
-import {promises as fs} from 'node:fs';
+import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import {minify as minifyHtml} from 'html-minifier-terser';
+import { minify as minifyHtml } from 'html-minifier-terser';
 import CleanCSS from 'clean-css';
-import {minify as minifyJs} from 'terser';
-import {optimize as optimizeSvg} from 'svgo';
+import { minify as minifyJs } from 'terser';
+import { optimize as optimizeSvg } from 'svgo';
 
 const root = path.resolve('build');
-const cleanCss = new CleanCSS({level: 2});
+const cleanCss = new CleanCSS({ level: 2 });
 
 async function walk(directory) {
-  const entries = await fs.readdir(directory, {withFileTypes: true});
+  const entries = await fs.readdir(directory, { withFileTypes: true });
   for (const entry of entries) {
     const file = path.join(directory, entry.name);
     if (entry.isDirectory()) {
@@ -37,7 +37,7 @@ async function walk(directory) {
     } else if (extension === '.css') {
       output = cleanCss.minify(source).styles;
     } else if (extension === '.js' && !entry.name.endsWith('.map')) {
-      const result = await minifyJs(source, {format: {comments: false}});
+      const result = await minifyJs(source, { format: { comments: false } });
       output = result.code;
     } else if (extension === '.svg') {
       output = optimizeSvg(source, { multipass: true }).data;

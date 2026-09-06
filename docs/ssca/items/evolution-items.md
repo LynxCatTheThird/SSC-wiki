@@ -12,7 +12,7 @@ description: SSCA 的月髓十字环、进化石与灵能宝珠
 
 物品 ID：`ssc_addon:sp_upgrade_thing`。不可堆叠。工作台配方固定四角放金锭，中心放塑形核心，其余位置放绿宝石、红石粉、月尘纯晶和下界合金锭；上游还提供允许无序摆放部分材料的兼容配方。
 
-使用时必须处于诅咒之月夜晚，并且当前形态存在月髓环目标。成功会消耗物品并开始变身；条件不足也会消耗物品。已经是目标 SP 形态时再次使用会触发破坏性爆炸，非和平难度会造成致命伤害。完整映射见[形态目录](../forms-catalog)。
+使用时必须处于诅咒之月夜晚，并且当前形态存在月髓环目标。成功会消耗物品并开始变身；条件不足也会消耗物品。已经是目标 SP 形态时再次使用会触发破坏性爆炸，非和平难度会造成致命伤害。完整映射见 [形态目录](../forms-catalog)。
 
 ## 进化石
 
@@ -24,8 +24,10 @@ description: SSCA 的月髓十字环、进化石与灵能宝珠
 
 物品 ID：`ssc_addon:psionic_orb`。只对进化使魔、进化美西螈等独立路线起点生效。长按右键打开转职界面，至少需要 3 个已获得的加点点数；确认后消耗宝珠，等级倒退 3 个里程碑档，并按新路线重新计算点数。它不会把普通终局形态变成另一条路线。
 
-:::warning 版本提示
-官方 Wiki 的旧页面仍保留部分故事化描述和旧概率。本文只采用当前资源文件、Java 实现与上游 README 能相互印证的规则。
+<!-- prettier-ignore-start -->
+:::warning
+版本提示官方 Wiki 的旧页面仍保留部分故事化描述和旧概率。本文只采用当前资源文件、Java 实现与上游 README 能相互印证的规则。
 :::
+<!-- prettier-ignore-end -->
 
 [^source]: [SSCA 官方进化用品页面](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/items/evolution_items/)、上游 `EvolutionStoneItem.java`、`SpUpgradeItem.java`、`PsionicOrbItem.java`、配方与战利品表，commit `e42a62aa`。
