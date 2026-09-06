@@ -1,4 +1,4 @@
-import type {Config} from '@docusaurus/types';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -14,12 +14,12 @@ const config: Config = {
   projectName: 'ssc-wiki',
   onBrokenLinks: 'throw',
   markdown: {
-    hooks: {onBrokenMarkdownLinks: 'throw'},
+    hooks: { onBrokenMarkdownLinks: 'throw' },
     mermaid: true,
     remarkRehypeOptions: {
       footnoteLabel: '资料来源',
       footnoteBackLabel: '返回正文',
-      footnoteLabelProperties: {className: ['footnotes-title']},
+      footnoteLabelProperties: { className: ['footnotes-title'] },
     },
   },
   themes: ['@docusaurus/theme-mermaid'],
@@ -36,7 +36,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
-          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/edit/main/',
+          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
@@ -48,18 +48,21 @@ const config: Config = {
     ],
   ],
   plugins: [
-    [LocalSearch, {
-      indexDocs: true,
-      indexBlog: false,
-      docsRouteBasePath: '/',
-      language: ['zh', 'en'],
-      hashed: 'filename',
-      highlightSearchTermsOnTargetPage: true,
-      searchResultLimits: 12,
-      searchResultContextMaxLength: 80,
-      explicitSearchResultPath: true,
-      searchBarShortcutKeymap: 'mod+k',
-    }],
+    [
+      LocalSearch,
+      {
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+        language: ['zh', 'en'],
+        hashed: 'filename',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 12,
+        searchResultContextMaxLength: 80,
+        explicitSearchResultPath: true,
+        searchBarShortcutKeymap: 'mod+k',
+      },
+    ],
   ],
   themeConfig: {
     image: 'img/ssc-social-card.svg',
@@ -71,28 +74,37 @@ const config: Config = {
     },
     navbar: {
       title: 'SSC Wiki',
-      logo: {alt: 'SSC Wiki', src: 'img/logo.svg'},
+      logo: { alt: 'SSC Wiki', src: 'img/logo.svg' },
       items: [
-        {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档'},
-        {to: '/reference/versions', label: '版本与兼容性', position: 'left'},
-        {type: 'localeDropdown', position: 'right'},
-        {href: 'https://github.com/LynxCatTheThird/SSC-wiki', label: 'GitHub', position: 'right'},
+        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档' },
+        { to: '/reference/versions', label: '版本与兼容性', position: 'left' },
+        { type: 'localeDropdown', position: 'right' },
+        { href: 'https://github.com/LynxCatTheThird/SSC-wiki', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
       links: [
-        {title: '项目来源', items: [
-          {label: 'SSC GitHub', href: 'https://github.com/onixary/shape-shifter-curse-fabric'},
-          {label: 'SSCA GitHub', href: 'https://github.com/MangZai-120/shape-shifter-curse-addon'},
-        ]},
-        {title: '反馈', items: [
-          {label: '提交 Issue', href: 'https://github.com/LynxCatTheThird/SSC-wiki/issues'},
-        ]},
+        {
+          title: '项目来源',
+          items: [
+            { label: 'SSC GitHub', href: 'https://github.com/onixary/shape-shifter-curse-fabric' },
+            {
+              label: 'SSCA GitHub',
+              href: 'https://github.com/MangZai-120/shape-shifter-curse-addon',
+            },
+          ],
+        },
+        {
+          title: '反馈',
+          items: [
+            { label: '提交 Issue', href: 'https://github.com/LynxCatTheThird/SSC-wiki/issues' },
+          ],
+        },
       ],
       copyright: 'SSC Wiki 是社区维护的非官方文档。',
     },
-    prism: {additionalLanguages: ['java', 'json', 'bash', 'yaml']},
+    prism: { additionalLanguages: ['java', 'json', 'bash', 'yaml'] },
   } satisfies Preset.ThemeConfig,
 };
 
