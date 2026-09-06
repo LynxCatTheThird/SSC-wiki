@@ -20,7 +20,9 @@ pnpm-debug.log*
 !.env.example
 .DS_Store
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # Local git metadata used when the host mounts .git read-only
 .git-local/

@@ -10,9 +10,9 @@ Shape Shifter Curse Addon（SSCA）是独立社区项目，不是 SSC 官方组�
 
 ## 从哪里开始
 
-想查看最终可以变成什么，阅读[形态目录](forms-catalog)。目录集中展示完整分支、内部 ID、进入条件和每种形态的主要能力。
+想查看最终可以变成什么，阅读 [形态目录](forms-catalog)。目录集中展示完整分支、内部 ID、进入条件和每种形态的主要能力。
 
-已经进入进化使魔或进化美西螈路线，准备积累经验、点亮节点或使用进化道具时，阅读[进化系统](evolution)。技能按键和界面见[操作、HUD 与白名单](controls-and-safety)，诅咒值、抗性和形态资源条的计算见[数值系统](numeric-systems)。
+已经进入进化使魔或进化美西螈路线，准备积累经验、点亮节点或使用进化道具时，阅读 [进化系统](evolution)。技能按键和界面见 [操作、HUD 与白名单](controls-and-safety)，诅咒值、抗性和形态资源条的计算见 [数值系统](numeric-systems)。
 
 ## 与 SSC 的边界
 
@@ -28,12 +28,14 @@ SSCA 的历史命名空间仍是 `my_addon`，模组 ID 则是 `ssc_addon`。命
 
 ## 如何进入内容
 
-新玩家翻开 SSC 的起始手册时，可以进入“SSCA 进化路线”选择界面。基线版本提供进化使魔和进化美西螈。
+新玩家翻开 SSC 的起始手册时，可以进入 “SSCA 进化路线” 选择界面。基线版本提供进化使魔和进化美西螈。
 
 已经沿 SSC 常规路线进入最终形态的玩家，则主要通过月髓十字环或进化石进入 SSCA 终局形态。两件物品的目标不同，使用条件和失败后果也不同，不能互换。
 
-:::warning Beta 基线
-本站首发基线是 Minecraft 1.20.1、SSC 1.10.0、SSCA 8.0.0-beta.3。SSCA 本身较成熟，但这个构建仍以 beta 发布；整合包服主应锁定确切文件，不要只写“最新版”。
+<!-- prettier-ignore-start -->
+:::warning
+Beta 基线本站首发基线是 Minecraft 1.20.1、SSC 1.10.0、SSCA 8.0.0-beta.3。SSCA 本身较成熟，但这个构建仍以 beta 发布；整合包服主应锁定确切文件，不要只写 “最新版”。
 :::
+<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSCA `fabric.mod.json`、`SscAddon.java`、`EvolutionRegistry.java` 与资源注册，当前 commit `e42a62aa`；模组元信息另与 [MC 百科条目](https://www.mcmod.cn/class/24327.html) 和官方 Wiki 交叉核对。注册与系统边界已核对；具体技能数值以形态页为准。

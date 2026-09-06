@@ -1,15 +1,15 @@
-import React, {useEffect, useRef} from 'react';
-import {useColorMode} from '@docusaurus/theme-common';
-import type {EChartsOption} from 'echarts';
+import React, { useEffect, useRef } from 'react';
+import { useColorMode } from '@docusaurus/theme-common';
+import type { EChartsOption } from 'echarts';
 
 type Props = {
   ariaLabel: string;
   option: EChartsOption;
 };
 
-export default function DocChart({ariaLabel, option}: Props) {
+export default function DocChart({ ariaLabel, option }: Props) {
   const elementRef = useRef<HTMLDivElement>(null);
-  const {colorMode} = useColorMode();
+  const { colorMode } = useColorMode();
 
   useEffect(() => {
     let disposed = false;
@@ -23,7 +23,7 @@ export default function DocChart({ariaLabel, option}: Props) {
       });
       chart.setOption({
         backgroundColor: 'transparent',
-        textStyle: {fontFamily: 'system-ui, sans-serif'},
+        textStyle: { fontFamily: 'system-ui, sans-serif' },
         ...option,
       });
       resizeObserver = new ResizeObserver(() => chart?.resize());
