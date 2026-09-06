@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "SSC Wiki",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "SSC Wiki",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.文档": {
+    "message": "Docs",
+    "description": "Navbar item with label 文档"
+  },
+  "item.label.版本与兼容性": {
+    "message": "Versions and compatibility",
+    "description": "Navbar item with label 版本与兼容性"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

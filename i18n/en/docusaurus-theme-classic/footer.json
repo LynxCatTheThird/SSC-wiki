@@ -1,0 +1,26 @@
+{
+  "link.title.项目来源": {
+    "message": "项目来源",
+    "description": "The title of the footer links column with title=项目来源 in the footer"
+  },
+  "link.title.反馈": {
+    "message": "反馈",
+    "description": "The title of the footer links column with title=反馈 in the footer"
+  },
+  "link.item.label.SSC GitHub": {
+    "message": "SSC GitHub",
+    "description": "The label of footer link with label=SSC GitHub linking to https://github.com/onixary/shape-shifter-curse-fabric"
+  },
+  "link.item.label.SSCA GitHub": {
+    "message": "SSCA GitHub",
+    "description": "The label of footer link with label=SSCA GitHub linking to https://github.com/MangZai-120/shape-shifter-curse-addon"
+  },
+  "link.item.label.提交 Issue": {
+    "message": "提交 Issue",
+    "description": "The label of footer link with label=提交 Issue linking to https://github.com/LynxCatTheThird/SSC-wiki/issues"
+  },
+  "copyright": {
+    "message": "SSC Wiki 是社区维护的非官方文档。",
+    "description": "The footer copyright"
+  }
+}

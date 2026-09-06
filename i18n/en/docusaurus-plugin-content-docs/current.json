@@ -1,0 +1,90 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.入门": {
+    "message": "Getting started",
+    "description": "The label for category '入门' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.核心玩法": {
+    "message": "Core gameplay",
+    "description": "The label for category '核心玩法' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SSC 形态": {
+    "message": "SSC forms",
+    "description": "The label for category 'SSC 形态' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SSCA 扩展": {
+    "message": "SSCA addon",
+    "description": "The label for category 'SSCA 扩展' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.进化路线": {
+    "message": "Evolution routes",
+    "description": "The label for category '进化路线' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.使魔狐": {
+    "message": "Familiar Fox",
+    "description": "The label for category '使魔狐' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.美西螈": {
+    "message": "Axolotl",
+    "description": "The label for category '美西螈' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.SSC 终局分支": {
+    "message": "SSC endgame branches",
+    "description": "The label for category 'SSC 终局分支' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.雪狐": {
+    "message": "Snow Fox",
+    "description": "The label for category '雪狐' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.阿努比斯之狼": {
+    "message": "Anubis Wolf",
+    "description": "The label for category '阿努比斯之狼' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.蝙蝠": {
+    "message": "Bat",
+    "description": "The label for category '蝙蝠' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.豹猫": {
+    "message": "Ocelot",
+    "description": "The label for category '豹猫' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.蜘蛛": {
+    "message": "Spider",
+    "description": "The label for category '蜘蛛' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.特殊形态分支": {
+    "message": "Special form branches",
+    "description": "The label for category '特殊形态分支' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.悦灵": {
+    "message": "Allay",
+    "description": "The label for category '悦灵' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.野猫": {
+    "message": "Feral Cat",
+    "description": "The label for category '野猫' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.系统与操作": {
+    "message": "Systems and controls",
+    "description": "The label for category '系统与操作' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.物品与装备": {
+    "message": "Items and equipment",
+    "description": "The label for category '物品与装备' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.服主手册": {
+    "message": "Server admin guide",
+    "description": "The label for category '服主手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.开发者": {
+    "message": "Developer",
+    "description": "The label for category '开发者' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.参考": {
+    "message": "Reference",
+    "description": "The label for category '参考' in sidebar 'tutorialSidebar'"
+  }
+}
