@@ -75,6 +75,7 @@ const config: Config = {
       items: [
         {type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档'},
         {to: '/reference/versions', label: '版本与兼容性', position: 'left'},
+        {type: 'localeDropdown', position: 'right'},
         {href: 'https://github.com/LynxCatTheThird/SSC-wiki', label: 'GitHub', position: 'right'},
       ],
     },
