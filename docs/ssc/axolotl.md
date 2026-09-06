@@ -10,17 +10,17 @@ status: partial
 ---
 
 # 美西螈形态
----
+***
 ## 形态概述
 
 美西螈形态在水中非常灵活，同时有着较高的生命上限与较强的再生能力，但需要时刻保持湿润。[^source]
 
 ## 行为
----
+***
 ### 盔甲槽
 
 | 阶段 | 头盔 | 胸甲 | 护腿 | 靴子 |
-|-|:-:|:-:|:-:|:-:|
+|-| :-: | :-: | :-: | :-: |
 | 第一阶段 | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
 | 第二阶段 | <span class="cell-false-bg">否</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
 | 第三阶段 | <span class="cell-false-bg">否</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
@@ -55,7 +55,7 @@ $$
 
 注：本表格中速度的单位均为**米/秒**。
 | 运动模式| 第一阶段| 第二阶段 | 第三阶段 | 永久阶段 |
-|:-:|:-:|:-:|:-:|:-:|
+| :-: | :-: | :-: | :-: | :-: |
 | 步行 | | | 4.317 | |
 | 步行（湿润度耗尽） | - | - | 2.159 | |
 | 疾跑[^1] | | | 5.612 | |
@@ -158,7 +158,7 @@ $$
 !!!
 
 ## 数据值
----
+***
 ### ID
 
 !!! warning 本条目缺少数据
