@@ -16,8 +16,8 @@ SSC 的内置形态分为常规阶段形态、特殊形态和子形态。下面�
 | [雪狐](snow-fox) | `snow_fox_0`–`snow_fox_3` | 多段跳、落地攻击、雪球和温度环境 |
 | [阿努比斯之狼](anubis-wolf) | `anubis_wolf_0`–`anubis_wolf_3` | 凋零、亡灵、召唤狼和不死能力 |
 | [蜘蛛](spider) | `spider_0`–`spider_3` | 蛛丝、茧、攀爬和蛛网桥 |
-| [悦灵特殊形态](special-forms# 悦灵) | `allay_sp` | 飞行、远程支援与音乐互动；可用普通抑制剂回到原始变形者 |
-| [野猫特殊形态](special-forms# 野猫) | `feral_cat_sp` | 四足潜行猎手；可用普通抑制剂回到原始变形者 |
+| [悦灵特殊形态](special-forms#悦灵) | `allay_sp` | 飞行、远程支援与音乐互动；可用普通抑制剂回到原始变形者 |
+| [野猫特殊形态](special-forms#野猫) | `feral_cat_sp` | 四足潜行猎手；可用普通抑制剂回到原始变形者 |
 
 各行链接进入完整形态页。阶段变化和最终形态的通用规则集中在 [形态与阶段](../gameplay/forms-and-stages)，催化剂与抑制剂的效果集中在 [关键物品](../gameplay/key-items)。
 

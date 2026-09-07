@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢你帮助完善 SSC Wiki。项目使用 Docusaurus、TypeScript 和 pnpm；请不要使用 npm 或 Yarn 修改依赖，以免生成相互冲突的锁文件。
+感谢您帮助完善 SSC Wiki。项目使用 Docusaurus、TypeScript 和 pnpm；为了减少锁文件冲突，建议使用 pnpm，而不是 npm、cnpm 或者 Yarn 修改依赖。
 
 ## 开发环境
 
@@ -33,7 +33,7 @@ pnpm check          # 依次检查格式和 lint
 pnpm build          # 执行完整生产构建
 ```
 
-提交前至少运行 `pnpm check && pnpm build`。CI 会使用冻结的 `pnpm-lock.yaml` 重复执行这些检查。
+提交前如果方便，建议运行 `pnpm check && pnpm build`。CI 会使用冻结的 `pnpm-lock.yaml` 重复执行这些检查。
 
 ## VS Code、pnpm 与格式化冲突
 
@@ -56,7 +56,7 @@ pnpm build          # 执行完整生产构建
 - 中文与英文、数字或代码标识符相邻时保留一个空格，例如“使用 React 组件”“需要 2 个参数”。行内代码、链接 URL 和 frontmatter 键值按语法书写，不为追求留白破坏语法。
 - `pnpm pangu` 使用 pangu.js 处理 Markdown，并跳过围栏代码块；Docusaurus `:::` 容器仍保持原有结构。自动处理后请人工检查命令、URL、frontmatter 和表格。
 - Prettier 的 `proseWrap: never` 不会为了列宽强制拆分 Markdown 段落；手动换行应只用于列表、表格或确有语义的分段。
-- `pnpm lint` 会自动修复 ESLint 可修复的问题；需要只读检查时运行 `pnpm lint:check`。提交前运行 `pnpm check`。
+- `pnpm lint` 会自动修复 ESLint 可修复的问题；需要只读检查时运行 `pnpm lint:check`。提交前可以运行 `pnpm check`。
 
 当前 TypeScript 为 7.0，typescript-eslint 尚未支持该版本，因此 ESLint 暂不解析 TS/TSX；这些文件仍由 Prettier 格式化。待 typescript-eslint 支持 TS 7 或项目升级到受支持的 TypeScript 版本后，再将 TS/TSX 纳入 ESLint。
 
@@ -69,9 +69,9 @@ pnpm build          # 执行完整生产构建
 
 ## 提交与 Pull Request
 
-- 每个提交聚焦一个主题，避免混入无关改动。
-- PR 描述应说明变更内容、验证过的版本以及资料来源；视觉改动请附截图。
-- 依赖变更必须同时提交 `package.json` 和 `pnpm-lock.yaml`。
-- 不要提交 `node_modules/`、`build/`、`.docusaurus/` 或个人编辑器设置。
+- 如果可以，尽量让每个提交聚焦一个主题，减少无关改动。
+- PR 描述最好说明变更内容、验证过的版本以及资料来源；视觉改动可以附截图。
+- 修改依赖时请记得同时提交 `package.json` 和 `pnpm-lock.yaml`。
+- `node_modules/`、`build/`、`.docusaurus/` 和个人编辑器设置通常不需要提交。
 
 发现错误时，请在 Issue 中提供页面链接、版本组合、预期行为、实际行为，以及必要的日志或截图。

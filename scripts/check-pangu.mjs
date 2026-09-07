@@ -14,14 +14,20 @@ async function walk(directory) {
   }
 }
 
+function spaceMarkdown(source) {
+  // Keep frontmatter, fenced code, inline code, and link destinations byte-for-byte.
+  const protectedPattern = /(^---\n[\s\S]*?\n---\n|```[\s\S]*?```|`[^`\n]+`|\]\([^\n)]*\))/gm;
+  return source
+    .split(protectedPattern)
+    .map((part, index) => (index % 2 ? part : pangu.spacingText(part)))
+    .join('');
+}
+
 for (const root of roots) await walk(root);
 let invalid = false;
 for (const file of files) {
   const source = await fs.readFile(file, 'utf8');
-  const corrected = source
-    .split(/(```[\s\S]*?```)/g)
-    .map((part, index) => (index % 2 ? part : pangu.spacingText(part)))
-    .join('');
+  const corrected = spaceMarkdown(source);
   if (corrected !== source) {
     invalid = true;
     console.error(`CJK/Latin spacing: ${file}`);
