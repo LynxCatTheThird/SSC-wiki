@@ -96,3 +96,13 @@
   margin-left: 0.35rem;
   text-decoration: none;
 }
+
+.cell-true-bg {
+  background-color: #C6EFCE;
+  color: #136713;
+}
+
+.cell-false-bg {
+  background-color: #FFC7CE;
+  color: #8C1206;
+}
