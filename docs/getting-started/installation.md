@@ -23,7 +23,7 @@ SSCA 依赖 SSC。两个模组的版本必须匹配；SSCA README 明确提醒 b
 
 SSC 1.10.0 的 `fabric.mod.json` 声明：
 
-| 依赖                   | 最低版本/范围         | 类型 |
+| 依赖                   | 最低版本 / 范围       | 类型 |
 | ---------------------- | --------------------- | ---- |
 | Fabric Loader          | `>=0.12.3`            | 必需 |
 | Fabric API             | `>=0.83.0`            | 必需 |
@@ -34,9 +34,11 @@ SSC 1.10.0 的 `fabric.mod.json` 声明：
 | First-person Model     | 任意兼容版            | 推荐 |
 | Trinkets               | `>=3.7.2`             | 推荐 |
 
-:::warning Origins 冲突
-SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包含或改造其所需部分，不要仅凭旧教程额外安装 Origins。`EnchantedLib >0.3.0`、OptiFabric、Identity `<1.14.2-beta` 和 GeckoLib 5 也被列入冲突范围。
+<!-- prettier-ignore-start -->
+:::warning
+Origins 冲突 SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包含或改造其所需部分，不要仅凭旧教程额外安装 Origins。`EnchantedLib >0.3.0`、OptiFabric、Identity `<1.14.2-beta` 和 GeckoLib 5 也被列入冲突范围。
 :::
+<!-- prettier-ignore-end -->
 
 ## SSCA 必需依赖
 
@@ -51,9 +53,11 @@ SSCA 8.0.0-beta.3 声明需要 Fabric Loader `>=0.14.21`、Fabric API `>=0.83.0`
 5. 启动游戏，确认没有依赖缺失或版本冲突。
 6. 进入世界后打开 SSC 的书籍或按照游戏内提示继续。
 
-:::tip 下载文件
-下载发行版 `.jar`，不要把 GitHub 源代码压缩包放进 `mods` 文件夹。SSC 和 SSCA 都是免费项目，谨防要求付费下载的第三方渠道。
+<!-- prettier-ignore-start -->
+:::tip
+下载文件下载发行版 `.jar`，不要把 GitHub 源代码压缩包放进 `mods` 文件夹。SSC 和 SSCA 都是免费项目，谨防要求付费下载的第三方渠道。
 :::
+<!-- prettier-ignore-end -->
 
 ## 粒子显示
 
@@ -61,6 +65,6 @@ SSCA README 提醒：请在游戏设置中启用粒子显示，否则部分技�
 
 ## 关于 1.21.1
 
-存在非官方的 1.21.1 社区移植，但成熟度和兼容性不能与本页的 1.20.1 基线等同。本站只在[版本与兼容性](../reference/versions)中简要记录，不为其建立完整玩法文档。
+存在非官方的 1.21.1 社区移植，但成熟度和兼容性不能与本页的 1.20.1 基线等同。本站只在 [版本与兼容性](../reference/versions) 中简要记录，不为其建立完整玩法文档。
 
 [^source]: 版本与依赖来自 SSC、SSCA 的 README、`gradle.properties`、`fabric.mod.json` 和 Modrinth 发布页。表格对应 SSC 1.10.0 与 SSCA 8.0.0-beta.3；其他发行包组合需要分别核对依赖声明。

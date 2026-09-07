@@ -44,6 +44,6 @@ flowchart LR
 
 ## 进入 SSCA 分支
 
-安装 SSCA 后，悦灵和野猫都有两条终局分支。全部目标集中列在[SSCA 形态目录](../ssca/forms-catalog)，进化道具、月相条件和失败后果见[进化系统](../ssca/evolution)。
+安装 SSCA 后，悦灵和野猫都有两条终局分支。全部目标集中列在 [SSCA 形态目录](../ssca/forms-catalog)，进化道具、月相条件和失败后果见 [进化系统](../ssca/evolution)。
 
 [^source]: 获取与恢复规则参考 [SSC 官方 Form Types](https://ssc-wiki.readthedocs.io/en/latest/mod_content/form_types/) 并经 `RegCustomPotions.java`、`RegPlayerForms.java`、`form_allay_sp.json`、`form_feral_cat_sp.json` 与对应 power JSON 核对，commit `c0f0bbb9`。正文为重新归纳的中文说明。

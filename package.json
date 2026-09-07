@@ -8,7 +8,14 @@
     "start": "docusaurus start",
     "build": "docusaurus build && node scripts/minify-build.mjs",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint . --max-warnings 0",
+    "pangu": "node scripts/check-pangu.mjs --write",
+    "pangu:check": "node scripts/check-pangu.mjs",
+    "check": "pnpm format:check && pnpm lint:check && pnpm pangu:check"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -34,6 +41,12 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "pangu": "^9.1.1",
+    "prettier": "^3.9.6",
     "typescript": "~7.0.2"
   },
   "browserslist": {
