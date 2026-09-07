@@ -10,7 +10,7 @@ description: 阿努比斯之狼的 SSCA 终局形态：领域、灵魂能量与�
 
 ## 进入方式
 
-从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚；两条分支的完整路线见[形态目录](../../../forms-catalog)，道具条件与失败后果见[进化系统](../../../evolution)。
+从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚；两条分支的完整路线见 [形态目录](../../../forms-catalog)，道具条件与失败后果见 [进化系统](../../../evolution)。
 
 ## 资源和被动
 
@@ -21,7 +21,7 @@ description: 阿努比斯之狼的 SSCA 终局形态：领域、灵魂能量与�
 | 冥狼击杀           | +10          | 召唤物完成击杀时获得                           |
 | 普通击杀           | +5           | 不在领域中也能积累                             |
 | 自身处于凋零时击杀 | 额外 +10     | 叠加在对应击杀奖励上                           |
-| 灵魂沙/灵魂土      | 持续恢复生命 | 适合把战场固定在下界主题地形                   |
+| 灵魂沙 / 灵魂土    | 持续恢复生命 | 适合把战场固定在下界主题地形                   |
 | 亡灵生物           | 默认中立     | 先攻击后会进入敌对状态，停止攻击约 30 秒后恢复 |
 
 ## 主技能：死亡领域
@@ -51,8 +51,10 @@ flowchart LR
 
 先在安全位置用普通攻击和领域内击杀把能量推到 100，再释放强化领域。领域的 15% 最大生命值削减适合对付高生命目标；面对会迅速离开区域的敌人，先用冥狼和凋零减速建立控制，再开始蓄力。
 
-:::note 版本口径
-上述范围、时间、数量和能量数值来自 SSCA Java 常量。饰品可以改变冥狼属性和数量，不能据此推断所有整合包中结果完全一致。
+<!-- prettier-ignore-start -->
+:::note
+版本口径上述范围、时间、数量和能量数值来自 SSCA Java 常量。饰品可以改变冥狼属性和数量，不能据此推断所有整合包中结果完全一致。
 :::
+<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `e42a62aa`。

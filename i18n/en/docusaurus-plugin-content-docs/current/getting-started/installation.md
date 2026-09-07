@@ -7,13 +7,13 @@ sidebar_position: 1
 
 This guide targets Minecraft 1.20.1 on Fabric with SSC and SSCA.
 
-| Component | Baseline |
-| --- | --- |
-| Minecraft | 1.20.1 |
-| Loader | Fabric Loader |
-| SSC | 1.10.0 |
-| SSCA | 8.0.0-beta.3 |
-| Java | 17 or newer |
+| Component | Baseline      |
+| --------- | ------------- |
+| Minecraft | 1.20.1        |
+| Loader    | Fabric Loader |
+| SSC       | 1.10.0        |
+| SSCA      | 8.0.0-beta.3  |
+| Java      | 17 or newer   |
 
 SSCA depends on SSC. Match the two versions exactly; beta builds may target an SSC test build.
 

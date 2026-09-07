@@ -12,7 +12,7 @@ sidebar_position: 1
 默认公共配置 `curseMoonPhase = [1, 5]`。SSC 读取主世界月相：月相编号必须是 1 或 5，同时主世界时间必须已经过中午、尚未到午夜，才会进入诅咒之月。判定只看主世界，玩家所在维度不影响结果：
 
 $$
-12000 < (\operatorname{timeOfDay}\bmod 24000) < 23000
+12000 < (\operatorname {timeOfDay}\bmod 24000) < 23000
 $$
 
 也就是说，`12000` tick（游戏内 18:00）和 `23000` tick（23:00）本身都不算诅咒之月；状态在服务端计算后同步给在线玩家。
@@ -31,7 +31,7 @@ $$
 月相不再满足条件或夜晚结束时：
 
 - 如果玩家在月夜中通过治愈改变了形态，SSC 保留对应的治愈结果并触发相关进度；
-- 否则，SSC按当前形态的 `CursedMoon` 前一形态规则启动恢复；
+- 否则，SSC 按当前形态的 `CursedMoon` 前一形态规则启动恢复；
 - 随后清空本次月夜的临时记录。
 
 这解释了为什么诅咒之月带来的变化通常不是永久升级：正常结束时会沿月夜规则退回。但特殊形态、最终形态、治愈和其他变身原因可能改变结果。
@@ -44,8 +44,10 @@ $$
 
 SSC 提供 `shape_shifter_curse jump_to_next_cursed_moon` 管理命令，用于跳到下一次诅咒之月。该命令需要权限等级 2。
 
+<!-- prettier-ignore-start -->
 :::note
 命令名称和权限来自当前 SSC 源码；触发后的具体结果仍取决于玩家形态、公共配置和世界状态。
 :::
+<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。

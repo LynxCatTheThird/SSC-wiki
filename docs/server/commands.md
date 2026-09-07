@@ -8,7 +8,7 @@ description: SSC 与 SSCA 1.20.1 当前命令、参数和权限
 
 本页从当前 Brigadier 命令树整理。尖括号表示必填参数，方括号表示可选参数；实际输入时不要包含括号。输入命令的一部分后按 `Tab`，游戏会补全可用玩家名、形态 ID 或固定选项。[^source]
 
-Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令可用性仍受单机作弊设置、服务器权限插件和配置影响。
+Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命令可用性仍受单机作弊设置、服务器权限插件和配置影响。
 
 ## SSC 形态管理
 
@@ -37,14 +37,14 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 
 ## SSC 世界管理
 
-| 命令                                                        | 权限 | 说明                         |
-| ----------------------------------------------------------- | ---: | ---------------------------- |
-| `jump_to_next_cursed_moon`                                  |    2 | 把主世界推进到下一个诅咒月相 |
-| `world_time set <time>`                                     |    2 | 设置世界时间                 |
-| `world_time add <time>`                                     |    2 | 增加世界时间                 |
-| `adjust_feral_item_loc <rot_center> <pos_offset> <euler_x>` |    2 | 开发用四足形态物品位置调整   |
+| 命令 | 权限 | 说明 |
+| --- | --: | --- |
+| `jump_to_next_cursed_moon` | 2 | 把主世界推进到下一个诅咒月相 |
+| `world_time set <time>` | 2 | 设置世界时间 |
+| `world_time add <time>` | 2 | 增加世界时间 |
+| `adjust_feral_item_loc <rot_center> <pos_offset> <euler_x>` | 2 | 开发用四足形态物品位置调整 |
 
-跳转命令总会寻找“下一次”诅咒月相；如果当前已经是目标月相，会向后跳完整的八个月相周期，而不是停在当天。
+跳转命令总会寻找 “下一次” 诅咒月相；如果当前已经是目标月相，会向后跳完整的八个月相周期，而不是停在当天。
 
 ## SSC 玩家可用命令
 
@@ -90,9 +90,11 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 - `dev_command`；
 - `reupload_auth_file`。
 
-:::danger 调试命令会修改持久数据
-清理命令可能不可逆地删除玩家形态、配色、使魔或 Mana 数据。执行前备份世界。虽然 `debug` 分支本身没有统一的 Brigadier 权限条件，各执行函数还会调用内部 `DebuggerUtils.canExecute`；不要据此假设所有普通玩家都能执行。
+<!-- prettier-ignore-start -->
+:::danger
+调试命令会修改持久数据清理命令可能不可逆地删除玩家形态、配色、使魔或 Mana 数据。执行前备份世界。虽然 `debug` 分支本身没有统一的 Brigadier 权限条件，各执行函数还会调用内部 `DebuggerUtils.canExecute`；不要据此假设所有普通玩家都能执行。
 :::
+<!-- prettier-ignore-end -->
 
 ## SSCA 玩家命令
 
@@ -111,18 +113,18 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 
 ## SSCA 管理命令
 
-| 命令                              | 权限 | 说明                                                                 |
-| --------------------------------- | ---: | -------------------------------------------------------------------- |
-| `set_mana <targets> <amount>`     |    2 | 设置目标当前拥有的 SSCA 主资源；最小值 0，超过上限时按该资源上限写入 |
-| `mark_owner <targets>`            |    2 | 为实体标记所有者                                                     |
-| `get_book <book_id> [language]`   |    2 | 获取指定故事书；语言为 `zh_cn` 或 `en_us`                            |
-| `list_books [language]`           |    2 | 列出故事书 ID；语言为 `zh_cn` 或 `en_us`                             |
-| `reload_books`                    |    2 | 重载故事书数据                                                       |
-| `reload`                          |    2 | 重载 SSCA 配置                                                       |
-| `skill <form> <skill> [player]`   |    2 | 强制调用技能                                                         |
-| `block <player> <form> <skill>`   |    2 | 屏蔽指定玩家的技能                                                   |
-| `unblock <player> <form> <skill>` |    2 | 解除技能屏蔽                                                         |
-| `list_blocks <player>`            |    2 | 查看玩家被屏蔽的技能                                                 |
+| 命令 | 权限 | 说明 |
+| --- | --: | --- |
+| `set_mana <targets> <amount>` | 2 | 设置目标当前拥有的 SSCA 主资源；最小值 0，超过上限时按该资源上限写入 |
+| `mark_owner <targets>` | 2 | 为实体标记所有者 |
+| `get_book <book_id> [language]` | 2 | 获取指定故事书；语言为 `zh_cn` 或 `en_us` |
+| `list_books [language]` | 2 | 列出故事书 ID；语言为 `zh_cn` 或 `en_us` |
+| `reload_books` | 2 | 重载故事书数据 |
+| `reload` | 2 | 重载 SSCA 配置 |
+| `skill <form> <skill> [player]` | 2 | 强制调用技能 |
+| `block <player> <form> <skill>` | 2 | 屏蔽指定玩家的技能 |
+| `unblock <player> <form> <skill>` | 2 | 解除技能屏蔽 |
+| `list_blocks <player>` | 2 | 查看玩家被屏蔽的技能 |
 
 `skill` 当前自动补全的形态关键词包括 `snow_fox`、`anubis_wolf`、`allay`、`axolotl`、`wild_cat`、`familiar_fox` 和 `familiar_fox_red`。这份固定列表未必覆盖所有新增 SP 形态。
 
@@ -132,15 +134,15 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 
 `skill` 立即调用一次技能，`block` 持续禁止指定技能，`unblock` 解除禁止。屏蔽状态保存在玩家命令标签里，重新登录后仍然存在；`list_blocks` 可查看当前记录。
 
-| 形态关键词         | 可用技能关键词                                                                          | 玩家能观察到的作用                                 |
-| ------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| `snow_fox`         | `melee_primary`、`melee_secondary`、`ranged_primary`、`ranged_secondary`、`frost_regen` | 四个战斗技能与霜寒恢复                             |
-| `anubis_wolf`      | `summon_wolves`、`death_domain`、`soul_sand_heal`、`wither_hunt`、`soul_scrutiny`       | 冥狼召唤、死亡领域、灵魂沙恢复、凋零追猎与灵魂审视 |
-| `allay`            | `jukebox_charge`、`group_heal`、`mana_regen`                                            | 唱片机充能、群体治疗与 Mana 恢复                   |
-| `axolotl`          | `natural_regen_boost`、`rain_wetness`                                                   | 自然恢复强化与雨水湿润                             |
-| `wild_cat`         | `night_speed`、`day_slow`                                                               | 夜间加速与白天减速                                 |
-| `familiar_fox`     | `mana_regen`                                                                            | SP 使魔 Mana 恢复                                  |
-| `familiar_fox_red` | `red_mana_regen`                                                                        | 红使魔 Mana 恢复                                   |
+| 形态关键词 | 可用技能关键词 | 玩家能观察到的作用 |
+| --- | --- | --- |
+| `snow_fox` | `melee_primary`、`melee_secondary`、`ranged_primary`、`ranged_secondary`、`frost_regen` | 四个战斗技能与霜寒恢复 |
+| `anubis_wolf` | `summon_wolves`、`death_domain`、`soul_sand_heal`、`wither_hunt`、`soul_scrutiny` | 冥狼召唤、死亡领域、灵魂沙恢复、凋零追猎与灵魂审视 |
+| `allay` | `jukebox_charge`、`group_heal`、`mana_regen` | 唱片机充能、群体治疗与 Mana 恢复 |
+| `axolotl` | `natural_regen_boost`、`rain_wetness` | 自然恢复强化与雨水湿润 |
+| `wild_cat` | `night_speed`、`day_slow` | 夜间加速与白天减速 |
+| `familiar_fox` | `mana_regen` | SP 使魔 Mana 恢复 |
+| `familiar_fox_red` | `red_mana_regen` | 红使魔 Mana 恢复 |
 
 例如，临时禁止 Steve 使用死亡领域：
 
@@ -165,9 +167,11 @@ Minecraft 权限等级 `2` 通常意味着管理员/开启作弊权限。命令�
 
 以上命令均要求权限等级 2。未提供玩家时作用于执行命令的玩家；控制台没有玩家身份，必须在末尾写出玩家名。`resistance set` 会把契灵抗伤层数限制在 0 到该玩家当前上限之间；`mancianima_assault reset` 允许目标今天再次触发敲钟袭击，`lock` 把今天标记为已触发，`status` 显示剩余 tick 与秒数。
 
-:::warning `evolution reset`
-该命令会清空玩家当前路线、进化经验、进化等级、剩余点数、已解锁节点、待确认节点与终局分支。关闭加点界面或重新载入配置不需要执行它。`unlock_all` 只设置全解锁标记，适合测试技能树，不会模拟逐级获得经验的过程。
+<!-- prettier-ignore-start -->
+:::warning
+`evolution reset` 该命令会清空玩家当前路线、进化经验、进化等级、剩余点数、已解锁节点、待确认节点与终局分支。关闭加点界面或重新载入配置不需要执行它。`unlock_all` 只设置全解锁标记，适合测试技能树，不会模拟逐级获得经验的过程。
 :::
+<!-- prettier-ignore-end -->
 
 ## 命令排障
 
