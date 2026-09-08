@@ -35,10 +35,8 @@ description: SSCA 可装备与不可装备饰品的效果和获取方式
 
 美西螈加湿器和雪球发射器属于手持功能道具，不占饰品栏。它们分别服务 SP 美西螈的湿润度管理和 SP 雪狐的远程输出。
 
-<!-- prettier-ignore-start -->
 :::note
 获取提示部分饰品只注册了结构宝箱战利品，部分只注册了工作台配方。具体掉落位置和配方请以 JEI/REI/EMI 在当前整合包中的显示为准。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: [SSCA 官方饰品页面](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/items/trinkets/)、`item/`、饰品注册、配方与战利品表，commit `e42a62aa`。

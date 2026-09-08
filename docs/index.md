@@ -10,11 +10,9 @@ Shape Shifter Curse（SSC）与 Shape Shifter Curse Addon（SSCA）的社区维�
 
 本站支持中文与 English。使用右上角的语言菜单切换，或直接进入 [English documentation](pathname:///en/)。
 
-<!-- prettier-ignore-start -->
 :::warning
 非官方文档本站不代表模组作者的官方立场。版本、行为和数值请以你实际安装的模组文件、发行说明和源代码为准。
 :::
-<!-- prettier-ignore-end -->
 
 ## 从这里开始
 

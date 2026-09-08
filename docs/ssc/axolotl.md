@@ -25,11 +25,9 @@ title: 美西螈形态
 
 ### 生命值
 
-<!-- prettier-ignore-start -->
 :::danger
 本条目缺失
 :::
-<!-- prettier-ignore-end -->
 
 ### 挖掘
 
@@ -51,10 +49,8 @@ $$
 
 ### 移动
 
-<!-- prettier-ignore-start -->
 :::warning 本条目缺少数据
 :::
-<!-- prettier-ignore-end -->
 
 注：本表格中速度的单位均为 ** 米 / 秒 **。
 
@@ -73,10 +69,8 @@ $$
 
 #### 步行
 
-<!-- prettier-ignore-start -->
 :::warning 本条目需要验证：第二、三阶段是仅在指定方块上才会减速还是只要在陆地上就会减速
 :::
-<!-- prettier-ignore-end -->
 
 美西螈形态在第二阶段及后续阶段下在陆地上的步行速度会变慢。
 
@@ -90,7 +84,6 @@ $$
 
 #### 游泳
 
-<!-- prettier-ignore-start -->
 :::warning
 本条目需要验证：游泳速度在第一、二、三阶段是否会有所提升
 :::
@@ -98,7 +91,6 @@ $$
 :::warning
 本条目缺少数据
 :::
-<!-- prettier-ignore-end -->
 
 美西螈形态的所有阶段在水中的游泳速度与速泳速度均快于原版玩家，且在永久阶段下完全进入水中后会自动变为速泳。
 
@@ -121,19 +113,15 @@ $$
 
 ### 湿润度
 
-<!-- prettier-ignore-start -->
 :::warning 本条目需要验证：滞留型药水是否能恢复湿润度
 :::
-<!-- prettier-ignore-end -->
 
 美西螈形态在第三阶段及后续阶段下其氧气值会变为湿润度，上限 300 点。
 
 #### 恢复
 
-<!-- prettier-ignore-start -->
 :::warning 本条目缺少数据
 :::
-<!-- prettier-ignore-end -->
 
 湿润度可以通过 ** 在水中完全浸没、暴露在雨中、饮用水瓶或药水、使用喷溅型药水或滞留型药水、水肺效果 ** 恢复。
 
@@ -154,19 +142,15 @@ $$
 
 #### 踏浪 {# 踏浪}
 
-<!-- prettier-ignore-start -->
 :::danger
 本条目缺失
 :::
-<!-- prettier-ignore-end -->
 
 #### 水流爆破
 
-<!-- prettier-ignore-start -->
 :::danger
 本条目缺失
 :::
-<!-- prettier-ignore-end -->
 
 ## 数据值
 
@@ -174,10 +158,8 @@ $$
 
 ### ID
 
-<!-- prettier-ignore-start -->
 :::warning 本条目缺少数据
 :::
-<!-- prettier-ignore-end -->
 
 | 名称               | 命名空间 ID | 本地化键名 |
 | ------------------ | ----------- | ---------- |

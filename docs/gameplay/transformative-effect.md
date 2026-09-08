@@ -57,10 +57,8 @@ SSC 同一时间只按一个转化效果处理。施加新效果前会清理已�
 - ** 自然到期 **：效果在 400 秒结束时消失，并触发对应进度；
 - ** 取得不兼容形态 **：形态变化后若不再允许持有效果，管理器会清除它。
 
-<!-- prettier-ignore-start -->
 :::warning
 不要把图标当作唯一判断依据服务端使用自定义 `TransformativeStatusInstance` 保存目标信息，客户端看到的是状态效果表现。跨模组修改状态效果、死亡继承或睡眠事件时，应以服务端实际形态结果为准。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `RegTStatusEffect.java`、`EffectManager.java`、`TransformativeStatusInstance.java`、`TransformRelatedItems.java` 与 `CommonConfig.java`，commit `c0f0bbb9`。

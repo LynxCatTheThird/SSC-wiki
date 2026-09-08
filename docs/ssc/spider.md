@@ -44,11 +44,9 @@ sidebar_position: 2
 
 未加工月之尘用 2 个青金石和 2 个紫水晶碎片按 `LA / AL` 排列，产出 4 个；露水蛛网用蛛网、未加工月之尘和丝露无序合成，产出 1 个。蜘蛛击杀目标实体时有 50% 基础概率掉落 1 个丝露，抢夺每级额外增加 10 个百分点。[^items]
 
-<!-- prettier-ignore-start -->
 :::note
 跨模组边界上表数值由能力 JSON 直接执行。蛛丝命中还会调用 Java 侧的缠绕、方块生成与网络同步；若服务器安装了会取消投射物命中或禁止放置方块的保护模组，可能出现命中动画存在、蛛网没有生成的情况。此时管理员应检查保护模组日志和出生点保护范围。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `RegPlayerForms.java`、`origins/form_spider_*.json`、蜘蛛能力 JSON/Java 和 Modrinth 更新说明，commit `c0f0bbb9`。数值来自数据定义；跨模组行为仍可能变化。
 

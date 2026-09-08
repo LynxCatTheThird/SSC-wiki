@@ -1,6 +1,0 @@
-node_modules/
-.docusaurus/
-build/
-.cache/
-pnpm-lock.yaml
-static/img/

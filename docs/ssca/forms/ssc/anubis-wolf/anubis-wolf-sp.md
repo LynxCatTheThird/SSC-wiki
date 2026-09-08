@@ -51,10 +51,8 @@ flowchart LR
 
 先在安全位置用普通攻击和领域内击杀把能量推到 100，再释放强化领域。领域的 15% 最大生命值削减适合对付高生命目标；面对会迅速离开区域的敌人，先用冥狼和凋零减速建立控制，再开始蓄力。
 
-<!-- prettier-ignore-start -->
 :::note
 版本口径上述范围、时间、数量和能量数值来自 SSCA Java 常量。饰品可以改变冥狼属性和数量，不能据此推断所有整合包中结果完全一致。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSCA `AnubisWolfSpDeathDomain.java`、`AnubisWolfSpSummonWolves.java`、`AnubisWolfSpSoulEnergy.java` 与 `form_anubis_wolf_sp.json`，commit `e42a62aa`。

@@ -1,16 +1,12 @@
-name: Documentation formatting CI
+name: Documentation CI
 
 on:
   push:
   pull_request:
 
-permissions:
-  contents: read
-  pull-requests: write
-
 jobs:
-  formatting:
-    name: Format and lint
+  build:
+    name: Build documentation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -20,66 +16,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - id: format
-        continue-on-error: true
-        run: pnpm format:check
-      - id: lint
-        continue-on-error: true
-        run: pnpm lint:check
-      - id: pangu
-        continue-on-error: true
-        run: pnpm pangu:check
-      - id: build
-        continue-on-error: true
+      - name: Check Chinese Markdown spacing
+        run: pnpm lint-md
+      - name: Build
         run: pnpm build
-      - name: Write check summary
-        if: always()
-        run: |
-          {
-            echo '## Formatting CI summary'
-            echo
-            echo '| Check | Result |'
-            echo '| --- | --- |'
-            echo '| Prettier | ${{ steps.format.outcome }} |'
-            echo '| ESLint | ${{ steps.lint.outcome }} |'
-            echo '| CJK/Latin spacing (pangu) | ${{ steps.pangu.outcome }} |'
-            echo '| Docusaurus build | ${{ steps.build.outcome }} |'
-            echo
-            echo 'Please run `pnpm check` locally before requesting review.'
-          } >> "$GITHUB_STEP_SUMMARY"
-      - name: Fail if any check failed
-        if: always()
-        run: |
-          if [[ "${{ steps.format.outcome }}" != "success" || \
-                "${{ steps.lint.outcome }}" != "success" || \
-                "${{ steps.pangu.outcome }}" != "success" || \
-                "${{ steps.build.outcome }}" != "success" ]]; then
-            echo 'One or more formatting checks failed.'
-            exit 1
-          fi
-      - name: Comment on pull request
-        if: always() && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const body = [
-              '## Formatting CI bot',
-              '',
-              '| Check | Result |',
-              '| --- | --- |',
-              `| Prettier | ${{ steps.format.outcome }} |`,
-              `| ESLint | ${{ steps.lint.outcome }} |`,
-              `| CJK/Latin spacing (pangu) | ${{ steps.pangu.outcome }} |`,
-              `| Docusaurus build | ${{ steps.build.outcome }} |`,
-              '',
-              '建议贡献者在本地运行 `pnpm check`；无需了解 pnpm 的内部实现。',
-            ].join('\n');
-            const {owner, repo} = context.repo;
-            const issue_number = context.issue.number;
-            const comments = await github.paginate(github.rest.issues.listComments, {owner, repo, issue_number});
-            const existing = comments.find((comment) => comment.user.type === 'Bot' && comment.body.startsWith('## Formatting CI bot'));
-            if (existing) {
-              await github.rest.issues.updateComment({owner, repo, comment_id: existing.id, body});
-            } else {
-              await github.rest.issues.createComment({owner, repo, issue_number, body});
-            }

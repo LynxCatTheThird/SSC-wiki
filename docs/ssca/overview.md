@@ -32,10 +32,8 @@ SSCA 的历史命名空间仍是 `my_addon`，模组 ID 则是 `ssc_addon`。命
 
 已经沿 SSC 常规路线进入最终形态的玩家，则主要通过月髓十字环或进化石进入 SSCA 终局形态。两件物品的目标不同，使用条件和失败后果也不同，不能互换。
 
-<!-- prettier-ignore-start -->
 :::warning
 Beta 基线本站首发基线是 Minecraft 1.20.1、SSC 1.10.0、SSCA 8.0.0-beta.3。SSCA 本身较成熟，但这个构建仍以 beta 发布；整合包服主应锁定确切文件，不要只写 “最新版”。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSCA `fabric.mod.json`、`SscAddon.java`、`EvolutionRegistry.java` 与资源注册，当前 commit `e42a62aa`；模组元信息另与 [MC 百科条目](https://www.mcmod.cn/class/24327.html) 和官方 Wiki 交叉核对。注册与系统边界已核对；具体技能数值以形态页为准。

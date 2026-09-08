@@ -24,10 +24,8 @@ description: SSCA 的月髓十字环、进化石与灵能宝珠
 
 物品 ID：`ssc_addon:psionic_orb`。只对进化使魔、进化美西螈等独立路线起点生效。长按右键打开转职界面，至少需要 3 个已获得的加点点数；确认后消耗宝珠，等级倒退 3 个里程碑档，并按新路线重新计算点数。它不会把普通终局形态变成另一条路线。
 
-<!-- prettier-ignore-start -->
 :::warning
 版本提示官方 Wiki 的旧页面仍保留部分故事化描述和旧概率。本文只采用当前资源文件、Java 实现与上游 README 能相互印证的规则。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: [SSCA 官方进化用品页面](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/items/evolution_items/)、上游 `EvolutionStoneItem.java`、`SpUpgradeItem.java`、`PsionicOrbItem.java`、配方与战利品表，commit `e42a62aa`。

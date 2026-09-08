@@ -49,11 +49,9 @@ description: SSC 与 SSCA 当前配置文件、默认值和服务端生效范围
 
 `initialFormIds` 只在开启初始形态选择后读取，格式为 `命名空间:形态ID:权重`。普通玩家通常不需要改它；数据包作者才会用到。
 
-<!-- prettier-ignore-start -->
 :::warning
 `enableInitialForm` 默认值源码注释写着 `Default: true`，但字段实际初始化为 `false`。本站以运行代码的字段值为准；这是旧文档或配置界面最容易写错的地方之一。
 :::
-<!-- prettier-ignore-end -->
 
 ### 已废弃 Patron 配置
 
@@ -97,11 +95,9 @@ Instinct、Mana 和物品存储条使用 1–9 九宫格锚点加 X/Y 偏移。�
 | 战利品箱中故事书的语言 | 中文 | 可改成英文，已生成的书不会跟随变化 | `bookLanguage` |
 | 全服停用某项技能 | 空，全部开放 | 填入技能 ID 后，相关形态失去对应能力 | `disabledSkills` |
 
-<!-- prettier-ignore-start -->
 :::danger
 不要使用旧的平衡参数表 SSCA 服务端配置类明确说明：雪狐、悦灵、阿努比斯狼和物品的旧平衡参数从未被代码读取，现已移除。源码中仅有私有旧结构作为说明，实际数值仍在能力 JSON 或 Java 类中。旧 Wiki 若声称可以通过这些配置改变伤害、范围或冷却，应视为过时。
 :::
-<!-- prettier-ignore-end -->
 
 ## SSCA 客户端配置
 

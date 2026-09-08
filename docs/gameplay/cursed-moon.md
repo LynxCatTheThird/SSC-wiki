@@ -44,10 +44,8 @@ $$
 
 SSC 提供 `shape_shifter_curse jump_to_next_cursed_moon` 管理命令，用于跳到下一次诅咒之月。该命令需要权限等级 2。
 
-<!-- prettier-ignore-start -->
 :::note
 命令名称和权限来自当前 SSC 源码；触发后的具体结果仍取决于玩家形态、公共配置和世界状态。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。

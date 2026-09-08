@@ -34,11 +34,9 @@ SSC 1.10.0 的 `fabric.mod.json` 声明：
 | First-person Model     | 任意兼容版            | 推荐 |
 | Trinkets               | `>=3.7.2`             | 推荐 |
 
-<!-- prettier-ignore-start -->
 :::warning
 Origins 冲突 SSC 当前元数据明确将独立的 Origins 模组列为冲突项。SSC 已包含或改造其所需部分，不要仅凭旧教程额外安装 Origins。`EnchantedLib >0.3.0`、OptiFabric、Identity `<1.14.2-beta` 和 GeckoLib 5 也被列入冲突范围。
 :::
-<!-- prettier-ignore-end -->
 
 ## SSCA 必需依赖
 
@@ -53,11 +51,9 @@ SSCA 8.0.0-beta.3 声明需要 Fabric Loader `>=0.14.21`、Fabric API `>=0.83.0`
 5. 启动游戏，确认没有依赖缺失或版本冲突。
 6. 进入世界后打开 SSC 的书籍或按照游戏内提示继续。
 
-<!-- prettier-ignore-start -->
 :::tip
 下载文件下载发行版 `.jar`，不要把 GitHub 源代码压缩包放进 `mods` 文件夹。SSC 和 SSCA 都是免费项目，谨防要求付费下载的第三方渠道。
 :::
-<!-- prettier-ignore-end -->
 
 ## 粒子显示
 

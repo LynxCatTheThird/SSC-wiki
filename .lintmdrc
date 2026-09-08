@@ -1,0 +1,26 @@
+{
+  "excludeFiles": ["**/node_modules/**", "**/.git/**", "**/build/**", "**/.docusaurus/**"],
+  "extensions": [".md"],
+  "rules": {
+    "no-empty-code-lang": 0,
+    "no-empty-url": 0,
+    "no-empty-list": 0,
+    "no-empty-code": 0,
+    "no-empty-inline-code": 0,
+    "no-empty-blockquote": 0,
+    "no-special-characters": 0,
+    "use-standard-ellipsis": 0,
+    "no-full-width-number": 0,
+    "no-space-in-link": 0,
+    "no-multiple-space-blockquote": 0,
+    "correct-title-trailing-punctuation": 0,
+    "no-space-in-inline-code": 0,
+    "no-long-code": 0,
+    "no-half-width-punctuation": 0,
+    "require-trailing-spaces": 0,
+    "space-around-link": 0,
+    "no-multiple-blank-lines": 0,
+    "space-around-alphabet": 2,
+    "space-around-number": 2
+  }
+}

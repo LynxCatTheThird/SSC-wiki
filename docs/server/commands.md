@@ -90,11 +90,9 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 - `dev_command`；
 - `reupload_auth_file`。
 
-<!-- prettier-ignore-start -->
 :::danger
 调试命令会修改持久数据清理命令可能不可逆地删除玩家形态、配色、使魔或 Mana 数据。执行前备份世界。虽然 `debug` 分支本身没有统一的 Brigadier 权限条件，各执行函数还会调用内部 `DebuggerUtils.canExecute`；不要据此假设所有普通玩家都能执行。
 :::
-<!-- prettier-ignore-end -->
 
 ## SSCA 玩家命令
 
@@ -167,11 +165,9 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 以上命令均要求权限等级 2。未提供玩家时作用于执行命令的玩家；控制台没有玩家身份，必须在末尾写出玩家名。`resistance set` 会把契灵抗伤层数限制在 0 到该玩家当前上限之间；`mancianima_assault reset` 允许目标今天再次触发敲钟袭击，`lock` 把今天标记为已触发，`status` 显示剩余 tick 与秒数。
 
-<!-- prettier-ignore-start -->
 :::warning
 `evolution reset` 该命令会清空玩家当前路线、进化经验、进化等级、剩余点数、已解锁节点、待确认节点与终局分支。关闭加点界面或重新载入配置不需要执行它。`unlock_all` 只设置全解锁标记，适合测试技能树，不会模拟逐级获得经验的过程。
 :::
-<!-- prettier-ignore-end -->
 
 ## 命令排障
 

@@ -64,16 +64,12 @@ flowchart TD
 
 默认空白名单会保护所有玩家、已驯服宠物和带主人标记的召唤物。加入第一名玩家或生物后，系统切换为仅保护名单内目标。完整行为和修改方法见 [操作、HUD 与白名单](../../../controls-and-safety)。
 
-<!-- prettier-ignore-start -->
 :::warning
 操作方式两个技能都采用 “按一次开始、再按一次取消”。持续按住不会加快蓄力。建议开启冷却秒数显示，便于区分 Mana 不足、蓄力中和冷却中三种状态。
 :::
-<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore-start -->
 :::note
 数值冲突群疗能力 JSON 底部仍保留 “20 点治疗、30 秒冷却” 的旧描述，英文语言文件也写着 30 秒；实际执行分支使用最大生命值的 75% 和 300 tick（15 秒）。本页采用执行代码，中文语言文件已与它一致。
 :::
-<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSCA `AllaySPGroupHeal.java`、`AllaySPJukebox.java`、`AllaySPPortableBeacon.java`、`form_allay_sp_group_heal.json` 与 `form_allay_sp_purify.json`，commit `e42a62aa`。
