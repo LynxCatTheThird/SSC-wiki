@@ -1,12 +1,5 @@
 ---
 title: 使魔狐
-mod: SSC
-minecraft: 1.20.1
-loader: Fabric
-ssc_version: 1.10.0
-verified_at: 2026-09-03
-source_commit: c0f0bbb9
-status: partial
 ---
 
 # 使魔狐

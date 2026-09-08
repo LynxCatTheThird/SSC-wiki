@@ -1,12 +1,5 @@
 ---
 title: 悦灵与野猫
-mod: SSC
-minecraft: 1.20.1
-loader: Fabric
-ssc_version: 1.10.0
-verified_at: 2026-09-03
-source_commit: c0f0bbb9
-status: verified
 ---
 
 # 悦灵与野猫
