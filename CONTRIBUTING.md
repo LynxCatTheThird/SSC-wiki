@@ -1,10 +1,14 @@
 # 贡献指南
 
-感谢您帮助维护 SSC Wiki。只修改文档内容时，不需要先学习 Docusaurus 或 pnpm 的内部实现；按下面的流程即可完成一次修改。
+感谢您帮助完善 SSC Wiki。项目使用 Docusaurus、TypeScript 和 pnpm；为了减少锁文件冲突，建议使用 pnpm，而不是 npm、cnpm 或者 Yarn 修改依赖。
 
-## 1. 准备环境
+## 开发环境
 
-建议使用 Node.js 22，并使用项目指定的 pnpm 版本。首次设置：
+- 推荐 Node.js 22（与 CI 一致）
+- 推荐 `package.json` 中 `packageManager` 指定的 pnpm 版本
+- 推荐使用 VS Code，并安装工作区推荐的 Prettier 与 ESLint 扩展
+
+首次设置：
 
 ```bash
 corepack enable
@@ -13,94 +17,61 @@ pnpm install --frozen-lockfile
 pnpm start
 ```
 
-`pnpm start` 会启动本地预览。浏览器打开终端显示的地址即可查看页面，通常是 `http://localhost:3000`。
+`corepack install` 会读取 `package.json` 的 `packageManager` 字段并准备正确版本，无需全局安装 pnpm。如果系统没有 Corepack，可按照 pnpm 官方说明安装 Corepack 后再执行以上命令。
 
-仓库提供了 VS Code 工作区设置和扩展推荐。若保存时格式反复变化，请在 **Format Document With…** 中选择 Prettier，并停用其他会同时格式化的扩展。VS Code 找不到依赖时，可以在仓库根目录运行 `corepack install && pnpm install`，然后执行 **Developer: Reload Window**。
-
-## 2. 修改文档
-
-### 找到正确文件
-
-- 中文正文在 `docs/`。
-- 英文翻译在 `i18n/en/docusaurus-plugin-content-docs/current/`。
-- 修改页面标题、路径或事实时，请顺手检查对应的英文页面和站内链接。
-
-### 保持统一格式
-
-- front matter 使用成对的 `---`，通常只保留 `title`、`sidebar_position` 和 `description`。
-- Minecraft、Loader、SSC/SSCA 版本与来源写在正文或参考链接中，不要堆在 front matter 顶部。
-- 中文与英文、数字或代码标识符相邻时，通常保留一个空格，例如“使用 React 组件”“需要 2 个参数”。
-- 不必为了列宽手动拆分 Markdown 段落。
-- `:::` 容器、代码块、行内代码、front matter 和链接目标都有特殊语法，修改后请保留其边界。
-- 事实、数值和兼容性结论应尽量附源码、资源、README 或游戏测试依据；不确定的内容请标明待验证。
-
-### 一次修改的建议步骤
-
-1. 从当前 `main` 创建分支，例如 `docs/update-spider`。
-2. 修改对应的 Markdown、翻译或配置文件。
-3. 用 `git diff` 检查是否混入了无关格式变化、构建产物或错误链接。
-4. 需要时运行 `pnpm format`、`pnpm lint` 和 `pnpm pangu` 自动整理；这些命令会修改文件，运行后请再次查看 diff。
-5. 运行只读检查，确认结果稳定：
-
-   ```bash
-   pnpm check
-   pnpm build
-   ```
-
-6. `pnpm build` 成功后，可以运行 `pnpm serve` 查看生产构建；不要在没有重新 build 时把旧的 `build/` 当成最新结果。
-
-## 3. 常用命令
+常用命令：
 
 ```bash
-pnpm start          # 启动开发预览
-pnpm format         # 自动格式化
-pnpm format:check   # 只检查 Prettier 格式
+pnpm start          # 启动本地开发服务器
+pnpm format         # 用 Prettier 修复格式
+pnpm format:check   # 只检查格式
 pnpm lint           # 自动修复 ESLint 可修复的问题
-pnpm lint:check     # 只检查 ESLint
+pnpm lint:check     # 只检查 ESLint 规则，不修改文件
 pnpm pangu          # 自动补齐 CJK 与 Latin/数字之间的空格
-pnpm pangu:check    # 只检查 CJK/Latin 空格
-pnpm check          # 运行格式、lint 和 pangu 检查
-pnpm build          # 生产构建并压缩产物
-pnpm serve          # 预览最近一次生产构建
+pnpm pangu:check    # 只检查 CJK 与 Latin/数字空格
+pnpm check          # 依次检查格式和 lint
+pnpm build          # 执行完整生产构建
 ```
 
-## 4. 容易遇到的问题
+提交前如果方便，建议运行 `pnpm check && pnpm build`。CI 会使用冻结的 `pnpm-lock.yaml` 重复执行这些检查。
 
-- **只改了中文页面。** 如果英文翻译暂时没有同步，请在 Pull Request 中说明；不要悄悄留下相反或过期的英文描述。
-- **格式化器改坏 `:::` 容器。** 参考已有页面，在容器前后保留成对的 `prettier-ignore-start/end` 标记。注意标记的范围，不要太大或太小。
-- **pangu 改坏键名、命令或链接。** 工具会保护代码、front matter 和链接目标，但运行后仍请检查中文标题锚点、URL、表格和命令，以确保万无一失。
-- **标题改了，旧链接失效。** 修改中文标题后搜索旧的 `#锚点` 引用，生产构建发现坏链接时会失败。请注意不要遗漏 `#`。
-- **只运行了开发服务器。** `pnpm start` 能显示页面，但导航、翻译路径和 broken link 仍可能要到 `pnpm build` 才会暴露。也就是说，即使 `pnpm start` 正常，实际部署仍有可能出问题。
-- **提交了生成文件。** `node_modules/`、`build/` 和 `.docusaurus/` 不需要提交。
-- **混用包管理器。** 依赖变更建议使用 `pnpm add`，并同时提交 `package.json` 与 `pnpm-lock.yaml`；不要额外生成 npm 或 Yarn 锁文件。
+## VS Code、pnpm 与格式化冲突
 
-## 5. 提交与 Pull Request
+仓库已提交 `.vscode/settings.json`，将 Prettier 设为默认格式化器、启用保存时格式化，并让 VS Code 使用仓库内的 TypeScript。接受推荐扩展后通常不需要额外设置。
 
-建议提交前运行：
+如果保存后代码反复变化或出现“多个格式化器”提示：
 
-```bash
-pnpm check && pnpm build
-```
+1. 对当前工作区选择 **Format Document With… → Configure Default Formatter → Prettier**。
+2. 禁用会同时格式化同一文件的扩展（例如 Biome、其他 Prettier 分支或内置 TypeScript 格式化器）；ESLint 负责代码质量，不负责与 Prettier 重复排版。
+3. 检查用户级 `editor.defaultFormatter`、`editor.codeActionsOnSave` 和语言专属设置，工作区配置应拥有最终优先级。
+4. 不要把 pnpm 配置成 npm：运行脚本用 `pnpm <script>`，添加依赖用 `pnpm add`，只提交 `pnpm-lock.yaml`。
+5. 如果 VS Code 找不到依赖，先在仓库根目录运行 `corepack install && pnpm install`，再执行 **Developer: Reload Window**。
 
-1. Pull Request 描述可以简要写明：改了什么、依据哪个版本或来源、是否同步了英文页面。页面或样式有明显变化时，可以附截图。
-2. 文档修改确实可能包含很多文件，也可能需要多次往返核对。建议按**逻辑主题**拆分提交，例如“更新事实内容”“同步英文翻译”“修复格式化问题”“更新工具配置”，而不是按每次保存或每个文件拆分。这样既方便审阅，也方便日后回退。
-3. 同一个 Pull Request 可以包含多个相关提交，不必为了“一个 Pull Request 只能一个 commit”而强行合并。无关的临时调试、批量格式化和内容修改最好分开。
-4. 依赖变更请同时提交 `package.json` 和 `pnpm-lock.yaml`。不需要提交 `node_modules/`、`build/`、`.docusaurus/` 或个人的编辑器设置。
+命令行的 `pnpm format` 是最终格式基准；编辑器结果与其不一致时，以命令行结果为准。
 
-核心维护者们请注意不要对贡献者过度要求 Pull Request 的格式，贡献者也不必过度紧张。但是，请贡献者务必勾选 `Allow edits and access to secrets by maintainers`。
+## 格式要求速查
 
-### 建议的 Git 协作方式
+- 缩进 2 个空格，使用 LF 换行，文件末尾保留换行。
+- JavaScript、TypeScript、JSX/TSX、JSON、YAML 和 Markdown 使用 Prettier；`pnpm format:check` 会检查配置文件与英文 i18n 文档。
+- 中文与英文、数字或代码标识符相邻时保留一个空格，例如“使用 React 组件”“需要 2 个参数”。行内代码、链接 URL 和 frontmatter 键值按语法书写，不为追求留白破坏语法。
+- `pnpm pangu` 使用 pangu.js 处理 Markdown，并跳过围栏代码块；Docusaurus `:::` 容器仍保持原有结构。自动处理后请人工检查命令、URL、frontmatter 和表格。
+- Prettier 的 `proseWrap: never` 不会为了列宽强制拆分 Markdown 段落；手动换行应只用于列表、表格或确有语义的分段。
+- `pnpm lint` 会自动修复 ESLint 可修复的问题；需要只读检查时运行 `pnpm lint:check`。提交前可以运行 `pnpm check`。
 
-为了让项目历史容易阅读和回退，`main` 分支原则上保持线性：
+当前 TypeScript 为 7.0，typescript-eslint 尚未支持该版本，因此 ESLint 暂不解析 TS/TSX；这些文件仍由 Prettier 格式化。待 typescript-eslint 支持 TS 7 或项目升级到受支持的 TypeScript 版本后，再将 TS/TSX 纳入 ESLint。
 
-- `main` 是保护分支，日常修改通过 Pull Request 合并。
-- 由于文档项目的特性，大多数都维护者对计算机欠熟悉，merge 会导致合并 Pull Request 时产生分支，造成不良的 graph 结构。所以，核心维护者们在合并 Pull Request 时，建议优先使用 **Squash and merge**，避免 merge 产生额外的分叉节点。
-- 贡献者可以在自己的分支保留多个逻辑清晰的 commit，合并到 `main` 时再由维护者 squash 成一个主题明确的提交。所以，对 Git 操作欠熟悉的贡献者也不必紧张。
-- 核心维护者也建议通过 Pull Request，尤其是文档事实、导航、依赖、格式化工具和 CI 的改动，尤其是大面积格式化、文档结构重组织等产生巨量 commit 和 diff 的任务。这样可以保留 CI 结果、审阅记录和 bot 提示。
-- 线上构建故障等紧急情况可以直接修复，但最好在后续 Issue 或 Pull Request 中补充原因和检查结果。
+## 文档要求
 
-这里的重点是让 `main` 易于理解，便于新贡献者的加入。一个文档任务包含多个逻辑 commit 是正常的；不建议按每次保存或每个文件拆分，也不必为了追求单一 commit 而丢失有用的修改过程。
+1. 确认页面适用的 Minecraft 版本、Loader 类型与版本、SSC/SSCA 版本，并在 frontmatter 中填写验证日期、来源 commit 和状态。
+2. 涉及技能数值、命令、配置、配方、依赖或兼容性时，优先引用目标版本源码、资源或游戏测试结果。旧版 Wiki、介绍或玩家经验不能单独作为最新行为的依据。
+3. 中文正文放在 `docs/`；对应英文翻译放在 `i18n/en/docusaurus-plugin-content-docs/current/`。修改两种语言共有的事实时，请检查是否需要同步更新翻译。
+4. 保持站内链接、标题层级和 frontmatter 有效。生产构建会把损坏的链接视为错误。
 
-## 6. 报告问题
+## 提交与 Pull Request
 
-Issue 中如果能提供页面链接、Minecraft/Loader/模组版本、预期行为、实际行为，以及必要的日志或截图，维护者会更容易复现和修正问题。
+- 如果可以，尽量让每个提交聚焦一个主题，减少无关改动。
+- PR 描述最好说明变更内容、验证过的版本以及资料来源；视觉改动可以附截图。
+- 修改依赖时请记得同时提交 `package.json` 和 `pnpm-lock.yaml`。
+- `node_modules/`、`build/`、`.docusaurus/` 和个人编辑器设置通常不需要提交。
+
+发现错误时，请在 Issue 中提供页面链接、版本组合、预期行为、实际行为，以及必要的日志或截图。

@@ -1,6 +1,6 @@
 # SSC Wiki
 
-SSC 与 SSCA 的非官方中文文档。
+SSC 与 SSCA 的[非官方中文Wiki](https://ssc-wiki.pages.dev/)。
 
 ```bash
 pnpm install
