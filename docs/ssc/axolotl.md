@@ -23,12 +23,12 @@ status: partial
 
 ### 盔甲槽
 
-| 阶段 | 头盔 | 胸甲 | 护腿 | 靴子 |
-|-| :-: | :-: | :-: | :-: |
-| 第一阶段 | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
-| 第二阶段 | <span class="cell-false-bg">否</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
-| 第三阶段 | <span class="cell-false-bg">否</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
-| 永久阶段 | <span class="cell-false-bg">否</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> | <span class="cell-true-bg">是</span> |
+| 阶段     | 头盔 | 胸甲 | 护腿 | 靴子 |
+| -------- | :--: | :--: | :--: | :--: |
+| 第一阶段 | 是   | 是   | 是   | 是   |
+| 第二阶段 | 否   | 是   | 是   | 是   |
+| 第三阶段 | 否   | 是   | 是   | 是   |
+| 永久阶段 | 否   | 是   | 是   | 是   |
 
 ### 生命值
 
@@ -56,8 +56,9 @@ $$
 
 ### 移动
 
-!!! warning 本条目缺少数据
-!!!
+:::warning
+**本条目缺少数据**
+:::
 
 注：本表格中速度的单位均为**米/秒**。
 | 运动模式| 第一阶段| 第二阶段 | 第三阶段 | 永久阶段 |
@@ -79,9 +80,11 @@ $$
 
 #### 步行
 
-!!! warning 本条目需要验证：
+:::warning 
+**本条目需要验证：**
+
 第二、三阶段的具体减速情况。
-!!!
+:::
 
 美西螈形态在第二阶段在陆地上的步行速度会变慢。
 
@@ -95,11 +98,14 @@ $$
 
 #### 游泳
 
-!!! warning 本条目需要验证：
+:::warning 
+**本条目需要验证：**
+
 游泳速度与速泳速度在第一、二、三阶段的具体提升情况。
-!!!
-!!! warning 本条目缺少数据
-!!!
+:::
+:::warning
+**本条目缺少数据**
+:::
 
 美西螈形态的所有阶段在水中的游泳速度均快于原版玩家，且在永久阶段下完全进入水中后会自动变为速泳。
 
@@ -145,20 +151,23 @@ $$
 
 #### 踏浪 {#踏浪}
 
-!!! danger 本条目当前缺失
-!!!
+:::danger
+**本条目当前缺失**
+:::
 
 #### 水流爆破
 
-!!! danger 本条目当前缺失
-!!!
+:::danger
+**本条目当前缺失**
+:::
 
 ## 数据值
 ---
 ### ID
 
-!!! warning 本条目缺少数据
-!!!
+:::warning
+**本条目缺少数据**
+:::
 
 | 名称 | 命名空间 ID | 本地化键名 |
 | - | - | - |
@@ -169,8 +178,9 @@ $$
 
 ## 历史
 
-!!! warning 本条目缺少数据
-!!!
+:::warning
+**本条目缺少数据**
+:::
 
 | 版本 | 内容 |
 | - | - |
@@ -182,8 +192,9 @@ $$
 
 ## 画廊
 
-!!! warning 本条目当前缺失
-!!!
+:::danger
+**本条目当前缺失**
+:::
 
 ## 附录
 
