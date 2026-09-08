@@ -18,7 +18,13 @@ async function walk(directory) {
     }
 
     const extension = path.extname(entry.name).toLowerCase();
-    const source = await fs.readFile(file, 'utf8');
+    let source;
+    try {
+      source = await fs.readFile(file, 'utf8');
+    } catch (error) {
+      if (error?.code === 'ENOENT') continue;
+      throw error;
+    }
     let output;
     if (extension === '.html') {
       output = await minifyHtml(source, {
@@ -46,7 +52,11 @@ async function walk(directory) {
     }
 
     if (output !== undefined && output !== source) {
-      await fs.writeFile(file, `${output}\n`);
+      try {
+        await fs.writeFile(file, `${output}\n`);
+      } catch (error) {
+        if (error?.code !== 'ENOENT') throw error;
+      }
     }
   }
 }

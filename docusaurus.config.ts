@@ -2,6 +2,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkBooleanTableCells from './src/remark/booleanTableCells';
 import LocalSearch from '@easyops-cn/docusaurus-search-local';
 
 const config: Config = {
@@ -37,7 +38,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
           editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/',
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [remarkMath, remarkBooleanTableCells],
           rehypePlugins: [rehypeKatex],
         },
         blog: false,
