@@ -97,24 +97,12 @@
   text-decoration: none;
 }
 
-.markdown table td.boolean-cell {
-  background-color: #c6efce;
+.cell-true-bg {
+  background-color: #C6EFCE;
   color: #136713;
-  font-weight: 600;
-  text-align: center;
 }
 
-.markdown table td.boolean-cell-no {
-  background-color: #ffc7ce;
-  color: #8c1206;
-}
-
-[data-theme='dark'] .markdown table td.boolean-cell-yes {
-  background-color: #245b36;
-  color: #d8f5df;
-}
-
-[data-theme='dark'] .markdown table td.boolean-cell-no {
-  background-color: #73323a;
-  color: #ffe1e4;
+.cell-false-bg {
+  background-color: #FFC7CE;
+  color: #8C1206;
 }
