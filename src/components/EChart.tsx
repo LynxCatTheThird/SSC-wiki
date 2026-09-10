@@ -1,23 +1,43 @@
 import React, { useEffect, useRef } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import type { EChartsOption } from 'echarts';
+import * as echarts from 'echarts/core';
+import { BarChart, LineChart } from 'echarts/charts';
+import {
+  AxisPointerComponent,
+  GridComponent,
+  LegendComponent,
+  TitleComponent,
+  TooltipComponent,
+} from 'echarts/components';
+import { SVGRenderer } from 'echarts/renderers';
+
+echarts.use([
+  AxisPointerComponent,
+  BarChart,
+  GridComponent,
+  LegendComponent,
+  LineChart,
+  SVGRenderer,
+  TitleComponent,
+  TooltipComponent,
+]);
 
 type Props = {
   ariaLabel: string;
-  option: EChartsOption;
+  option?: EChartsOption;
 };
 
-export default function DocChart({ ariaLabel, option }: Props) {
+export default function EChart({ ariaLabel, option = {} }: Props) {
   const elementRef = useRef<HTMLDivElement>(null);
   const { colorMode } = useColorMode();
 
   useEffect(() => {
     let disposed = false;
     let resizeObserver: ResizeObserver | undefined;
-    let chart: import('echarts').ECharts | undefined;
+    let chart: echarts.ECharts | undefined;
 
-    void import('echarts').then((echarts) => {
-      if (disposed || !elementRef.current) return;
+    if (elementRef.current) {
       chart = echarts.init(elementRef.current, colorMode === 'dark' ? 'dark' : undefined, {
         renderer: 'svg',
       });
@@ -28,7 +48,7 @@ export default function DocChart({ ariaLabel, option }: Props) {
       });
       resizeObserver = new ResizeObserver(() => chart?.resize());
       resizeObserver.observe(elementRef.current);
-    });
+    }
 
     return () => {
       disposed = true;

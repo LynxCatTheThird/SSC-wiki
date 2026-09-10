@@ -4,8 +4,6 @@ sidebar_position: 3
 description: 加点路线、月髓十字环、进化石和灵能宝珠的完整规则
 ---
 
-import {EvolutionExperienceChart} from '@site/src/components/SystemCharts';
-
 # 进化系统
 
 SSCA 把 “进化” 用于三套有关联、但规则不同的机制：加点路线负责成长，月髓十字环和进化石负责终局分支。先确认手中道具和当前形态，再决定路线。[^source]
@@ -35,7 +33,16 @@ flowchart TD
 
 进化经验只记录进入路线后新获得的原版总经验正增量。附魔、铁砧消费或死亡造成的经验减少不会倒扣进化经验。系统先把累计获得的原版经验除以 2 并向下取整，再按原版经验曲线换算为进化等级，上限 50 级。也就是说，进化等级 50 需要在进入路线后累计获得 10,690 点原版经验。
 
-<EvolutionExperienceChart />
+<EChart
+  ariaLabel="进化等级所需累计原版经验折线图"
+  option={{
+    tooltip: { trigger: 'axis', valueFormatter: (value) => `${Number(value).toLocaleString()} 点原版经验` },
+    grid: { left: 58, right: 24, top: 36, bottom: 52 },
+    xAxis: { type: 'category', name: '进化等级', data: ['5', '10', '15', '20', '30', '40', '45', '50'] },
+    yAxis: { type: 'value', name: '累计原版经验' },
+    series: [{ type: 'line', name: '累计经验', smooth: true, symbolSize: 8, areaStyle: { opacity: 0.12 }, data: [110, 320, 630, 1100, 2790, 5840, 8040, 10690] }],
+  }}
+/>
 
 | 路线       | 发放加点点数的等级里程碑  | 满级自动分支 |
 | ---------- | ------------------------- | -----------: |
