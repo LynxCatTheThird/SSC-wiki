@@ -6,7 +6,8 @@
   "description": "Unofficial Shape Shifter Curse and Shape Shifter Curse Addon documentation",
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build && node scripts/minify-build.mjs",
+    "build": "docusaurus build",
+    "build:production": "docusaurus build && node scripts/minify-build.mjs",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "lint-md": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\"",
