@@ -223,9 +223,38 @@ $$
 
 ## 画廊
 
-:::danger
-条目缺失
-:::
+### 交互模型
+
+<!-- prettier-ignore-start -->
+<FormModelViewer
+  stages={{
+    axolotl_0: { label: '第一阶段', title: '美西螈第一阶段 · axolotl_0.gltf', model: '/models/forms/axolotl/axolotl_0.gltf' },
+    axolotl_1: { label: '第二阶段', title: '美西螈第二阶段 · axolotl_1.gltf', model: '/models/forms/axolotl/axolotl_1.gltf' },
+    axolotl_2: { label: '第三阶段', title: '美西螈第三阶段 · axolotl_2.gltf', model: '/models/forms/axolotl/axolotl_2.gltf' },
+    axolotl_3: { label: '永久阶段', title: '美西螈永久阶段 · axolotl_3.gltf', model: '/models/forms/axolotl/axolotl_3.gltf' },
+  }}
+  animations={{
+    axolotl_2_crawling: '爬行（旧版）',
+    axolotl_2_crawling_attack_once: '爬行攻击',
+    axolotl_2_crawling_idle: '爬行待机（旧版）',
+    axolotl_2_crawling_idle_new: '爬行待机',
+    axolotl_2_crawling_jump: '爬行跳跃',
+    axolotl_2_crawling_new: '爬行',
+    axolotl_2_crawling_tool_swing: '工具挥动',
+    axolotl_2_swimming: '游泳',
+    axolotl_2_swimming_idle: '游泳待机',
+    axolotl_3_crawling: '爬行',
+    axolotl_3_crawling_idle: '爬行待机',
+    axolotl_3_creative_flight: '创造模式飞行',
+    axolotl_3_idle: '站立待机',
+    axolotl_3_jump: '跳跃',
+    axolotl_3_run: '奔跑 / 踏浪',
+    axolotl_3_rush_jump: '踏浪跳跃',
+    axolotl_3_sleep: '睡眠',
+    axolotl_3_walk: '走动',
+  }}
+/>
+<!-- prettier-ignore-end -->
 
 ## 附录
 
