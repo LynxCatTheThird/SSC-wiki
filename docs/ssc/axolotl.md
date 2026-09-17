@@ -105,13 +105,13 @@ $$
     tooltip: { trigger: 'axis', axisPointer: { type: 'line' }, valueFormatter: (value) => `${Number(value).toFixed(3)} 米/秒` },
     legend: { top: 6, left: 'center', itemGap: 10, itemWidth: 14 },
     grid: { left: 64, right: 28, top: 44, bottom: 52 },
-    xAxis: { type: 'category', name: '阶段', nameLocation: 'middle', nameGap: 28, data: ['第一阶段', '第二阶段', '第三阶段', '永久阶段'], axisLabel: { interval: 0 } },
+    xAxis: { type: 'category', name: '阶段', nameLocation: 'middle', nameGap: 28, data: ['普通玩家', '第一阶段', '第二阶段', '第三阶段', '永久阶段'], axisLabel: { interval: 0 } },
     yAxis: { type: 'value', name: '速度（米/秒）', min: 0, max: 32 },
     series: [
-      { name: '步行', type: 'line', symbolSize: 7, data: [4.317, 4.317, 4.317, 3.022] },
-      { name: '疾跑', type: 'line', symbolSize: 7, data: [5.612, 5.612, 5.612, 7.817] },
-      { name: '潜行 / 爬行', type: 'line', symbolSize: 7, data: [1.295, 1.295, 5.828, 3.885] },
-      { name: '游泳（水平）', type: 'line', symbolSize: 7, data: [4.312, 8.909, 30.061, 30.060] },
+      { name: '步行', type: 'line', symbolSize: 7, data: [4.317, 4.317, 4.317, 4.317, 3.022] },
+      { name: '疾跑', type: 'line', symbolSize: 7, data: [5.612, 5.612, 5.612, 5.612, 7.817] },
+      { name: '潜行', type: 'line', symbolSize: 7, data: [1.295, 1.295, 1.295, 5.828, 3.885] },
+      { name: '游泳', type: 'line', symbolSize: 7, data: [1.960, 4.312, 8.909, 30.061, 30.060] },
     ],
   }}
 />
@@ -125,10 +125,6 @@ $$
 #### 疾跑
 
 美西螈形态在永久阶段下且有湿润度的情况下疾跑会被替换为踏浪。
-
-#### 潜行
-
-美西螈形态在第三阶段及后续阶段下的潜行会被替换为爬行。
 
 #### 游泳
 
@@ -152,9 +148,13 @@ $$
 | 第三阶段 | 为普通玩家速泳速度的 7.67 倍 |    30.061     |
 | 永久阶段 | 为普通玩家速泳速度的 7.67 倍 |    30.060     |
 
-#### 爬行
+#### 潜行 / 爬行
 
-美西螈形态在第三阶段及后续阶段在湿润度未耗尽下的爬行速度均快于普通玩家，在永久阶段下耗尽湿润度也会进入爬行状态。
+美西螈形态在第三阶段及后续阶段下的潜行会被替换为爬行。
+
+美西螈形态下的潜行（与爬行[^速度]）速度持平或快于普通玩家，仅在永久阶段下耗尽湿润度进入爬行且位于松散地面上才会略慢于普通玩家。
+
+[^速度]: 普通玩家潜行和爬行速度一致。
 
 ### 湿润度
 
