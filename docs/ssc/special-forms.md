@@ -29,6 +29,25 @@ flowchart LR
 
 距离正在播放唱片的唱片机不超过 3 格时，每 40 tick，也就是每 2 秒恢复 2 点生命。悦灵可以走过细雪，并拥有缓降与落地免疫。
 
+### 交互模型
+
+<!-- prettier-ignore-start -->
+<FormModelViewer
+  model="/models/forms/allay_sp/allay_sp.gltf"
+  title="SP 悦灵 · allay_sp.gltf"
+  animations={{
+    allay_sp_attack: '攻击',
+    allay_sp_digging: '挖掘',
+    allay_sp_fly: '飞行',
+    allay_sp_idle: '待机',
+    allay_sp_moving: '移动',
+    allay_sp_run: '奔跑',
+    allay_sp_sneaking: '潜行待机',
+    allay_sp_sneaking_walk: '潜行移动',
+  }}
+/>
+<!-- prettier-ignore-end -->
+
 ## 野猫
 
 野猫是四足潜行形态，沿用豹猫终局形态的主要移动能力。它可以全向攀爬，免疫摔落，脚步无声且不会触发绊线，苦力怕会主动远离；猫与豹猫把玩家视为友好目标。它还有猫科夜视和四足视角摆动。
