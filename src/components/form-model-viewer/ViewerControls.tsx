@@ -1,4 +1,5 @@
 import React from 'react';
+import SelectControl from './SelectControl';
 import type {AppearanceSettings, CameraSnapshot, StageDefinition} from './types';
 
 export const STATIC_ANIMATION = '__static__';
@@ -48,23 +49,19 @@ export default function ViewerControls({
 }: ViewerControlsProps) {
   return <>
     <div className="form-model-viewer__controls">
-      {stages.length > 1 && <label className="form-model-viewer__field">
-        <span>阶段</span>
-        <select value={stageId} onChange={(event) => onStageChange(event.target.value)}>
-          {stages.map((stage) => <option value={stage.id} key={stage.id}>{stage.label}</option>)}
-        </select>
-      </label>}
-      <label className="form-model-viewer__field">
-        <span>动作</span>
-        <select
-          value={animation ?? STATIC_ANIMATION}
-          disabled={!ready}
-          onChange={(event) => onAnimationChange(event.target.value === STATIC_ANIMATION ? null : event.target.value)}
-        >
-          <option value={STATIC_ANIMATION}>静止</option>
-          {animations.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
-        </select>
-      </label>
+      {stages.length > 1 && <SelectControl
+        label="阶段"
+        value={stageId}
+        options={stages.map((stage) => ({value: stage.id, label: stage.label}))}
+        onChange={onStageChange}
+      />}
+      <SelectControl
+        label="动作"
+        value={animation ?? STATIC_ANIMATION}
+        options={[{value: STATIC_ANIMATION, label: '静止'}, ...animations]}
+        disabled={!ready}
+        onChange={(value) => onAnimationChange(value === STATIC_ANIMATION ? null : value)}
+      />
       <button type="button" disabled={!ready || animation == null} onClick={onPlaybackToggle}>
         {playing ? '暂停' : '播放'}
       </button>
