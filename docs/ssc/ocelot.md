@@ -31,4 +31,20 @@ title: 豹猫
 
 中后期注册了水中减速、温度兼容和无脚步声等能力。若整合包包含环境温度模组，应额外核验实际兼容行为。
 
+## 画廊
+
+<FormModelViewer stages={{
+  ocelot_0: { label: '第一阶段', title: '豹猫第一阶段 · ocelot_0.gltf', model: '/models/forms/ssc/ocelot/ocelot_0.gltf' },
+  ocelot_1: { label: '第二阶段', title: '豹猫第二阶段 · ocelot_1.gltf', model: '/models/forms/ssc/ocelot/ocelot_1.gltf' },
+  ocelot_2: { label: '第三阶段', title: '豹猫第三阶段 · ocelot_2.gltf', model: '/models/forms/ssc/ocelot/ocelot_2.gltf' },
+  ocelot_3: { label: '永久阶段', title: '豹猫永久阶段 · ocelot_3.gltf', model: '/models/forms/ssc/ocelot/ocelot_3.gltf' },
+}}
+  animations={{
+    ocelot_2_climbing: '攀爬', ocelot_2_rush_jump: '冲刺跳跃', ocelot_2_sneak_idle: '潜行待机', ocelot_2_sneak_rush_2: '潜行冲刺',
+    form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬', form_feral_common_climb_idle: '攀爬待机', form_feral_common_dig: '挖掘',
+    form_feral_common_idle: '待机', form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠',
+    form_feral_common_sneak_idle: '潜行待机', form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
+  }}
+/>
+
 [^source]: 源码核对：SSC `origins/form_ocelot_*.json` 与相关能力文件；未确认的交互不会写作确定结论。

@@ -192,10 +192,10 @@ $$
 <!-- prettier-ignore-start -->
 <FormModelViewer
   stages={{
-    axolotl_0: { label: '第一阶段', title: '美西螈第一阶段 · axolotl_0.gltf', model: '/models/forms/axolotl/axolotl_0.gltf' },
-    axolotl_1: { label: '第二阶段', title: '美西螈第二阶段 · axolotl_1.gltf', model: '/models/forms/axolotl/axolotl_1.gltf' },
-    axolotl_2: { label: '第三阶段', title: '美西螈第三阶段 · axolotl_2.gltf', model: '/models/forms/axolotl/axolotl_2.gltf' },
-    axolotl_3: { label: '永久阶段', title: '美西螈永久阶段 · axolotl_3.gltf', model: '/models/forms/axolotl/axolotl_3.gltf' },
+    axolotl_0: { label: '第一阶段', title: '美西螈第一阶段 · axolotl_0.gltf', model: '/models/forms/ssc/axolotl/axolotl_0.gltf' },
+    axolotl_1: { label: '第二阶段', title: '美西螈第二阶段 · axolotl_1.gltf', model: '/models/forms/ssc/axolotl/axolotl_1.gltf' },
+    axolotl_2: { label: '第三阶段', title: '美西螈第三阶段 · axolotl_2.gltf', model: '/models/forms/ssc/axolotl/axolotl_2.gltf' },
+    axolotl_3: { label: '永久阶段', title: '美西螈永久阶段 · axolotl_3.gltf', model: '/models/forms/ssc/axolotl/axolotl_3.gltf' },
   }}
   animations={{
     axolotl_2_crawling: '爬行（旧版）',

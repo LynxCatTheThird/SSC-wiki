@@ -28,4 +28,20 @@ title: 蝙蝠
 
 最终阶段的墙面附着由独立能力和动画处理。空中强、地面弱是这条形态线的核心交换，不宜按普通玩家的战斗习惯配置装备。
 
+## 画廊
+
+<FormModelViewer stages={{
+  bat_0: { label: '第一阶段', title: '蝙蝠第一阶段 · bat_0.gltf', model: '/models/forms/ssc/bat/bat_0.gltf' },
+  bat_1: { label: '第二阶段', title: '蝙蝠第二阶段 · bat_1.gltf', model: '/models/forms/ssc/bat/bat_1.gltf' },
+  bat_2: { label: '第三阶段', title: '蝙蝠第三阶段 · bat_2.gltf', model: '/models/forms/ssc/bat/bat_2.gltf' },
+  bat_3: { label: '永久阶段', title: '蝙蝠永久阶段 · bat_3.gltf', model: '/models/forms/ssc/bat/bat_3.gltf' },
+}}
+  animations={{
+    bat_1_jump: '跳跃', bat_1_jump2: '跳跃（变体）', bat_1_sneak_idle: '潜行待机',
+    bat_2_attack: '攻击', bat_2_digging: '挖掘', bat_2_jump: '跳跃', bat_2_slow_falling: '缓降',
+    bat_3_attach_bottom: '附着天花板', bat_3_attach_side: '附着墙面', bat_3_attack: '攻击', bat_3_climb: '攀爬',
+    bat_3_digging: '挖掘', bat_3_idle: '待机', bat_3_jump: '跳跃', bat_3_sleep: '睡眠', bat_3_sneak_walk: '潜行移动', bat_3_walk: '走动',
+  }}
+/>
+
 [^source]: 源码核对：SSC `origins/form_bat_*.json` 与 `RegPlayerForms.java`。表中只概括已注册能力。
