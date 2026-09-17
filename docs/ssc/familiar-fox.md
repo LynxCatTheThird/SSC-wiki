@@ -41,7 +41,7 @@ title: 使魔狐
 }}
   animations={{
     ocelot_2_sneak_idle: '潜行待机', form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬', form_feral_common_climb_idle: '攀爬待机',
-    form_feral_common_dig: '挖掘', form_feral_common_elytra_fly: '鞘翅飞行', form_feral_common_fall: '下落', form_feral_common_idle: '待机',
+    form_feral_common_dig: '挖掘', form_feral_common_elytra_fly: '鞘翅飞行', form_feral_common_fall: '下落', form_feral_common_float: '漂浮', form_feral_common_idle: '待机',
     form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠', form_feral_common_sneak_idle: '潜行待机',
     form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
   }}
