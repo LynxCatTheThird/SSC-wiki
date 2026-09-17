@@ -55,10 +55,10 @@ sidebar_position: 2
 <!-- prettier-ignore-start -->
 <FormModelViewer
   stages={{
-    spider_0: { label: '第一阶段', title: '蜘蛛第一阶段 · spider_0.gltf', model: '/models/forms/spider/spider_0.gltf' },
-    spider_1: { label: '第二阶段', title: '蜘蛛第二阶段 · spider_1.gltf', model: '/models/forms/spider/spider_1.gltf' },
-    spider_2: { label: '第三阶段', title: '蜘蛛第三阶段 · spider_2.gltf', model: '/models/forms/spider/spider_2.gltf' },
-    spider_3: { label: '永久阶段', title: '蜘蛛永久阶段 · spider_3.gltf', model: '/models/forms/spider/spider_3.gltf' },
+    spider_0: { label: '第一阶段', title: '蜘蛛第一阶段 · spider_0.gltf', model: '/models/forms/ssc/spider/spider_0.gltf' },
+    spider_1: { label: '第二阶段', title: '蜘蛛第二阶段 · spider_1.gltf', model: '/models/forms/ssc/spider/spider_1.gltf' },
+    spider_2: { label: '第三阶段', title: '蜘蛛第三阶段 · spider_2.gltf', model: '/models/forms/ssc/spider/spider_2.gltf' },
+    spider_3: { label: '永久阶段', title: '蜘蛛永久阶段 · spider_3.gltf', model: '/models/forms/ssc/spider/spider_3.gltf' },
   }}
   animations={{
     spider_1_idle: '待机',
