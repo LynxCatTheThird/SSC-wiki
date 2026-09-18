@@ -48,6 +48,40 @@ sidebar_position: 2
 跨模组边界上表数值由能力 JSON 直接执行。蛛丝命中还会调用 Java 侧的缠绕、方块生成与网络同步；若服务器安装了会取消投射物命中或禁止放置方块的保护模组，可能出现命中动画存在、蛛网没有生成的情况。此时管理员应检查保护模组日志和出生点保护范围。
 :::
 
+## 画廊
+
+### 交互模型
+
+<!-- prettier-ignore-start -->
+<FormModelViewer
+  stages={{
+    spider_0: { label: '第一阶段', title: '蜘蛛第一阶段 · spider_0.gltf', model: '/models/forms/ssc/spider/spider_0.gltf' },
+    spider_1: { label: '第二阶段', title: '蜘蛛第二阶段 · spider_1.gltf', model: '/models/forms/ssc/spider/spider_1.gltf' },
+    spider_2: { label: '第三阶段', title: '蜘蛛第三阶段 · spider_2.gltf', model: '/models/forms/ssc/spider/spider_2.gltf' },
+    spider_3: { label: '永久阶段', title: '蜘蛛永久阶段 · spider_3.gltf', model: '/models/forms/ssc/spider/spider_3.gltf' },
+  }}
+  animations={{
+    spider_1_idle: '待机',
+    spider_1_move: '移动',
+    spider_2_sneak_idle: '潜行待机',
+    spider_3_walk: '走动',
+    spider_3_climb: '攀爬',
+    spider_3_climb_idle: '攀爬待机',
+    spider_3_creative_flight: '创造模式飞行',
+    spider_3_fall: '下落',
+    spider_3_idle: '站立待机',
+    spider_3_jump: '跳跃',
+    spider_3_ride: '骑乘',
+    spider_3_run: '奔跑',
+    spider_3_shielding: '举盾',
+    spider_3_sleep: '睡眠',
+    spider_3_sneak_idle: '潜行待机',
+    spider_3_sneak_walk: '潜行移动',
+    spider_3_swim_idle: '游泳待机',
+  }}
+/>
+<!-- prettier-ignore-end -->
+
 [^source]: 源码核对：SSC `RegPlayerForms.java`、`origins/form_spider_*.json`、蜘蛛能力 JSON/Java 和 Modrinth 更新说明，commit `c0f0bbb9`。数值来自数据定义；跨模组行为仍可能变化。
 
 [^items]: 配方与掉落来自 SSC `recipes/untreated_moondust.json`、`recipes/dew_covered_cobweb.json` 与 `loot_tables/entities/t_spider.json`，commit `c0f0bbb9`。

@@ -31,4 +31,20 @@ title: 阿努比斯之狼
 
 中后期存在将肉转为腐肉、将作物转为沙的能力。具体触发方式应查对应物品交互页面，避免在珍贵物品上直接试验。
 
+## 画廊
+
+<FormModelViewer stages={{
+  anubis_wolf_0: { label: '第一阶段', title: '阿努比斯之狼第一阶段 · anubis_wolf_0.gltf', model: '/models/forms/ssc/anubis_wolf/anubis_wolf_0.gltf' },
+  anubis_wolf_1: { label: '第二阶段', title: '阿努比斯之狼第二阶段 · anubis_wolf_1.gltf', model: '/models/forms/ssc/anubis_wolf/anubis_wolf_1.gltf' },
+  anubis_wolf_2: { label: '第三阶段', title: '阿努比斯之狼第三阶段 · anubis_wolf_2.gltf', model: '/models/forms/ssc/anubis_wolf/anubis_wolf_2.gltf' },
+  anubis_wolf_3: { label: '永久阶段', title: '阿努比斯之狼永久阶段 · anubis_wolf_3.gltf', model: '/models/forms/ssc/anubis_wolf/anubis_wolf_3.gltf' },
+}}
+  animations={{
+    form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬', form_feral_common_climb_idle: '攀爬待机', form_feral_common_dig: '挖掘',
+    form_feral_common_elytra_fly: '鞘翅飞行', form_feral_common_fall: '下落', form_feral_common_float: '漂浮', form_feral_common_idle: '待机',
+    form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠', form_feral_common_sneak_idle: '潜行待机',
+    form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
+  }}
+/>
+
 [^source]: 源码核对：SSC `origins/form_anubis_wolf_*.json`、召唤和伤害能力；未确认的交互不会写作确定结论。

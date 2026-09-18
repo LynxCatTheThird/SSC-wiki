@@ -31,4 +31,20 @@ title: 使魔狐
 
 女巫和掠夺者友好、村民恐惧、禁止攻击女巫等规则分布在多个能力中。主动攻击仍可能触发额外惩罚。
 
+## 画廊
+
+<FormModelViewer stages={{
+  familiar_fox_0: { label: '第一阶段', title: '使魔狐第一阶段 · familiar_fox_0.gltf', model: '/models/forms/ssc/familiar_fox/familiar_fox_0.gltf' },
+  familiar_fox_1: { label: '第二阶段', title: '使魔狐第二阶段 · familiar_fox_1.gltf', model: '/models/forms/ssc/familiar_fox/familiar_fox_1.gltf' },
+  familiar_fox_2: { label: '第三阶段', title: '使魔狐第三阶段 · familiar_fox_2.gltf', model: '/models/forms/ssc/familiar_fox/familiar_fox_2.gltf' },
+  familiar_fox_3: { label: '永久阶段', title: '使魔狐永久阶段 · familiar_fox_3.gltf', model: '/models/forms/ssc/familiar_fox/familiar_fox_3.gltf' },
+}}
+  animations={{
+    ocelot_2_sneak_idle: '潜行待机', form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬', form_feral_common_climb_idle: '攀爬待机',
+    form_feral_common_dig: '挖掘', form_feral_common_elytra_fly: '鞘翅飞行', form_feral_common_fall: '下落', form_feral_common_idle: '待机',
+    form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠', form_feral_common_sneak_idle: '潜行待机',
+    form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
+  }}
+/>
+
 [^source]: 源码核对：SSC `origins/form_familiar_fox_*.json`、Mana 和生物交互能力；未确认的交互不会写作确定结论。
