@@ -4,8 +4,6 @@ sidebar_position: 3
 description: SSCA 的生命、伤害、时间、范围、资源条和冷却如何计算
 ---
 
-import {ResourceRecoveryChart, TickTimeChart} from '@site/src/components/SystemCharts';
-
 # 数值系统
 
 SSCA 的能力由数据包 JSON 与 Java 共同执行。玩家看到的技能文字有时没有随执行代码更新，因此本站先说明统一口径，再在形态页列出当前 commit 的实际常量。[^source]
@@ -31,7 +29,16 @@ $$
 t_{\mathrm {second}}=\frac {t_{\mathrm {tick}}}{20}
 $$
 
-<TickTimeChart />
+<EChart
+  ariaLabel="游戏 tick 与现实秒数换算图"
+  option={{
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, valueFormatter: (value) => `${value} 秒` },
+    grid: { left: 68, right: 28, top: 30, bottom: 48 },
+    xAxis: { type: 'category', name: '游戏 tick', data: ['6', '20', '60', '100', '300', '600'] },
+    yAxis: { type: 'value', name: '现实秒数', min: 0 },
+    series: [{ type: 'bar', name: '换算时间', data: [0.3, 1, 3, 5, 15, 30], label: { show: true, position: 'top', formatter: '{c} 秒' } }],
+  }}
+/>
 
 服务器卡顿时，20 tick 可能花费超过现实中的 1 秒。技能仍按服务器 tick 推进，所以现实等待时间会跟着拉长。
 
@@ -79,7 +86,16 @@ flowchart LR
 
 以下时间从空资源开始，只计算稳定自然回复，不包含击杀、命中、吃种子、环境切换与暂停时间。
 
-<ResourceRecoveryChart />
+<EChart
+  ariaLabel="五种资源从空到满的理论恢复时间条形图"
+  option={{
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, valueFormatter: (value) => `${value} 秒` },
+    grid: { left: 116, right: 28, top: 28, bottom: 42 },
+    xAxis: { type: 'value', name: '从空到满的理论时间（秒）' },
+    yAxis: { type: 'category', data: ['SP 悦灵 Mana', 'SP 雪狐（普通）', 'SP 雪狐（适宜环境）', '寄生果蝠（脱战）', '寄生果蝠（交战）'] },
+    series: [{ type: 'bar', name: '恢复时间', data: [26.7, 33.3, 20, 50, 80], label: { show: true, position: 'right', formatter: '{c} 秒' } }],
+  }}
+/>
 
 ## 独立计数系统
 
