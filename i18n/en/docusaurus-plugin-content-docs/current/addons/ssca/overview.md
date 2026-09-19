@@ -12,4 +12,4 @@ The addon uses the historical `my_addon` namespace while its mod ID is `ssc_addo
 
 New players can select the evolved Familiar Fox or evolved Axolotl route from the Shape Shifter Curse starter book. Players who reach an Shape Shifter Curse stage-4 form can use the Moon Marrow Cross or an evolution stone to enter an Shape Shifter Curse Addon branch. These items have different targets and failure rules.
 
-Read [the form catalog](forms-catalog), [evolution system](evolution), and [numeric systems](numeric-systems) next.
+Read [the form catalog](forms/overview), [evolution system](systems/evolution), and [numeric systems](systems/numeric-systems) next.

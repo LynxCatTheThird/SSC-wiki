@@ -1,8 +1,8 @@
 ---
-title: Wind Spirit
+title: Wind Spirit Form
 ---
 
-# Wind Spirit
+# Wind Spirit Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

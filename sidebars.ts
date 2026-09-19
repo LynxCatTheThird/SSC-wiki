@@ -72,7 +72,7 @@ const sidebars: SidebarsConfig = {
                   items: [
                     {
                       type: "category",
-                      label: "使魔红狐",
+                      label: "使魔红狐形态",
                       items: [
                         "addons/ssca/forms/routes/familiar-fox/upgrade",
                         "addons/ssca/forms/routes/familiar-fox/sp",
@@ -82,7 +82,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "美西螈",
+                      label: "美西螈形态",
                       items: [
                         "addons/ssca/forms/routes/axolotl/upgrade",
                         "addons/ssca/forms/routes/axolotl/sp",
@@ -98,7 +98,7 @@ const sidebars: SidebarsConfig = {
                   items: [
                     {
                       type: "category",
-                      label: "雪狐",
+                      label: "雪狐形态",
                       items: [
                         "addons/ssca/forms/base-forms/snow-fox/ice-spine",
                         "addons/ssca/forms/base-forms/snow-fox/sp",
@@ -106,7 +106,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "胡狼",
+                      label: "胡狼形态",
                       items: [
                         "addons/ssca/forms/base-forms/anubis-wolf/golden-sandstorm",
                         "addons/ssca/forms/base-forms/anubis-wolf/anubis-wolf-sp",
@@ -114,7 +114,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "蝙蝠",
+                      label: "蝙蝠形态",
                       items: [
                         "addons/ssca/forms/base-forms/bat/desmodus",
                         "addons/ssca/forms/base-forms/bat/parasitic-fruit",
@@ -122,7 +122,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "豹猫",
+                      label: "豹猫形态",
                       items: [
                         "addons/ssca/forms/base-forms/ocelot/wind-spirit",
                         "addons/ssca/forms/base-forms/ocelot/nova",
@@ -130,7 +130,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "蜘蛛",
+                      label: "蜘蛛形态",
                       items: [
                         "addons/ssca/forms/base-forms/spider/moon-weaver",
                         "addons/ssca/forms/base-forms/spider/salticidae",
@@ -144,7 +144,7 @@ const sidebars: SidebarsConfig = {
                   items: [
                     {
                       type: "category",
-                      label: "悦灵",
+                      label: "悦灵形态",
                       items: [
                         "addons/ssca/forms/special/allay/allay-sp",
                         "addons/ssca/forms/special/allay/fallen",
@@ -152,7 +152,7 @@ const sidebars: SidebarsConfig = {
                     },
                     {
                       type: "category",
-                      label: "野猫",
+                      label: "野猫形态",
                       items: [
                         "addons/ssca/forms/special/wild-cat/nightmare",
                         "addons/ssca/forms/special/wild-cat/sp",

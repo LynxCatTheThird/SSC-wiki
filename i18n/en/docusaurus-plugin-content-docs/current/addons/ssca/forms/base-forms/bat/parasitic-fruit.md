@@ -1,8 +1,8 @@
 ---
-title: Parasitic Fruit Bat
+title: Parasitic Fruit Bat Form
 ---
 
-# Parasitic Fruit Bat
+# Parasitic Fruit Bat Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

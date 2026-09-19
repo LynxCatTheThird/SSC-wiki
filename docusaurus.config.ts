@@ -14,6 +14,7 @@ const config: Config = {
   organizationName: 'ssc-community',
   projectName: 'ssc-wiki',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   markdown: {
     hooks: { onBrokenMarkdownLinks: 'throw' },
     mermaid: true,
@@ -37,7 +38,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
-          editUrl: 'https://github.com/LynxCatTheThird/幻形者诅咒-wiki/',
+          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/',
           remarkPlugins: [remarkMath, remarkBooleanTableCells],
           rehypePlugins: [rehypeKatex],
         },
@@ -67,6 +68,10 @@ const config: Config = {
   ],
   themeConfig: {
     image: 'img/shape-shifter-curse-social-card.svg',
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 6,
+    },
     colorMode: {
       // Docusaurus requires a light/dark fallback; this flag follows OS preference.
       defaultMode: 'light',
@@ -80,7 +85,7 @@ const config: Config = {
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档' },
         { to: '/reference/versions', label: '版本与兼容性', position: 'left' },
         { type: 'localeDropdown', position: 'right' },
-        { href: 'https://github.com/LynxCatTheThird/幻形者诅咒-wiki', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/LynxCatTheThird/SSC-wiki', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
@@ -99,7 +104,7 @@ const config: Config = {
         {
           title: '反馈',
           items: [
-            { label: '提交 Issue', href: 'https://github.com/LynxCatTheThird/幻形者诅咒-wiki/issues' },
+            { label: '提交 Issue', href: 'https://github.com/LynxCatTheThird/SSC-wiki/issues' },
           ],
         },
       ],

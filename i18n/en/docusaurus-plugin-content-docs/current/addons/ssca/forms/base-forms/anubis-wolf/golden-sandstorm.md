@@ -1,8 +1,8 @@
 ---
-title: Golden Sandstorm
+title: Golden Sandstorm Form
 ---
 
-# Golden Sandstorm
+# Golden Sandstorm Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

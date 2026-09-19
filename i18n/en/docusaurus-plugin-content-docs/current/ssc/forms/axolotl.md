@@ -1,8 +1,8 @@
 ---
-title: Axolotl
+title: Axolotl Form
 ---
 
-# Axolotl
+# Axolotl Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

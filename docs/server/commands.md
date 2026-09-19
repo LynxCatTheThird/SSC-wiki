@@ -91,7 +91,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 - `reupload_auth_file`。
 
 :::danger
-调试命令会修改持久数据清理命令可能不可逆地删除玩家形态、配色、使魔或 Mana 数据。执行前备份世界。虽然 `debug` 分支本身没有统一的 Brigadier 权限条件，各执行函数还会调用内部 `DebuggerUtils.canExecute`；不要据此假设所有普通玩家都能执行。
+调试命令会修改持久数据清理命令可能不可逆地删除玩家形态、配色、使魔或魔力值数据。执行前备份世界。虽然 `debug` 分支本身没有统一的 Brigadier 权限条件，各执行函数还会调用内部 `DebuggerUtils.canExecute`；不要据此假设所有普通玩家都能执行。
 :::
 
 ## 幻形者诅咒扩展包玩家命令
@@ -104,7 +104,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 | `palette export`       |       普通玩家 | 导出当前形态配色分享码           |
 | `palette apply <code>` |       普通玩家 | 应用配色分享码并启用自定义颜色   |
 | `debug form`           | 未声明统一权限 | 显示当前形态调试信息             |
-| `debug mana`           | 未声明统一权限 | 显示 Mana 调试信息               |
+| `debug mana`           | 未声明统一权限 | 显示魔力值调试信息               |
 | `debug anim`           | 未声明统一权限 | 显示动画调试信息                 |
 
 配色命令只作用于执行者本人，没有目标玩家参数，关闭作弊时也能使用。
@@ -126,7 +126,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 `skill` 当前自动补全的形态关键词包括 `snow_fox`、`anubis_wolf`、`allay`、`axolotl`、`wild_cat`、`familiar_fox` 和 `familiar_fox_red`。这份固定列表未必覆盖所有新增 SP 形态。
 
-虽然命令名写作 `set_mana`，当前实现还会同时识别霜寒、悦灵 Mana、吸血蝙蝠血渴、冥裁者灵魂能量和寄生果蝠种子量。玩家当前拥有哪一种资源，就修改哪一种；同一玩家若同时挂有多种相应能力，所有匹配资源都会被设置。举例来说，`/ssc_addon set_mana Steve 100` 会把 Steve 当前可用的这些资源设置到 100，各资源仍受自身上限限制。
+虽然命令名写作 `set_mana`，当前实现还会同时识别霜寒、悦灵魔力值、吸血蝙蝠形态血渴、冥裁者形态灵魂能量和寄生果蝠形态种子量。玩家当前拥有哪一种资源，就修改哪一种；同一玩家若同时挂有多种相应能力，所有匹配资源都会被设置。举例来说，`/ssc_addon set_mana Steve 100` 会把 Steve 当前可用的这些资源设置到 100，各资源仍受自身上限限制。
 
 ### 技能关键词
 
@@ -136,11 +136,11 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 | ------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | `snow_fox`         | `melee_primary`、`melee_secondary`、`ranged_primary`、`ranged_secondary`、`frost_regen` | 四个战斗技能与霜寒恢复                             |
 | `anubis_wolf`      | `summon_wolves`、`death_domain`、`soul_sand_heal`、`wither_hunt`、`soul_scrutiny`       | 冥狼召唤、死亡领域、灵魂沙恢复、凋零追猎与灵魂审视 |
-| `allay`            | `jukebox_charge`、`group_heal`、`mana_regen`                                            | 唱片机充能、群体治疗与 Mana 恢复                   |
+| `allay`            | `jukebox_charge`、`group_heal`、`mana_regen`                                            | 唱片机充能、群体治疗与魔力值恢复                   |
 | `axolotl`          | `natural_regen_boost`、`rain_wetness`                                                   | 自然恢复强化与雨水湿润                             |
 | `wild_cat`         | `night_speed`、`day_slow`                                                               | 夜间加速与白天减速                                 |
-| `familiar_fox`     | `mana_regen`                                                                            | SP 使魔 Mana 恢复                                  |
-| `familiar_fox_red` | `red_mana_regen`                                                                        | 红使魔 Mana 恢复                                   |
+| `familiar_fox`     | `mana_regen`                                                                            | SP 使魔形态魔力值恢复                                  |
+| `familiar_fox_red` | `red_mana_regen`                                                                        | 红使魔形态魔力值恢复                                   |
 
 例如，临时禁止 Steve 使用死亡领域：
 
@@ -163,7 +163,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 /ssc_addon evolution reset [player]
 ```
 
-以上命令均要求权限等级 2。未提供玩家时作用于执行命令的玩家；控制台没有玩家身份，必须在末尾写出玩家名。`resistance set` 会把契灵抗伤层数限制在 0 到该玩家当前上限之间；`mancianima_assault reset` 允许目标今天再次触发敲钟袭击，`lock` 把今天标记为已触发，`status` 显示剩余 tick 与秒数。
+以上命令均要求权限等级 2。未提供玩家时作用于执行命令的玩家；控制台没有玩家身份，必须在末尾写出玩家名。`resistance set` 会把契灵形态抗伤层数限制在 0 到该玩家当前上限之间；`mancianima_assault reset` 允许目标今天再次触发敲钟袭击，`lock` 把今天标记为已触发，`status` 显示剩余 tick 与秒数。
 
 :::warning
 `evolution reset` 该命令会清空玩家当前路线、进化经验、进化等级、剩余点数、已解锁节点、待确认节点与终局分支。关闭加点界面或重新载入配置不需要执行它。`unlock_all` 只设置全解锁标记，适合测试技能树，不会模拟逐级获得经验的过程。

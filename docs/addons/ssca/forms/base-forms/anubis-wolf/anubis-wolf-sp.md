@@ -1,16 +1,16 @@
 ---
-title: 冥裁者
+title: 冥裁者形态
 sidebar_position: 5
-description: 胡狼的幻形者诅咒扩展包终局形态：领域、灵魂能量与冥狼
+description: 胡狼形态的幻形者诅咒扩展包终局形态：领域、灵魂能量与冥狼
 ---
 
-# 冥裁者
+# 冥裁者形态
 
-冥裁者是胡狼的幻形者诅咒扩展包终局形态。它把战斗分成两段：先用普通击杀积攒灵魂能量，再用死亡领域把积攒的能量转成更强的区域控制。[^source]
+冥裁者形态是胡狼形态的幻形者诅咒扩展包终局形态。它把战斗分成两段：先用普通击杀积攒灵魂能量，再用死亡领域把积攒的能量转成更强的区域控制。[^source]
 
 ## 进入方式
 
-从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚；两条分支的完整路线见 [形态目录](../../overview)，道具条件与失败后果见 [进化系统](../../../systems/evolution)。
+从 `shape-shifter-curse:anubis_wolf_3` 使用月髓十字环，可在诅咒之月夜晚进入 `my_addon:anubis_wolf_sp`。使用进化石会进入金沙岚形态；两条分支的完整路线见 [形态目录](../../overview)，道具条件与失败后果见 [进化系统](../../../systems/evolution)。
 
 ## 资源和被动
 

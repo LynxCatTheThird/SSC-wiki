@@ -1,10 +1,10 @@
 ---
-title: 胡狼
+title: 胡狼形态
 ---
 
-# 胡狼
+# 胡狼形态
 
-胡狼线围绕凋零、亡灵、腐肉和狼群展开。阶段越高，玩家越接近亡灵属性，并获得召唤、灵魂沙移动和不死相关能力。[^source]
+胡狼形态线围绕凋零、亡灵、腐肉和狼群展开。阶段越高，玩家越接近亡灵属性，并获得召唤、灵魂沙移动和不死相关能力。[^source]
 
 ## 阶段总览
 
@@ -17,27 +17,27 @@ title: 胡狼
 
 ## 行为
 
-### 盔甲槽
+**盔甲槽**
 
-### 生命值与治疗
+**生命值与治疗**
 
 最终阶段同时注册了瞬间伤害反转、瞬间治疗免疫、再生免疫和食物治疗削弱。治疗策略必须按亡灵形态重新配置；不要默认普通恢复药水仍然有效。
 
-### 挖掘
+**挖掘**
 
-### 近战攻击
+**近战攻击**
 
-### 饥饿与食物转化
+**饥饿与食物转化**
 
 中后期存在将肉转为腐肉、将作物转为沙的能力。具体触发方式应查对应物品交互页面，避免在珍贵物品上直接试验。
 
-### 移动
+**移动**
 
-### 亡灵与阵营关系
+**亡灵与阵营关系**
 
 ## 能力
 
-### 已确认数值
+**已确认数值**
 
 | 阶段或条件                     |                                         数值 | 玩家感受                 |
 | ------------------------------ | -------------------------------------------: | ------------------------ |
@@ -49,7 +49,7 @@ title: 胡狼
 
 ## 数据值
 
-### ID
+**ID**
 
 | 名称             | 命名空间 ID     | 本地化键名                           |
 | ---------------- | --------------- | ------------------------------------ |
@@ -67,22 +67,22 @@ title: 胡狼
   stages={{
     anubis_wolf_0: {
       label: '初始阶段',
-      title: '胡狼初始阶段 · anubis_wolf_0.gltf',
+      title: '胡狼形态初始阶段 · anubis_wolf_0.gltf',
       model: '/models/forms/ssc/anubis_wolf/anubis_wolf_0.gltf',
     },
     anubis_wolf_1: {
       label: '第一阶段',
-      title: '胡狼第一阶段 · anubis_wolf_1.gltf',
+      title: '胡狼形态第一阶段 · anubis_wolf_1.gltf',
       model: '/models/forms/ssc/anubis_wolf/anubis_wolf_1.gltf',
     },
     anubis_wolf_2: {
       label: '第二阶段',
-      title: '胡狼第二阶段 · anubis_wolf_2.gltf',
+      title: '胡狼形态第二阶段 · anubis_wolf_2.gltf',
       model: '/models/forms/ssc/anubis_wolf/anubis_wolf_2.gltf',
     },
     anubis_wolf_3: {
       label: '永久阶段',
-      title: '胡狼永久阶段 · anubis_wolf_3.gltf',
+      title: '胡狼形态永久阶段 · anubis_wolf_3.gltf',
       model: '/models/forms/ssc/anubis_wolf/anubis_wolf_3.gltf',
     },
   }}

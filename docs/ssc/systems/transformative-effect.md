@@ -41,7 +41,7 @@ flowchart TD
 | `to_feral_cat_sp_effect`   | `feral_cat_sp`   |
 | `to_custom_statue_effect`  | 由自定义数据决定 |
 
-完整资源 ID 还应加上命名空间 `shape-shifter-curse:`。注册有效果不代表原版生存流程一定提供对应的自然感染来源。
+完整资源 ID 还应加上命名空间 `shape-shifter-curse:`。注册有效果不代表 Minecraft 常规生存流程一定提供对应的自然感染来源。
 
 ## 谁能获得效果
 

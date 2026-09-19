@@ -1,8 +1,8 @@
 ---
-title: SP Allay (alternate entry)
+title: SP Allay (alternate entry) Form
 ---
 
-# SP Allay (alternate entry)
+# SP Allay (alternate entry) Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

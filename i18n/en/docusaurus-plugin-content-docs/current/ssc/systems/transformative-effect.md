@@ -9,4 +9,4 @@ A transformation effect is the item that starts an Shape Shifter Curse form. Use
 
 The effect is consumed on success. An inhibitor can return a normal Shape Shifter Curse form to its previous state, but Shape Shifter Curse Addon special forms are marked inhibitor-immune. Do not assume that an item works across every branch; use the form page and the route diagram before consuming an evolution item.
 
-See [cursed moon](cursed-moon), [instinct](instinct), and [key items](key-items) for the systems that change transformation results.
+See [cursed moon](cursed-moon), [instinct](instinct), and [key items](../items/key-items) for the systems that change transformation results.

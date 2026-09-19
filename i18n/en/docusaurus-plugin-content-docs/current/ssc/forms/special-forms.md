@@ -1,8 +1,8 @@
 ---
-title: Allay and Feral Cat
+title: Allay and Feral Cat Form
 ---
 
-# Allay and Feral Cat
+# Allay and Feral Cat Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 

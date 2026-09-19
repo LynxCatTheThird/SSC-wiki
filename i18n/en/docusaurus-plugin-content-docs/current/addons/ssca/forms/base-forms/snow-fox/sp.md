@@ -1,8 +1,8 @@
 ---
-title: SP Snow Fox
+title: SP Snow Fox Form
 ---
 
-# SP Snow Fox
+# SP Snow Fox Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 
