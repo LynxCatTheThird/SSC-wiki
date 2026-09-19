@@ -1,12 +1,12 @@
 ---
-title: SSCA 扩展总览
+title: 幻形者诅咒扩展包总览
 sidebar_position: 1
 description: SSCA 的定位、内容边界和进入方式
 ---
 
-# SSCA 扩展总览
+# 幻形者诅咒扩展包（SSCA）总览
 
-Shape Shifter Curse Addon（SSCA）是独立社区项目，不是 SSC 官方组件。它建立在 SSC 的形态、动画和资源系统之上，增加终局形态、进化路线、战斗技能、专属资源、装备、故事和实用界面。[^source]
+幻形者诅咒扩展包（Shape Shifter Curse Addon，SSCA）是独立社区项目，不是幻形者诅咒（SSC）的官方组件。它建立在 SSC 的形态、动画和资源系统之上，增加终局形态、进化路线、战斗技能、专属资源、装备、故事和实用界面。[^source]
 
 ## 从哪里开始
 

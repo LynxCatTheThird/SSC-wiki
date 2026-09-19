@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: SSC Wiki
-description: Shape Shifter Curse 与 Shape Shifter Curse Addon 的非官方文档
+title: 幻形者诅咒 Wiki
+description: 幻形者诅咒与幻形者诅咒扩展包的非官方文档
 ---
 
-# SSC Wiki
+# 幻形者诅咒 Wiki
 
-Shape Shifter Curse（SSC）与 Shape Shifter Curse Addon（SSCA）的社区维护文档。
+幻形者诅咒（Shape Shifter Curse，SSC）与幻形者诅咒扩展包（Shape Shifter Curse Addon，SSCA）的社区维护文档。
 
 本站支持中文与 English。使用右上角的语言菜单切换，或直接进入 [English documentation](pathname:///en/)。
 

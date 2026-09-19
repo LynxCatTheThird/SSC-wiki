@@ -11,13 +11,17 @@
     "message": "Core gameplay",
     "description": "The label for category '核心玩法' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.SSC 形态": {
-    "message": "SSC forms",
-    "description": "The label for category 'SSC 形态' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.幻形者诅咒（SSC）形态": {
+    "message": "Shape Shifter Curse (SSC) forms",
+    "description": "The label for category '幻形者诅咒（SSC）形态' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.SSCA 扩展": {
-    "message": "SSCA addon",
-    "description": "The label for category 'SSCA 扩展' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.附属模组": {
+    "message": "Addons",
+    "description": "The label for category '附属模组' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.幻形者诅咒扩展包（SSCA）": {
+    "message": "Shape Shifter Curse Addon (SSCA)",
+    "description": "The label for category '幻形者诅咒扩展包（SSCA）' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.进化路线": {
     "message": "Evolution routes",
@@ -31,9 +35,9 @@
     "message": "Axolotl",
     "description": "The label for category '美西螈' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.SSC 终局分支": {
-    "message": "SSC endgame branches",
-    "description": "The label for category 'SSC 终局分支' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.幻形者诅咒（SSC）终局分支": {
+    "message": "Shape Shifter Curse (SSC) endgame branches",
+    "description": "The label for category '幻形者诅咒（SSC）终局分支' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.雪狐": {
     "message": "Snow Fox",

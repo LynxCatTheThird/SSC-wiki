@@ -24,7 +24,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "SSC 形态",
+      label: "幻形者诅咒（SSC）形态",
       items: [
         "ssc/forms-overview",
         "ssc/bat",
@@ -77,7 +77,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "SSC 终局分支",
+          label: "幻形者诅咒（SSC）终局分支",
           items: [
             {
               type: "category",

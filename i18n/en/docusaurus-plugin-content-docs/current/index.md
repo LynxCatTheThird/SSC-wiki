@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-title: SSC Wiki
+title: Shape Shifter Curse Wiki
 description: Unofficial documentation for Shape Shifter Curse and Shape Shifter Curse Addon
 ---
 
-# SSC Wiki
+# Shape Shifter Curse Wiki
 
 Community-maintained documentation for Shape Shifter Curse (SSC) and Shape Shifter Curse Addon (SSCA).
 
