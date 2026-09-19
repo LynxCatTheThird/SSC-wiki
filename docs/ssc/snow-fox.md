@@ -32,18 +32,48 @@ title: 雪狐
 
 ## 画廊
 
-<FormModelViewer stages={{
-  snow_fox_0: { label: '第一阶段', title: '雪狐第一阶段 · snow_fox_0.gltf', model: '/models/forms/ssc/snow_fox/snow_fox_0.gltf' },
-  snow_fox_1: { label: '第二阶段', title: '雪狐第二阶段 · snow_fox_1.gltf', model: '/models/forms/ssc/snow_fox/snow_fox_1.gltf' },
-  snow_fox_2: { label: '第三阶段', title: '雪狐第三阶段 · snow_fox_2.gltf', model: '/models/forms/ssc/snow_fox/snow_fox_2.gltf' },
-  snow_fox_3: { label: '永久阶段', title: '雪狐永久阶段 · snow_fox_3.gltf', model: '/models/forms/ssc/snow_fox/snow_fox_3.gltf' },
-}}
+<!-- prettier-ignore-start -->
+<FormModelViewer
+  stages={{
+    snow_fox_0: {
+      label: '初始阶段',
+      title: '雪狐初始阶段 · snow_fox_0.gltf',
+      model: '/models/forms/ssc/snow_fox/snow_fox_0.gltf',
+    },
+    snow_fox_1: {
+      label: '第一阶段',
+      title: '雪狐第一阶段 · snow_fox_1.gltf',
+      model: '/models/forms/ssc/snow_fox/snow_fox_1.gltf',
+    },
+    snow_fox_2: {
+      label: '第二阶段',
+      title: '雪狐第二阶段 · snow_fox_2.gltf',
+      model: '/models/forms/ssc/snow_fox/snow_fox_2.gltf',
+    },
+    snow_fox_3: {
+      label: '永久阶段',
+      title: '雪狐永久阶段 · snow_fox_3.gltf',
+      model: '/models/forms/ssc/snow_fox/snow_fox_3.gltf',
+    },
+  }}
   animations={{
-    ocelot_2_sneak_idle: '潜行待机', form_snow_fox_3_fall: '下落', form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬',
-    form_feral_common_climb_idle: '攀爬待机', form_feral_common_dig: '挖掘', form_feral_common_float: '漂浮', form_feral_common_idle: '待机',
-    form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠', form_feral_common_sneak_idle: '潜行待机',
-    form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
+    ocelot_2_sneak_idle: '潜行待机',
+    form_snow_fox_3_fall: '下落',
+    form_feral_common_attack: '攻击',
+    form_feral_common_climb: '攀爬',
+    form_feral_common_climb_idle: '攀爬待机',
+    form_feral_common_dig: '挖掘',
+    form_feral_common_float: '漂浮',
+    form_feral_common_idle: '待机',
+    form_feral_common_jump: '跳跃',
+    form_feral_common_run: '奔跑',
+    form_feral_common_sleep: '睡眠',
+    form_feral_common_sneak_idle: '潜行待机',
+    form_feral_common_sneak_walk: '潜行移动',
+    form_feral_common_swim: '游泳',
+    form_feral_common_walk: '走动',
   }}
 />
+<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `origins/form_snow_fox_*.json` 与相关能力文件；未确认的交互不会写作确定结论。

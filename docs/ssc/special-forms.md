@@ -50,16 +50,29 @@ flowchart LR
 
 ## 野猫
 
+<!-- prettier-ignore-start -->
 <FormModelViewer
   model="/models/forms/ssc/feral_cat/feral_cat.gltf"
   title="野猫 · feral_cat.gltf"
   animations={{
-    form_feral_common_attack: '攻击', form_feral_common_climb: '攀爬', form_feral_common_climb_idle: '攀爬待机', form_feral_common_dig: '挖掘',
-    form_feral_common_elytra_fly: '鞘翅飞行', form_feral_common_fall: '下落', form_feral_common_float: '漂浮', form_feral_common_idle: '待机',
-    form_feral_common_jump: '跳跃', form_feral_common_run: '奔跑', form_feral_common_sleep: '睡眠', form_feral_common_sneak_idle: '潜行待机',
-    form_feral_common_sneak_walk: '潜行移动', form_feral_common_swim: '游泳', form_feral_common_walk: '走动',
+    form_feral_common_attack: '攻击',
+    form_feral_common_climb: '攀爬',
+    form_feral_common_climb_idle: '攀爬待机',
+    form_feral_common_dig: '挖掘',
+    form_feral_common_elytra_fly: '鞘翅飞行',
+    form_feral_common_fall: '下落',
+    form_feral_common_float: '漂浮',
+    form_feral_common_idle: '待机',
+    form_feral_common_jump: '跳跃',
+    form_feral_common_run: '奔跑',
+    form_feral_common_sleep: '睡眠',
+    form_feral_common_sneak_idle: '潜行待机',
+    form_feral_common_sneak_walk: '潜行移动',
+    form_feral_common_swim: '游泳',
+    form_feral_common_walk: '走动',
   }}
 />
+<!-- prettier-ignore-end -->
 
 野猫是四足潜行形态，沿用豹猫终局形态的主要移动能力。它可以全向攀爬，免疫摔落，脚步无声且不会触发绊线，苦力怕会主动远离；猫与豹猫把玩家视为友好目标。它还有猫科夜视和四足视角摆动。
 

@@ -29,16 +29,48 @@ $$
 t_{\mathrm {second}}=\frac {t_{\mathrm {tick}}}{20}
 $$
 
+<!-- prettier-ignore-start -->
 <EChart
   ariaLabel="游戏 tick 与现实秒数换算图"
   option={{
-    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, valueFormatter: (value) => `${value} 秒` },
-    grid: { left: 68, right: 28, top: 30, bottom: 48 },
-    xAxis: { type: 'category', name: '游戏 tick', data: ['6', '20', '60', '100', '300', '600'] },
-    yAxis: { type: 'value', name: '现实秒数', min: 0 },
-    series: [{ type: 'bar', name: '换算时间', data: [0.3, 1, 3, 5, 15, 30], label: { show: true, position: 'top', formatter: '{c} 秒' } }],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow',
+      },
+      valueFormatter: (value) => `${value} 秒`,
+    },
+    grid: {
+      left: 68,
+      right: 28,
+      top: 30,
+      bottom: 48,
+    },
+    xAxis: {
+      type: 'category',
+      name: '游戏 tick',
+      data: ['6', '20', '60', '100', '300', '600'],
+    },
+    yAxis: {
+      type: 'value',
+      name: '现实秒数',
+      min: 0,
+    },
+    series: [
+      {
+        type: 'bar',
+        name: '换算时间',
+        data: [0.3, 1, 3, 5, 15, 30],
+        label: {
+          show: true,
+          position: 'top',
+          formatter: '{c} 秒',
+        },
+      },
+    ],
   }}
 />
+<!-- prettier-ignore-end -->
 
 服务器卡顿时，20 tick 可能花费超过现实中的 1 秒。技能仍按服务器 tick 推进，所以现实等待时间会跟着拉长。
 
@@ -63,13 +95,13 @@ $$
 
 ## 各形态资源
 
-| 形态 | 资源与范围 | 开始值 | 主要恢复 | 主要用途 |
-| --- | --- | --: | --- | --- |
-| SP 悦灵 | Mana，0 至 200 | 0 | 每 8 tick 恢复 3；远程命中每 3.5 秒可恢复上限的 8% | 群疗至少需要 100，完成后清空；信标与应急食物也会消耗 |
-| 吸血蝙蝠 | 血渴，0 至 100 | 0 | 普攻命中增加 8，技能前三个目标依次增加 12、6、3，击杀增加 15 | 数值区间直接改变减伤、吸血和伤害 |
-| 冥裁者 | 灵魂能量，0 至 100 | 0 | 普通击杀增加 5，冥狼击杀增加 10，领域内击杀增加 20，自身凋零时额外增加 10 | 满 100 强化下一次死亡领域并清空 |
-| SP 雪狐 | 霜寒，0 至 100 | 0 | 技能或受伤后暂停 5 秒；随后每秒恢复 3，适宜温度环境恢复 5 | 近战主技能 15，瞬移成功 30、失败 20，冰风暴 30，护盾触发 20 |
-| 寄生果蝠 | 种子量，0 至 10 | 10 | 脱战每 5 秒增加 1，交战每 8 秒增加 1；吃种子也可增加 1 | 灵果寄生与孢子弹每次消耗 1 |
+| 形态     | 资源与范围         | 开始值 | 主要恢复                                                                  | 主要用途                                                    |
+| -------- | ------------------ | -----: | ------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| SP 悦灵  | Mana，0 至 200     |      0 | 每 8 tick 恢复 3；远程命中每 3.5 秒可恢复上限的 8%                        | 群疗至少需要 100，完成后清空；信标与应急食物也会消耗        |
+| 吸血蝙蝠 | 血渴，0 至 100     |      0 | 普攻命中增加 8，技能前三个目标依次增加 12、6、3，击杀增加 15              | 数值区间直接改变减伤、吸血和伤害                            |
+| 冥裁者   | 灵魂能量，0 至 100 |      0 | 普通击杀增加 5，冥狼击杀增加 10，领域内击杀增加 20，自身凋零时额外增加 10 | 满 100 强化下一次死亡领域并清空                             |
+| SP 雪狐  | 霜寒，0 至 100     |      0 | 技能或受伤后暂停 5 秒；随后每秒恢复 3，适宜温度环境恢复 5                 | 近战主技能 15，瞬移成功 30、失败 20，冰风暴 30，护盾触发 20 |
+| 寄生果蝠 | 种子量，0 至 10    |     10 | 脱战每 5 秒增加 1，交战每 8 秒增加 1；吃种子也可增加 1                    | 灵果寄生与孢子弹每次消耗 1                                  |
 
 ### 血渴的四段效果
 
@@ -86,16 +118,46 @@ flowchart LR
 
 以下时间从空资源开始，只计算稳定自然回复，不包含击杀、命中、吃种子、环境切换与暂停时间。
 
+<!-- prettier-ignore-start -->
 <EChart
   ariaLabel="五种资源从空到满的理论恢复时间条形图"
   option={{
-    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, valueFormatter: (value) => `${value} 秒` },
-    grid: { left: 116, right: 28, top: 28, bottom: 42 },
-    xAxis: { type: 'value', name: '从空到满的理论时间（秒）' },
-    yAxis: { type: 'category', data: ['SP 悦灵 Mana', 'SP 雪狐（普通）', 'SP 雪狐（适宜环境）', '寄生果蝠（脱战）', '寄生果蝠（交战）'] },
-    series: [{ type: 'bar', name: '恢复时间', data: [26.7, 33.3, 20, 50, 80], label: { show: true, position: 'right', formatter: '{c} 秒' } }],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow',
+      },
+      valueFormatter: (value) => `${value} 秒`,
+    },
+    grid: {
+      left: 116,
+      right: 28,
+      top: 28,
+      bottom: 42,
+    },
+    xAxis: {
+      type: 'value',
+      name: '从空到满的理论时间（秒）',
+    },
+    yAxis: {
+      type: 'category',
+      data: ['SP 悦灵 Mana', 'SP 雪狐（普通）', 'SP 雪狐（适宜环境）', '寄生果蝠（脱战）', '寄生果蝠（交战）'],
+    },
+    series: [
+      {
+        type: 'bar',
+        name: '恢复时间',
+        data: [26.7, 33.3, 20, 50, 80],
+        label: {
+          show: true,
+          position: 'right',
+          formatter: '{c} 秒',
+        },
+      },
+    ],
   }}
 />
+<!-- prettier-ignore-end -->
 
 ## 独立计数系统
 

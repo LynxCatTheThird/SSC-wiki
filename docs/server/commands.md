@@ -25,7 +25,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 `set_*` 与 `transform_to_*` 不完全等价：后者会经过变身管理器并表现出对应的转化过程。日常管理优先使用 `transform_to_*`，数据修复时才考虑直接设置。
 
-例如，把玩家 Steve 通过正常动画变成蝙蝠第 1 阶段，应输入：
+例如，把玩家 Steve 通过正常动画变成蝙蝠第一阶段，应输入：
 
 ```text
 /shape_shifter_curse transform_to_form Steve shape-shifter-curse:bat_0
@@ -37,12 +37,12 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 ## SSC 世界管理
 
-| 命令 | 权限 | 说明 |
-| --- | --: | --- |
-| `jump_to_next_cursed_moon` | 2 | 把主世界推进到下一个诅咒月相 |
-| `world_time set <time>` | 2 | 设置世界时间 |
-| `world_time add <time>` | 2 | 增加世界时间 |
-| `adjust_feral_item_loc <rot_center> <pos_offset> <euler_x>` | 2 | 开发用四足形态物品位置调整 |
+| 命令                                                        | 权限 | 说明                         |
+| ----------------------------------------------------------- | ---: | ---------------------------- |
+| `jump_to_next_cursed_moon`                                  |    2 | 把主世界推进到下一个诅咒月相 |
+| `world_time set <time>`                                     |    2 | 设置世界时间                 |
+| `world_time add <time>`                                     |    2 | 增加世界时间                 |
+| `adjust_feral_item_loc <rot_center> <pos_offset> <euler_x>` |    2 | 开发用四足形态物品位置调整   |
 
 跳转命令总会寻找 “下一次” 诅咒月相；如果当前已经是目标月相，会向后跳完整的八个月相周期，而不是停在当天。
 
@@ -111,18 +111,18 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 ## SSCA 管理命令
 
-| 命令 | 权限 | 说明 |
-| --- | --: | --- |
-| `set_mana <targets> <amount>` | 2 | 设置目标当前拥有的 SSCA 主资源；最小值 0，超过上限时按该资源上限写入 |
-| `mark_owner <targets>` | 2 | 为实体标记所有者 |
-| `get_book <book_id> [language]` | 2 | 获取指定故事书；语言为 `zh_cn` 或 `en_us` |
-| `list_books [language]` | 2 | 列出故事书 ID；语言为 `zh_cn` 或 `en_us` |
-| `reload_books` | 2 | 重载故事书数据 |
-| `reload` | 2 | 重载 SSCA 配置 |
-| `skill <form> <skill> [player]` | 2 | 强制调用技能 |
-| `block <player> <form> <skill>` | 2 | 屏蔽指定玩家的技能 |
-| `unblock <player> <form> <skill>` | 2 | 解除技能屏蔽 |
-| `list_blocks <player>` | 2 | 查看玩家被屏蔽的技能 |
+| 命令                              | 权限 | 说明                                                                 |
+| --------------------------------- | ---: | -------------------------------------------------------------------- |
+| `set_mana <targets> <amount>`     |    2 | 设置目标当前拥有的 SSCA 主资源；最小值 0，超过上限时按该资源上限写入 |
+| `mark_owner <targets>`            |    2 | 为实体标记所有者                                                     |
+| `get_book <book_id> [language]`   |    2 | 获取指定故事书；语言为 `zh_cn` 或 `en_us`                            |
+| `list_books [language]`           |    2 | 列出故事书 ID；语言为 `zh_cn` 或 `en_us`                             |
+| `reload_books`                    |    2 | 重载故事书数据                                                       |
+| `reload`                          |    2 | 重载 SSCA 配置                                                       |
+| `skill <form> <skill> [player]`   |    2 | 强制调用技能                                                         |
+| `block <player> <form> <skill>`   |    2 | 屏蔽指定玩家的技能                                                   |
+| `unblock <player> <form> <skill>` |    2 | 解除技能屏蔽                                                         |
+| `list_blocks <player>`            |    2 | 查看玩家被屏蔽的技能                                                 |
 
 `skill` 当前自动补全的形态关键词包括 `snow_fox`、`anubis_wolf`、`allay`、`axolotl`、`wild_cat`、`familiar_fox` 和 `familiar_fox_red`。这份固定列表未必覆盖所有新增 SP 形态。
 
@@ -132,15 +132,15 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 `skill` 立即调用一次技能，`block` 持续禁止指定技能，`unblock` 解除禁止。屏蔽状态保存在玩家命令标签里，重新登录后仍然存在；`list_blocks` 可查看当前记录。
 
-| 形态关键词 | 可用技能关键词 | 玩家能观察到的作用 |
-| --- | --- | --- |
-| `snow_fox` | `melee_primary`、`melee_secondary`、`ranged_primary`、`ranged_secondary`、`frost_regen` | 四个战斗技能与霜寒恢复 |
-| `anubis_wolf` | `summon_wolves`、`death_domain`、`soul_sand_heal`、`wither_hunt`、`soul_scrutiny` | 冥狼召唤、死亡领域、灵魂沙恢复、凋零追猎与灵魂审视 |
-| `allay` | `jukebox_charge`、`group_heal`、`mana_regen` | 唱片机充能、群体治疗与 Mana 恢复 |
-| `axolotl` | `natural_regen_boost`、`rain_wetness` | 自然恢复强化与雨水湿润 |
-| `wild_cat` | `night_speed`、`day_slow` | 夜间加速与白天减速 |
-| `familiar_fox` | `mana_regen` | SP 使魔 Mana 恢复 |
-| `familiar_fox_red` | `red_mana_regen` | 红使魔 Mana 恢复 |
+| 形态关键词         | 可用技能关键词                                                                          | 玩家能观察到的作用                                 |
+| ------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `snow_fox`         | `melee_primary`、`melee_secondary`、`ranged_primary`、`ranged_secondary`、`frost_regen` | 四个战斗技能与霜寒恢复                             |
+| `anubis_wolf`      | `summon_wolves`、`death_domain`、`soul_sand_heal`、`wither_hunt`、`soul_scrutiny`       | 冥狼召唤、死亡领域、灵魂沙恢复、凋零追猎与灵魂审视 |
+| `allay`            | `jukebox_charge`、`group_heal`、`mana_regen`                                            | 唱片机充能、群体治疗与 Mana 恢复                   |
+| `axolotl`          | `natural_regen_boost`、`rain_wetness`                                                   | 自然恢复强化与雨水湿润                             |
+| `wild_cat`         | `night_speed`、`day_slow`                                                               | 夜间加速与白天减速                                 |
+| `familiar_fox`     | `mana_regen`                                                                            | SP 使魔 Mana 恢复                                  |
+| `familiar_fox_red` | `red_mana_regen`                                                                        | 红使魔 Mana 恢复                                   |
 
 例如，临时禁止 Steve 使用死亡领域：
 

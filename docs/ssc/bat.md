@@ -30,18 +30,50 @@ title: 蝙蝠
 
 ## 画廊
 
-<FormModelViewer stages={{
-  bat_0: { label: '第一阶段', title: '蝙蝠第一阶段 · bat_0.gltf', model: '/models/forms/ssc/bat/bat_0.gltf' },
-  bat_1: { label: '第二阶段', title: '蝙蝠第二阶段 · bat_1.gltf', model: '/models/forms/ssc/bat/bat_1.gltf' },
-  bat_2: { label: '第三阶段', title: '蝙蝠第三阶段 · bat_2.gltf', model: '/models/forms/ssc/bat/bat_2.gltf' },
-  bat_3: { label: '永久阶段', title: '蝙蝠永久阶段 · bat_3.gltf', model: '/models/forms/ssc/bat/bat_3.gltf' },
-}}
+<!-- prettier-ignore-start -->
+<FormModelViewer
+  stages={{
+    bat_0: {
+      label: '初始阶段',
+      title: '蝙蝠初始阶段 · bat_0.gltf',
+      model: '/models/forms/ssc/bat/bat_0.gltf',
+    },
+    bat_1: {
+      label: '第一阶段',
+      title: '蝙蝠第一阶段 · bat_1.gltf',
+      model: '/models/forms/ssc/bat/bat_1.gltf',
+    },
+    bat_2: {
+      label: '第二阶段',
+      title: '蝙蝠第二阶段 · bat_2.gltf',
+      model: '/models/forms/ssc/bat/bat_2.gltf',
+    },
+    bat_3: {
+      label: '永久阶段',
+      title: '蝙蝠永久阶段 · bat_3.gltf',
+      model: '/models/forms/ssc/bat/bat_3.gltf',
+    },
+  }}
   animations={{
-    bat_1_jump: '跳跃', bat_1_jump2: '跳跃（变体）', bat_1_sneak_idle: '潜行待机',
-    bat_2_attack: '攻击', bat_2_digging: '挖掘', bat_2_jump: '跳跃', bat_2_slow_falling: '缓降',
-    bat_3_attach_bottom: '附着天花板', bat_3_attach_side: '附着墙面', bat_3_attack: '攻击', bat_3_climb: '攀爬',
-    bat_3_digging: '挖掘', bat_3_idle: '待机', bat_3_jump: '跳跃', bat_3_sleep: '睡眠', bat_3_sneak_walk: '潜行移动', bat_3_walk: '走动',
+    bat_1_jump: '跳跃',
+    bat_1_jump2: '跳跃（变体）',
+    bat_1_sneak_idle: '潜行待机',
+    bat_2_attack: '攻击',
+    bat_2_digging: '挖掘',
+    bat_2_jump: '跳跃',
+    bat_2_slow_falling: '缓降',
+    bat_3_attach_bottom: '附着天花板',
+    bat_3_attach_side: '附着墙面',
+    bat_3_attack: '攻击',
+    bat_3_climb: '攀爬',
+    bat_3_digging: '挖掘',
+    bat_3_idle: '待机',
+    bat_3_jump: '跳跃',
+    bat_3_sleep: '睡眠',
+    bat_3_sneak_walk: '潜行移动',
+    bat_3_walk: '走动',
   }}
 />
+<!-- prettier-ignore-end -->
 
 [^source]: 源码核对：SSC `origins/form_bat_*.json` 与 `RegPlayerForms.java`。表中只概括已注册能力。

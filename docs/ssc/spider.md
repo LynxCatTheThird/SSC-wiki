@@ -5,16 +5,16 @@ sidebar_position: 2
 
 # 蜘蛛
 
-蜘蛛形态线包含 `spider_0` 至 `spider_3` 四个阶段。源码将第一阶段标记为 Starter Form，中后期阶段包含抗性、Instinct 锁定、最终形态和诅咒之月相关标记。[^source]
+蜘蛛形态线包含 `spider_0` 至 `spider_3` 四个阶段。源码将初始阶段标记为 Starter Form，中后期阶段包含抗性、Instinct 锁定、最终形态和诅咒之月相关标记。[^source]
 
 ## 阶段概览
 
-| 阶段 | 主要能力 | 主要限制 |
-| --- | --- | --- |
-| `spider_0` | 蛛丝投射物、蛛网攀爬、不受蛛网减速、Mana | 腿甲受限、素食收益降低 |
-| `spider_1` | 茧阶段专属 Instinct 和粒子 | 禁止疾跑、减速、视野变暗、物品 / 旋转受限 |
-| `spider_2` | 爬墙、夜视、专属额外槽、制作蛛网与蛛网堆肥桶 | 胸甲 / 腿甲受限、火焰伤害增加、食性受限 |
-| `spider_3` | 蛛网桥、完整蛛丝蓄力、台阶跨越和空中跳跃 | 胸/腿/鞋受限、火焰伤害增加 |
+| 阶段       | 主要能力                                     | 主要限制                                  |
+| ---------- | -------------------------------------------- | ----------------------------------------- |
+| `spider_0` | 蛛丝投射物、蛛网攀爬、不受蛛网减速、Mana     | 腿甲受限、素食收益降低                    |
+| `spider_1` | 茧阶段专属 Instinct 和粒子                   | 禁止疾跑、减速、视野变暗、物品 / 旋转受限 |
+| `spider_2` | 爬墙、夜视、专属额外槽、制作蛛网与蛛网堆肥桶 | 胸甲 / 腿甲受限、火焰伤害增加、食性受限   |
+| `spider_3` | 蛛网桥、完整蛛丝蓄力、台阶跨越和空中跳跃     | 胸/腿/鞋受限、火焰伤害增加                |
 
 ## 蛛丝技能
 
@@ -55,10 +55,26 @@ sidebar_position: 2
 <!-- prettier-ignore-start -->
 <FormModelViewer
   stages={{
-    spider_0: { label: '第一阶段', title: '蜘蛛第一阶段 · spider_0.gltf', model: '/models/forms/ssc/spider/spider_0.gltf' },
-    spider_1: { label: '第二阶段', title: '蜘蛛第二阶段 · spider_1.gltf', model: '/models/forms/ssc/spider/spider_1.gltf' },
-    spider_2: { label: '第三阶段', title: '蜘蛛第三阶段 · spider_2.gltf', model: '/models/forms/ssc/spider/spider_2.gltf' },
-    spider_3: { label: '永久阶段', title: '蜘蛛永久阶段 · spider_3.gltf', model: '/models/forms/ssc/spider/spider_3.gltf' },
+    spider_0: {
+      label: '初始阶段',
+      title: '蜘蛛初始阶段 · spider_0.gltf',
+      model: '/models/forms/ssc/spider/spider_0.gltf',
+    },
+    spider_1: {
+      label: '第一阶段',
+      title: '蜘蛛第一阶段 · spider_1.gltf',
+      model: '/models/forms/ssc/spider/spider_1.gltf',
+    },
+    spider_2: {
+      label: '第二阶段',
+      title: '蜘蛛第二阶段 · spider_2.gltf',
+      model: '/models/forms/ssc/spider/spider_2.gltf',
+    },
+    spider_3: {
+      label: '永久阶段',
+      title: '蜘蛛永久阶段 · spider_3.gltf',
+      model: '/models/forms/ssc/spider/spider_3.gltf',
+    },
   }}
   animations={{
     spider_1_idle: '待机',

@@ -14,9 +14,9 @@ SSC 将玩家形态注册为形态（Form）和形态组（Form Group）。主�
 - 蝙蝠（Bat）；
 - 美西螈（Axolotl）；
 - 豹猫（Ocelot）；
-- 使魔狐（Familiar Fox）；
+- 使魔红狐（Familiar Fox）；
 - 雪狐（Snow Fox）；
-- 阿努比斯之狼（Anubis Wolf）；
+- 胡狼（Anubis Wolf）；
 - 蜘蛛（Spider）；
 - 悦灵和野猫等特殊形态。
 
