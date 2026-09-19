@@ -16,4 +16,4 @@ title: 荧光幼灵
 
 阿澪会在剧情中复用该技能集，但其三连发与潮汐倍率由阿澪 ID 强制启用，见[阿澪](aling)。
 
-[^source]:幻形者诅咒扩展包`SscAddonForms.java`、`FluorescentLaserManager.java`、`FluorescentTidalManager.java`、`LaserBeamEntity.java`、`TidalOrbEntity.java` 与 `form_axolotl_fluorescent_*.json`；上游核对时间 2026-09-09。
+[^source]: 幻形者诅咒扩展包 `SscAddonForms.java`、`FluorescentLaserManager.java`、`FluorescentTidalManager.java`、`LaserBeamEntity.java`、`TidalOrbEntity.java` 与 `form_axolotl_fluorescent_*.json`；上游核对时间 2026-09-09。

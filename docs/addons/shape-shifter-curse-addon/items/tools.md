@@ -1,7 +1,7 @@
 ---
 title: 道具与方块
 sidebar_position: 3
-description:幻形者诅咒扩展包的水矛、友军标记、能量设备和功能道具
+description: 幻形者诅咒扩展包的水矛、友军标记、能量设备和功能道具
 ---
 
 # 道具与方块

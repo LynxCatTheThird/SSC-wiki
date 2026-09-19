@@ -8,4 +8,4 @@ title: 进化使魔
 
 进入终局前请先阅读 [进化系统](../../../systems/evolution)。
 
-[^source]:幻形者诅咒扩展包进化路线 JSON 与 `EvolutionComponent.java`，commit `e42a62aa`。
+[^source]: 幻形者诅咒扩展包进化路线 JSON 与 `EvolutionComponent.java`，commit `e42a62aa`。

@@ -1,7 +1,7 @@
 ---
 title: 剧情与世界观
 sidebar_position: 2
-description:幻形者诅咒扩展包官方故事内容的来源、许可和阅读索引
+description: 幻形者诅咒扩展包官方故事内容的来源、许可和阅读索引
 ---
 
 # 剧情与世界观
@@ -22,6 +22,6 @@ description:幻形者诅咒扩展包官方故事内容的来源、许可和阅�
 
 ## 许可
 
-幻形者诅咒扩展包README 将 `story/`、游戏内书籍和 Codex 叙事文本标为 **CC BY-NC-ND 4.0**：可以转载，但必须保留署名，不得商业使用，也不得改写原文。字体和字号调整不改变文本内容。本站因此只做中文摘要、索引和来源链接。
+幻形者诅咒扩展包 README 将 `story/`、游戏内书籍和 Codex 叙事文本标为 **CC BY-NC-ND 4.0**：可以转载，但必须保留署名，不得商业使用，也不得改写原文。字体和字号调整不改变文本内容。本站因此只做中文摘要、索引和来源链接。
 
-[^source]: 故事书注册来自幻形者诅咒扩展包`src/main/resources/data/ssc_addon/story_books/books_cn.json`、`books_en.json`、`story/MoonScarStoryManager.java` 与 `story/TideSpiritStoryManager.java`，commit `e42a62aa`；许可依据项目 README 的 License 章节。
+[^source]: 故事书注册来自幻形者诅咒扩展包 `src/main/resources/data/ssc_addon/story_books/books_cn.json`、`books_en.json`、`story/MoonScarStoryManager.java` 与 `story/TideSpiritStoryManager.java`，commit `e42a62aa`；许可依据项目 README 的 License 章节。

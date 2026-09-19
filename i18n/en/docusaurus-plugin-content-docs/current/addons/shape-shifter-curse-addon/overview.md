@@ -6,7 +6,7 @@ description: Scope, systems, and entry points for Shape Shifter Curse Addon
 
 # Shape Shifter Curse Addon overview
 
-Shape Shifter Curse Addon (Shape Shifter Curse Addon) is an independent community project built on Shape Shifter Curse's form and animation framework. It adds endgame forms, evolution routes, combat skills, resources, equipment, story content, and HUD features.
+Shape Shifter Curse Addon is an independent community project built on Shape Shifter Curse's form and animation framework. It adds endgame forms, evolution routes, combat skills, resources, equipment, story content, and HUD features.
 
 The addon uses the historical `my_addon` namespace while its mod ID is `ssc_addon`. The namespace in an item or form ID is therefore not a reliable indication of which jar provided it.
 

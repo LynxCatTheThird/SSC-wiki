@@ -1,12 +1,12 @@
 ---
 title: 配置与兼容性
 sidebar_position: 2
-description:幻形者诅咒与幻形者诅咒扩展包当前配置文件、默认值和服务端生效范围
+description: 幻形者诅咒与幻形者诅咒扩展包当前配置文件、默认值和服务端生效范围
 ---
 
 # 配置与兼容性
 
-本页对应幻形者诅咒commit `c0f0bbb9` 和幻形者诅咒扩展包commit `e42a62aa`。设置前先判断自己遇到的是哪一类问题：世界规则由服务器决定，界面位置和按键只影响本机，技能伤害与范围目前大多写在技能本身。[^source]
+本页对应幻形者诅咒 commit `c0f0bbb9` 和幻形者诅咒扩展包 commit `e42a62aa`。设置前先判断自己遇到的是哪一类问题：世界规则由服务器决定，界面位置和按键只影响本机，技能伤害与范围目前大多写在技能本身。[^source]
 
 ## 配置入口
 
@@ -14,12 +14,12 @@ description:幻形者诅咒与幻形者诅咒扩展包当前配置文件、默�
 
 | 模组 | 配置名                       | 作用域                     |
 | ---- | ---------------------------- | -------------------------- |
-|幻形者诅咒 | `shape-shifter-curse-common` | 双端 / 服务器规则          |
-|幻形者诅咒 | `shape-shifter-curse-client` | 本地显示和工具             |
-|幻形者诅咒扩展包| `ssc_addon_server`           | 服务端权威规则             |
-|幻形者诅咒扩展包| `ssc_addon_client`           | 本地 HUD、按键和颜色编辑器 |
+| 幻形者诅咒 | `shape-shifter-curse-common` | 双端 / 服务器规则          |
+| 幻形者诅咒 | `shape-shifter-curse-client` | 本地显示和工具             |
+| 幻形者诅咒扩展包 | `ssc_addon_server`           | 服务端权威规则             |
+| 幻形者诅咒扩展包 | `ssc_addon_client`           | 本地 HUD、按键和颜色编辑器 |
 
-##幻形者诅咒公共配置
+## 幻形者诅咒公共配置
 
 ### 咒文生物出现频率
 
@@ -57,7 +57,7 @@ description:幻形者诅咒与幻形者诅咒扩展包当前配置文件、默�
 
 `enablePatronFormSystem`、各类 Data/Resource Pack URL、Patron Data URL 和检查间隔仍留在配置类中，但源码已标为 `[Obsolete]`。新服务器不应围绕这些字段建立部署方案。
 
-##幻形者诅咒客户端配置
+## 幻形者诅咒客户端配置
 
 这些设置只改变自己的画面和操作体验，联机时也不会替其他玩家修改。
 
@@ -85,7 +85,7 @@ Instinct、Mana 和物品存储条使用 1–9 九宫格锚点加 X/Y 偏移。�
 
 客户端配置还保留 Patron 授权文件 URL 和自定义 UUID 字段。它们不应被理解为服务器权限配置。
 
-##幻形者诅咒扩展包服务端配置
+## 幻形者诅咒扩展包服务端配置
 
 当前生效的服务端设置集中在三种体验上。
 
@@ -99,7 +99,7 @@ Instinct、Mana 和物品存储条使用 1–9 九宫格锚点加 X/Y 偏移。�
 不要使用旧的平衡参数表幻形者诅咒扩展包服务端配置类明确说明：雪狐、悦灵、阿努比斯狼和物品的旧平衡参数从未被代码读取，现已移除。源码中仅有私有旧结构作为说明，实际数值仍在能力 JSON 或 Java 类中。旧 Wiki 若声称可以通过这些配置改变伤害、范围或冷却，应视为过时。
 :::
 
-##幻形者诅咒扩展包客户端配置
+## 幻形者诅咒扩展包客户端配置
 
 | 想改变的操作             | 默认体验       | 可选效果                               | 查找字段                 |
 | ------------------------ | -------------- | -------------------------------------- | ------------------------ |
@@ -132,4 +132,4 @@ flowchart TD
   L --> C
 ```
 
-[^source]: 源码核对：幻形者诅咒`CommonConfig.java`、`ClientConfig.java`；幻形者诅咒扩展包`SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。
+[^source]: 源码核对：幻形者诅咒 `CommonConfig.java`、`ClientConfig.java`；幻形者诅咒扩展包 `SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。

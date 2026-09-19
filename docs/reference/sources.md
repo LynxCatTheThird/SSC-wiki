@@ -7,10 +7,10 @@ sidebar_position: 2
 
 ## 主要来源
 
-- [幻形者诅咒Modrinth](https://modrinth.com/mod/shape-shifter-curse)
-- [幻形者诅咒GitHub](https://github.com/onixary/shape-shifter-curse-fabric)
-- [幻形者诅咒扩展包Modrinth](https://modrinth.com/mod/shape-shifter-curse-addon)
-- [幻形者诅咒扩展包GitHub](https://github.com/MangZai-120/shape-shifter-curse-addon)
+- [幻形者诅咒 Modrinth](https://modrinth.com/mod/shape-shifter-curse)
+- [幻形者诅咒 GitHub](https://github.com/onixary/shape-shifter-curse-fabric)
+- [幻形者诅咒扩展包 Modrinth](https://modrinth.com/mod/shape-shifter-curse-addon)
+- [幻形者诅咒扩展包 GitHub](https://github.com/MangZai-120/shape-shifter-curse-addon)
 - [幻形者诅咒官方 Wiki](https://ssc-wiki.readthedocs.io/en/latest/)
 - [幻形者诅咒扩展包官方 Wiki](https://shape-shifter-curse-addon.readthedocs.io/zh-cn/latest/)
 - [MC 百科幻形者诅咒扩展包条目](https://www.mcmod.cn/class/24327.html)

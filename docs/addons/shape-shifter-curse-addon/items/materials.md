@@ -1,7 +1,7 @@
 ---
 title: 材料与素材
 sidebar_position: 2
-description:幻形者诅咒扩展包新增材料、珊瑚球与原版物品改动
+description: 幻形者诅咒扩展包新增材料、珊瑚球与原版物品改动
 ---
 
 # 材料与素材

@@ -1,7 +1,7 @@
 ---
 title: 饰品
 sidebar_position: 4
-description:幻形者诅咒扩展包可装备与不可装备饰品的效果和获取方式
+description: 幻形者诅咒扩展包可装备与不可装备饰品的效果和获取方式
 ---
 
 # 饰品

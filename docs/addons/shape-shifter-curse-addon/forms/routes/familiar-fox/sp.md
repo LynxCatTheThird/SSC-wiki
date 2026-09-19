@@ -8,4 +8,4 @@ title: 灵界之主
 
 入口条件与失败后果见 [进化系统](../../../systems/evolution)。
 
-[^source]:幻形者诅咒扩展包`FamiliarFoxSp` 相关能力代码，commit `e42a62aa`。
+[^source]: 幻形者诅咒扩展包 `FamiliarFoxSp` 相关能力代码，commit `e42a62aa`。

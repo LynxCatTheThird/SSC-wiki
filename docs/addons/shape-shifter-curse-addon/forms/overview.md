@@ -1,10 +1,10 @@
 ---
-title:幻形者诅咒扩展包形态目录
+title: 幻形者诅咒扩展包形态目录
 sidebar_position: 2
-description:幻形者诅咒扩展包8.0.0-beta.3 注册形态、内部 ID 与主要来源
+description: 幻形者诅咒扩展包 8.0.0-beta.3 注册形态、内部 ID 与主要来源
 ---
 
-#幻形者诅咒扩展包形态目录
+# 幻形者诅咒扩展包形态目录
 
 当前基线共注册 22 个附属形态。它们都带有 `NoInstinct`、`NoCursedMoonEffect`、`SpecialForm` 和 `InhibitorImmune` 标记：不会走普通本能或诅咒之月阶段推进，也不能靠普通抑制剂恢复。[^source]
 
@@ -53,7 +53,7 @@ flowchart LR
 
 ## 其他终局分支
 
-|幻形者诅咒起点        | 月髓十字环目标                | 进化石目标                     |
+| 幻形者诅咒起点        | 月髓十字环目标                | 进化石目标                     |
 | --------------- | ----------------------------- | ------------------------------ |
 | `snow_fox_3`    | 寒棘狐 `snow_fox_frostspine`  | SP 雪狐 `snow_fox_sp`          |
 | `anubis_wolf_3` | 冥裁者 `anubis_wolf_sp`       | 金沙岚 `golden_sandstorm_sp`   |

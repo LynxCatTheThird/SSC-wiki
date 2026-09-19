@@ -8,4 +8,4 @@ title: SP 悦灵
 
 详细的白名单和技能操作见 [操作、HUD 与白名单](../../../systems/controls-and-safety)。
 
-[^source]:幻形者诅咒扩展包悦灵进化石分支代码与注册表，commit `e42a62aa`。
+[^source]: 幻形者诅咒扩展包悦灵进化石分支代码与注册表，commit `e42a62aa`。

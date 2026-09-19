@@ -10,4 +10,4 @@ title: 进化美西螈
 
 路线规则见 [进化系统](../../../systems/evolution)。
 
-[^source]:幻形者诅咒扩展包`data/my_addon/ssca_evolution/routes/axolotl.json`、`EvolutionManager.java` 与 `EvolutionComponent.java`；上游核对时间 2026-09-09。
+[^source]: 幻形者诅咒扩展包 `data/my_addon/ssca_evolution/routes/axolotl.json`、`EvolutionManager.java` 与 `EvolutionComponent.java`；上游核对时间 2026-09-09。

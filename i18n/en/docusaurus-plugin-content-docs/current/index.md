@@ -6,7 +6,7 @@ description: Unofficial documentation for Shape Shifter Curse and Shape Shifter 
 
 # Shape Shifter Curse Wiki
 
-Community-maintained documentation for Shape Shifter Curse (Shape Shifter Curse) and Shape Shifter Curse Addon (Shape Shifter Curse Addon).
+Community-maintained documentation for Shape Shifter Curse and Shape Shifter Curse Addon.
 
 This site is available in Chinese and English. Use the language menu in the top-right corner, or open the [中文文档](pathname:///zh-CN/).
 

@@ -51,4 +51,4 @@ sidebar_position: 2
 
 幻形者诅咒支持通过 JSON/Data Pack 加载动态形态。动态形态与内置 Java 形态分开管理，重载时会清理和重新应用动态注册内容。自定义内容作者应使用独立命名空间，避免与内置 ID 冲突。
 
-[^source]: 源码核对：幻形者诅咒`player_form/RegPlayerForms.java`，commit `c0f0bbb9`。注册结构已逐项核对；能力摘要仍以各形态页的代码核对结果为准。
+[^source]: 源码核对：幻形者诅咒 `player_form/RegPlayerForms.java`，commit `c0f0bbb9`。注册结构已逐项核对；能力摘要仍以各形态页的代码核对结果为准。

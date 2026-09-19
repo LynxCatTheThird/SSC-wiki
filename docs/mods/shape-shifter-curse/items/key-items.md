@@ -51,4 +51,4 @@ description: 手册、月之尘、催化剂和抑制剂的用途与配方
 - 创造模式不会消耗物品；
 - 它们被加入幻形者诅咒/Origins 的饮食忽略标签，形态食性不应阻止使用。
 
-[^source]: 源码核对：幻形者诅咒`recipes/*.json`、`RegCustomItem.java`、`Catalyst.java`、`Inhibitor.java`、`TransformRelatedItems.java` 与 `LivingEntityMixin.java`，commit `c0f0bbb9`。配方与物品行为已核对；跨模组击杀掉落仍受事件覆盖影响。
+[^source]: 源码核对：幻形者诅咒 `recipes/*.json`、`RegCustomItem.java`、`Catalyst.java`、`Inhibitor.java`、`TransformRelatedItems.java` 与 `LivingEntityMixin.java`，commit `c0f0bbb9`。配方与物品行为已核对；跨模组击杀掉落仍受事件覆盖影响。

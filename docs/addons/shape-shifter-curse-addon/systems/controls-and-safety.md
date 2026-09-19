@@ -1,7 +1,7 @@
 ---
 title: 操作、HUD 与白名单
 sidebar_position: 4
-description:幻形者诅咒扩展包主副技能键、冷却条、资源条和友军保护规则
+description: 幻形者诅咒扩展包主副技能键、冷却条、资源条和友军保护规则
 ---
 
 # 操作、HUD 与白名单
@@ -15,7 +15,7 @@ description:幻形者诅咒扩展包主副技能键、冷却条、资源条和�
 - `主动技能 1`：幻形者诅咒扩展包主技能；
 - `主动技能 2`：幻形者诅咒扩展包次要技能。
 
-幻形者诅咒1.10.0 源码把主动技能 1 到 6 的默认按键全部设为 “未绑定”。因此首次游玩应在 Minecraft 的按键设置中自行绑定前两个主动技能，不能假定主技能默认是 G。
+幻形者诅咒 1.10.0 源码把主动技能 1 到 6 的默认按键全部设为 “未绑定”。因此首次游玩应在 Minecraft 的按键设置中自行绑定前两个主动技能，不能假定主技能默认是 G。
 
 幻形者诅咒扩展包还提供按形态覆盖：从 Mod Menu 打开幻形者诅咒扩展包设置，进入 “特殊键位设置”，选择形态后启用自定义键位，并分别绑定主、副技能。启用后，该形态只读取自定义按键，不再响应幻形者诅咒的全局主动技能键；按 `Esc` 可以解绑。
 
@@ -43,7 +43,7 @@ GUI 打开时不会触发技能幻形者诅咒扩展包明确在任何界面打�
 | 资源          | 默认上限 | 常见形态                         |
 | ------------- | -------: | -------------------------------- |
 | SP 悦灵 Mana  |      200 | SP 悦灵                          |
-|幻形者诅咒Mana 适配 |      100 | 使魔、蜘蛛等沿用幻形者诅咒Mana 的形态 |
+| 幻形者诅咒 Mana 适配 |      100 | 使魔、蜘蛛等沿用幻形者诅咒 Mana 的形态 |
 | Blood         |      100 | 吸血蝙蝠                         |
 | Soul Energy   |      100 | 冥裁者                           |
 | Frost/Mana    |      100 | 雪狐扩展形态                     |
@@ -80,4 +80,4 @@ HUD 的本能、能量和冷却位置可在可视化位置编辑器中拖动。�
 6. 让服主检查 `disabledSkills` 与玩家级 `ssc_skill_blocked:*` 标记。
 7. 检查客户端日志是否出现 `Failed to register client keybindings`；出现时通常是幻形者诅咒/幻形者诅咒扩展包版本接口不匹配。
 
-[^source]: 源码核对：幻形者诅咒`ShapeShifterCurseFabricClient.java`；幻形者诅咒扩展包`SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`e42a62aa`。通用输入和白名单规则已核对。
+[^source]: 源码核对：幻形者诅咒 `ShapeShifterCurseFabricClient.java`；幻形者诅咒扩展包 `SscAddonKeybindings.java`、`SSCAddonClientConfig.java`、`SkillCooldownBarRenderer.java`、`BarKeys.java`、`WhitelistUtils.java` 与 `SkillBlocker.java`，对应 commit `c0f0bbb9`、`e42a62aa`。通用输入和白名单规则已核对。

@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "形态",
+          key: "shape-shifter-curse-forms",
           items: [
             "mods/shape-shifter-curse/forms/overview",
             "mods/shape-shifter-curse/forms/bat",
@@ -33,11 +34,13 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "物品",
+          key: "shape-shifter-curse-items",
           items: ["mods/shape-shifter-curse/items/key-items"],
         },
         {
           type: "category",
           label: "系统",
+          key: "shape-shifter-curse-systems",
           items: [
             "mods/shape-shifter-curse/systems/transformative-effect",
             "mods/shape-shifter-curse/systems/cursed-moon",
@@ -59,6 +62,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "category",
               label: "形态",
+              key: "shape-shifter-curse-addon-forms",
               items: [
                 "addons/shape-shifter-curse-addon/forms/overview",
                 "addons/shape-shifter-curse-addon/forms/reference",
@@ -161,6 +165,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "category",
               label: "物品",
+              key: "shape-shifter-curse-addon-items",
               items: [
                 "addons/shape-shifter-curse-addon/items/evolution-items",
                 "addons/shape-shifter-curse-addon/items/materials",
@@ -171,6 +176,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "category",
               label: "系统",
+              key: "shape-shifter-curse-addon-systems",
               items: [
                 "addons/shape-shifter-curse-addon/systems/numeric-systems",
                 "addons/shape-shifter-curse-addon/systems/evolution",

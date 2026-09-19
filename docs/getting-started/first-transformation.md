@@ -35,7 +35,7 @@ flowchart LR
 
 ## 2. 寻找咒文生物
 
-幻形者诅咒1.10.0 注册了五种带有附魔粒子的转化生物。它们都有独立的实体类型和生成条件：
+幻形者诅咒 1.10.0 注册了五种带有附魔粒子的转化生物。它们都有独立的实体类型和生成条件：
 
 | 咒文生物   | 主要生成位置             | 命中后指向的初始形态 | 每次命中的效果概率 |
 | ---------- | ------------------------ | -------------------- | -----------------: |
@@ -86,4 +86,4 @@ flowchart LR
 | 睡觉没有变身   | 确认结束睡眠时效果仍在；多人服务器还要排查其他模组对睡眠事件的修改 |
 | 变成了意外形态 | 检查此前已有的效果、管理员命令、数据包动态形态和附属模组           |
 
-[^source]: 源码核对：幻形者诅咒`give_book`/`delay_give_book` 函数、`TransformativeEntitySpawning.java`、`ITMob.java`、`EffectManager.java`、`TransformativeStatusInstance.java`，commit `c0f0bbb9`。生成密度与跨模组睡眠兼容性尚未覆盖所有环境。
+[^source]: 源码核对：幻形者诅咒 `give_book`/`delay_give_book` 函数、`TransformativeEntitySpawning.java`、`ITMob.java`、`EffectManager.java`、`TransformativeStatusInstance.java`，commit `c0f0bbb9`。生成密度与跨模组睡眠兼容性尚未覆盖所有环境。

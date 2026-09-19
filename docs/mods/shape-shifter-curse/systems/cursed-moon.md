@@ -48,4 +48,4 @@ $$
 命令名称和权限来自当前幻形者诅咒源码；触发后的具体结果仍取决于玩家形态、公共配置和世界状态。
 :::
 
-[^source]: 源码核对：幻形者诅咒`cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。
+[^source]: 源码核对：幻形者诅咒 `cursed_moon/CursedMoon.java`、`config/CommonConfig.java` 与 `command/ShapeShifterCurseCommand.java`，commit `c0f0bbb9`。

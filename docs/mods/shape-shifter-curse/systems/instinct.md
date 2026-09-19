@@ -77,4 +77,4 @@ HUD 位置可在客户端配置中调整；本能值和增长率由服务端保�
 数值口径能力 JSON 的 `value` 是每次或每 tick 写入系统的原始修正，不能直接当成 “每秒百分比”。持续时间、触发类型和服务器 tick 都会影响最终速度。
 :::
 
-[^source]: 源码核对：幻形者诅咒`InstinctUtils.java`、`StaticParams.java`、`FormUtils.java`、各形态 Origin 与 instinct power JSON，commit `c0f0bbb9`。系统规则已核对；尚未发现数值定义的行为不会据此推测。
+[^source]: 源码核对：幻形者诅咒 `InstinctUtils.java`、`StaticParams.java`、`FormUtils.java`、各形态 Origin 与 instinct power JSON，commit `c0f0bbb9`。系统规则已核对；尚未发现数值定义的行为不会据此推测。

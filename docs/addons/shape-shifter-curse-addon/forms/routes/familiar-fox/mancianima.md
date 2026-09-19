@@ -10,4 +10,4 @@ title: 契灵
 
 完整入口映射见 [幻形者诅咒扩展包形态目录](../../overview)。
 
-[^source]:幻形者诅咒扩展包`MancianimaPrimary.java`、`MancianimaTeleport.java` 与 `MancianimaMarkManager.java`，当前源码 commit `e42a62aa`。
+[^source]: 幻形者诅咒扩展包 `MancianimaPrimary.java`、`MancianimaTeleport.java` 与 `MancianimaMarkManager.java`，当前源码 commit `e42a62aa`。

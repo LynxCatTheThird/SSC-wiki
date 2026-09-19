@@ -1,7 +1,7 @@
 ---
 title: 进化用品
 sidebar_position: 1
-description:幻形者诅咒扩展包的月髓十字环、进化石与灵能宝珠
+description: 幻形者诅咒扩展包的月髓十字环、进化石与灵能宝珠
 ---
 
 # 进化用品

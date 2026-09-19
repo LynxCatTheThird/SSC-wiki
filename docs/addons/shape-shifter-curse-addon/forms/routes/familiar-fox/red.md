@@ -8,4 +8,4 @@ title: 使魔（Red）
 
 它不属于普通终局出口，获得方式以对应剧情或整合包配置为准。
 
-[^source]:幻形者诅咒扩展包Red 变体的能力与资源 JSON，commit `e42a62aa`。
+[^source]: 幻形者诅咒扩展包 Red 变体的能力与资源 JSON，commit `e42a62aa`。
