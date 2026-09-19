@@ -38,7 +38,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
-          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/',
+          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/edit/main/',
           remarkPlugins: [remarkMath, remarkBooleanTableCells],
           rehypePlugins: [rehypeKatex],
         },

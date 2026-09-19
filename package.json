@@ -9,6 +9,8 @@
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
+    "typecheck": "tsc --noEmit",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test src/components/form-model-viewer/viewerState.test.ts",
     "lint-md": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\"",
     "lint-md:fix": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\" --fix"
   },
@@ -35,7 +37,7 @@
     "@docusaurus/types": "3.10.2",
     "@gltf-transform/cli": "^4.5.0",
     "@lint-md/cli": "^2.3.1",
-    "typescript": "~7.0.2"
+    "typescript": "~5.9.3"
   },
   "browserslist": {
     "production": [

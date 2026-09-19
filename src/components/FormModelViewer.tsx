@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useReducer } from 'react';
+import { translate } from '@docusaurus/Translate';
 import ViewerControls from './form-model-viewer/ViewerControls';
 import type { AppearanceSettings, CameraSnapshot, StageDefinition, ViewPreset } from './form-model-viewer/types';
 import { ensureModelViewerDefined, useModelViewerBridge } from './form-model-viewer/useModelViewerBridge';
@@ -24,7 +25,7 @@ export type FormModelViewerProps = {
 export default function FormModelViewer({
   model,
   poster,
-  title = '3D 模型',
+  title = translate({ id: 'formModelViewer.defaultTitle', message: '3D 模型' }),
   stages,
   animations = {},
 }: FormModelViewerProps) {
@@ -137,7 +138,13 @@ export default function FormModelViewer({
         )}
         {state.phase !== 'ready' && (
           <div className="form-model-viewer__fallback" role="status">
-            <strong>{state.phase === 'error' ? state.error : '正在载入'}</strong>
+            <strong>
+              {state.phase === 'error'
+                ? state.error === 'registration'
+                  ? translate({ id: 'formModelViewer.registrationFailed', message: '模型查看器加载失败' })
+                  : translate({ id: 'formModelViewer.modelFailed', message: '模型暂不可用' })
+                : translate({ id: 'formModelViewer.loading', message: '正在载入' })}
+            </strong>
           </div>
         )}
       </div>

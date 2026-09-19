@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
+import { translate } from '@docusaurus/Translate';
 
 export type SelectOption = {
   value: string;
@@ -84,7 +85,9 @@ export default function SelectControl({ label, value, options, disabled = false,
           }
         }}
       >
-        <span id={`${id}-value`}>{selected?.label ?? '不可用'}</span>
+        <span id={`${id}-value`}>
+          {selected?.label ?? translate({ id: 'formModelViewer.unavailable', message: '不可用' })}
+        </span>
         <span className="form-model-viewer__chevron" aria-hidden="true" />
       </button>
       {open && (

@@ -18,5 +18,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: Check Chinese Markdown spacing
         run: pnpm lint-md
+      - name: Check types
+        run: pnpm typecheck
+      - name: Test
+        run: pnpm test
       - name: Build
         run: pnpm build

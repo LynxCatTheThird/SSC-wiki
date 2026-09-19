@@ -1,5 +1,5 @@
-import type {AppearanceSettings, CameraSnapshot} from './types';
-import {DEFAULT_APPEARANCE} from './types';
+import type {AppearanceSettings, CameraSnapshot} from './types.ts';
+import {DEFAULT_APPEARANCE} from './types.ts';
 
 export type ViewerPhase = 'registering' | 'loading' | 'ready' | 'error';
 
@@ -16,7 +16,7 @@ export type ViewerState = {
   homeCamera: CameraSnapshot | null;
   camera: CameraSnapshot | null;
   settingsOpen: boolean;
-  error: string | null;
+  error: 'registration' | 'model' | null;
 };
 
 export type ViewerAction =
@@ -64,7 +64,7 @@ export function viewerReducer(state: ViewerState, action: ViewerAction): ViewerS
     case 'REGISTERED':
       return {...state, moduleReady: true, phase: 'loading', error: null};
     case 'REGISTRATION_FAILED':
-      return {...state, phase: 'error', error: '模型查看器加载失败'};
+      return {...state, phase: 'error', error: 'registration'};
     case 'SELECT_STAGE':
       if (action.stageId === state.stageId) return state;
       return {
@@ -93,7 +93,7 @@ export function viewerReducer(state: ViewerState, action: ViewerAction): ViewerS
       };
     case 'MODEL_FAILED':
       if (action.generation !== state.generation) return state;
-      return {...state, phase: 'error', error: '模型暂不可用'};
+      return {...state, phase: 'error', error: 'model'};
     case 'CAMERA_CHANGED':
       if (action.generation !== state.generation || state.phase !== 'ready') return state;
       return {...state, camera: action.camera};

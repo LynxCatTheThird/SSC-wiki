@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import SelectControl from './SelectControl';
 import type { AppearanceSettings, CameraSnapshot, StageDefinition } from './types';
 
@@ -52,21 +53,26 @@ export default function ViewerControls({
       <div className="form-model-viewer__controls">
         {stages.length > 1 && (
           <SelectControl
-            label="阶段"
+            label={translate({ id: 'formModelViewer.stage', message: '阶段' })}
             value={stageId}
             options={stages.map((stage) => ({ value: stage.id, label: stage.label }))}
             onChange={onStageChange}
           />
         )}
         <SelectControl
-          label="动作"
+          label={translate({ id: 'formModelViewer.animation', message: '动作' })}
           value={animation ?? STATIC_ANIMATION}
-          options={[{ value: STATIC_ANIMATION, label: '静止' }, ...animations]}
+          options={[
+            { value: STATIC_ANIMATION, label: translate({ id: 'formModelViewer.static', message: '静止' }) },
+            ...animations,
+          ]}
           disabled={!ready}
           onChange={(value) => onAnimationChange(value === STATIC_ANIMATION ? null : value)}
         />
         <button type="button" disabled={!ready || animation == null} onClick={onPlaybackToggle}>
-          {playing ? '暂停' : '播放'}
+          {playing
+            ? translate({ id: 'formModelViewer.pause', message: '暂停' })
+            : translate({ id: 'formModelViewer.play', message: '播放' })}
         </button>
         <label className="form-model-viewer__toggle">
           <input
@@ -75,10 +81,10 @@ export default function ViewerControls({
             disabled={!ready}
             onChange={(event) => onAutoRotateChange(event.target.checked)}
           />
-          自动旋转
+          {translate({ id: 'formModelViewer.autoRotate', message: '自动旋转' })}
         </label>
         <button type="button" disabled={!ready} onClick={onSettingsToggle} aria-expanded={settingsOpen}>
-          参数
+          {translate({ id: 'formModelViewer.settings', message: '参数' })}
         </button>
       </div>
 
@@ -125,9 +131,9 @@ function CameraSettings({
   return (
     <div className="form-model-viewer__settings">
       <fieldset>
-        <legend>画幅位置</legend>
+        <legend>{translate({ id: 'formModelViewer.framing', message: '画幅位置' })}</legend>
         <Range
-          label="水平位置 X"
+          label={translate({ id: 'formModelViewer.targetX', message: '水平位置 X' })}
           value={camera.targetX}
           {...targetX}
           step={0.01}
@@ -136,7 +142,7 @@ function CameraSettings({
           onChange={(value) => onCameraChange('targetX', value)}
         />
         <Range
-          label="垂直位置 Y"
+          label={translate({ id: 'formModelViewer.targetY', message: '垂直位置 Y' })}
           value={camera.targetY}
           {...targetY}
           step={0.01}
@@ -145,7 +151,7 @@ function CameraSettings({
           onChange={(value) => onCameraChange('targetY', value)}
         />
         <Range
-          label="纵深位置 Z"
+          label={translate({ id: 'formModelViewer.targetZ', message: '纵深位置 Z' })}
           value={camera.targetZ}
           {...targetZ}
           step={0.01}
@@ -155,9 +161,9 @@ function CameraSettings({
         />
       </fieldset>
       <fieldset>
-        <legend>观察角度</legend>
+        <legend>{translate({ id: 'formModelViewer.viewAngle', message: '观察角度' })}</legend>
         <Range
-          label="水平角度"
+          label={translate({ id: 'formModelViewer.orbitX', message: '水平角度' })}
           value={camera.orbitX}
           min={-180}
           max={180}
@@ -166,7 +172,7 @@ function CameraSettings({
           onChange={(value) => onCameraChange('orbitX', value)}
         />
         <Range
-          label="俯仰角度"
+          label={translate({ id: 'formModelViewer.orbitY', message: '俯仰角度' })}
           value={camera.orbitY}
           min={5}
           max={175}
@@ -176,9 +182,9 @@ function CameraSettings({
         />
       </fieldset>
       <fieldset>
-        <legend>镜头</legend>
+        <legend>{translate({ id: 'formModelViewer.camera', message: '镜头' })}</legend>
         <Range
-          label="镜头距离 R"
+          label={translate({ id: 'formModelViewer.distance', message: '镜头距离 R' })}
           value={camera.distance}
           min={distanceMin}
           max={distanceMax}
@@ -188,7 +194,7 @@ function CameraSettings({
           onChange={(value) => onCameraChange('distance', value)}
         />
         <Range
-          label="镜头视野"
+          label={translate({ id: 'formModelViewer.fieldOfView', message: '镜头视野' })}
           value={camera.fieldOfView}
           min={12}
           max={55}
@@ -198,9 +204,9 @@ function CameraSettings({
         />
       </fieldset>
       <fieldset>
-        <legend>光照与运动</legend>
+        <legend>{translate({ id: 'formModelViewer.lightingAndMotion', message: '光照与运动' })}</legend>
         <Range
-          label="曝光"
+          label={translate({ id: 'formModelViewer.exposure', message: '曝光' })}
           value={appearance.exposure}
           min={0.25}
           max={2}
@@ -209,7 +215,7 @@ function CameraSettings({
           onChange={(value) => onAppearanceChange('exposure', value)}
         />
         <Range
-          label="阴影浓度"
+          label={translate({ id: 'formModelViewer.shadowIntensity', message: '阴影浓度' })}
           value={appearance.shadowIntensity}
           min={0}
           max={1}
@@ -218,7 +224,7 @@ function CameraSettings({
           onChange={(value) => onAppearanceChange('shadowIntensity', value)}
         />
         <Range
-          label="阴影柔度"
+          label={translate({ id: 'formModelViewer.shadowSoftness', message: '阴影柔度' })}
           value={appearance.shadowSoftness}
           min={0}
           max={1}
@@ -227,7 +233,7 @@ function CameraSettings({
           onChange={(value) => onAppearanceChange('shadowSoftness', value)}
         />
         <Range
-          label="旋转速度"
+          label={translate({ id: 'formModelViewer.rotationSpeed', message: '旋转速度' })}
           value={appearance.rotationSpeed}
           min={4}
           max={60}
@@ -238,7 +244,7 @@ function CameraSettings({
       </fieldset>
       <div className="form-model-viewer__settings-actions">
         <button type="button" onClick={onReset}>
-          恢复当前阶段默认视图
+          {translate({ id: 'formModelViewer.resetView', message: '恢复当前阶段默认视图' })}
         </button>
       </div>
     </div>
