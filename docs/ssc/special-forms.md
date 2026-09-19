@@ -36,14 +36,14 @@ flowchart LR
   model="/models/forms/ssc/allay_sp/allay_sp.gltf"
   title="SP 悦灵 · allay_sp.gltf"
   animations={{
-    allay_sp_attack: '攻击',
-    allay_sp_digging: '挖掘',
-    allay_sp_fly: '飞行',
-    allay_sp_idle: '待机',
-    allay_sp_moving: '移动',
-    allay_sp_run: '奔跑',
-    allay_sp_sneaking: '潜行待机',
-    allay_sp_sneaking_walk: '潜行移动',
+    'allay_sp_attack_1.0': '攻击',
+    'allay_sp_digging_1.0': '挖掘',
+    'allay_sp_fly_1.0': '飞行',
+    'allay_sp_idle_1.0': '待机',
+    'allay_sp_moving_1.0': '移动',
+    'allay_sp_run_1.0': '奔跑',
+    'allay_sp_sneaking_1.0': '潜行待机',
+    'allay_sp_sneaking_walk_1.0': '潜行移动',
   }}
 />
 <!-- prettier-ignore-end -->
@@ -55,21 +55,22 @@ flowchart LR
   model="/models/forms/ssc/feral_cat/feral_cat.gltf"
   title="野猫 · feral_cat.gltf"
   animations={{
-    form_feral_common_attack: '攻击',
-    form_feral_common_climb: '攀爬',
-    form_feral_common_climb_idle: '攀爬待机',
-    form_feral_common_dig: '挖掘',
-    form_feral_common_elytra_fly: '鞘翅飞行',
-    form_feral_common_fall: '下落',
-    form_feral_common_float: '漂浮',
-    form_feral_common_idle: '待机',
-    form_feral_common_jump: '跳跃',
-    form_feral_common_run: '奔跑',
-    form_feral_common_sleep: '睡眠',
-    form_feral_common_sneak_idle: '潜行待机',
-    form_feral_common_sneak_walk: '潜行移动',
-    form_feral_common_swim: '游泳',
-    form_feral_common_walk: '走动',
+    'form_feral_common_attack_1.0': '攻击',
+    'form_feral_common_climb_1.0': '攀爬',
+    'form_feral_common_climb_idle_1.0': '攀爬待机',
+    'form_feral_common_dig_1.0': '挖掘',
+    'form_feral_common_elytra_fly_1.0': '鞘翅飞行',
+    'form_feral_common_fall_1.0': '下落',
+    'form_feral_common_float_1.0': '漂浮',
+    'form_feral_common_idle_1.0': '待机',
+    'form_feral_common_jump_1.0': '跳跃',
+    'form_feral_common_run_2.3': '奔跑',
+    'form_feral_common_sleep_1.0': '睡眠',
+    'form_feral_common_sneak_idle_1.0': '潜行待机',
+    'form_feral_common_sneak_walk_1.0': '潜行移动',
+    'form_feral_common_swim_1.0': '游泳',
+    'form_feral_common_walk_1.2': '走动',
+    'feral_cat_sp_riding_1.0': '骑乘',
   }}
 />
 <!-- prettier-ignore-end -->
