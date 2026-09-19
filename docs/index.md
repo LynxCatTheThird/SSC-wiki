@@ -18,7 +18,7 @@ description: 幻形者诅咒与幻形者诅咒扩展包的非官方文档
 
 - [安装与依赖](getting-started/installation)：安装 Minecraft 1.20.1 Fabric、幻形者诅咒和幻形者诅咒扩展包。
 - [第一次变身](getting-started/first-transformation)：找到咒文生物，取得并激活首个转化效果。
-- [核心玩法](mods/shape-shifter-curse/systems/transformative-effect)：理解转化效果、诅咒之月、本能值和阶段推进。
+- [核心玩法](ssc/systems/transformative-effect)：理解转化效果、诅咒之月、本能值和阶段推进。
 - [版本与兼容性](reference/versions)：确认当前页面适用的版本。
 
 ## 文档范围

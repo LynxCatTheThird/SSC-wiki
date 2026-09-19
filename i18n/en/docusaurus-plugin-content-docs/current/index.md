@@ -18,7 +18,7 @@ This site is not affiliated with the mod authors. Check the exact jar, release n
 
 - [Installation and dependencies](getting-started/installation)
 - [Your first transformation](getting-started/first-transformation)
-- [Core gameplay](mods/shape-shifter-curse/systems/transformative-effect)
+- [Core gameplay](ssc/systems/transformative-effect)
 - [Version compatibility](reference/versions)
 
 The English locale follows the Minecraft 1.20.1 Fabric baseline: Shape Shifter Curse 1.10.0 and Shape Shifter Curse Addon 8.0.0-beta.3. Pages that are still being translated link to the complete Chinese reference.
