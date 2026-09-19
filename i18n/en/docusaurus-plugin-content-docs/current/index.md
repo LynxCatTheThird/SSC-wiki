@@ -6,7 +6,7 @@ description: Unofficial documentation for Shape Shifter Curse and Shape Shifter 
 
 # Shape Shifter Curse Wiki
 
-Community-maintained documentation for Shape Shifter Curse (SSC) and Shape Shifter Curse Addon (SSCA).
+Community-maintained documentation for Shape Shifter Curse (Shape Shifter Curse) and Shape Shifter Curse Addon (Shape Shifter Curse Addon).
 
 This site is available in Chinese and English. Use the language menu in the top-right corner, or open the [中文文档](pathname:///zh-CN/).
 
@@ -18,7 +18,7 @@ This site is not affiliated with the mod authors. Check the exact jar, release n
 
 - [Installation and dependencies](getting-started/installation)
 - [Your first transformation](getting-started/first-transformation)
-- [Core gameplay](gameplay/transformative-effect)
+- [Core gameplay](mods/shape-shifter-curse/systems/transformative-effect)
 - [Version compatibility](reference/versions)
 
-The English locale follows the Minecraft 1.20.1 Fabric baseline: SSC 1.10.0 and SSCA 8.0.0-beta.3. Pages that are still being translated link to the complete Chinese reference.
+The English locale follows the Minecraft 1.20.1 Fabric baseline: Shape Shifter Curse 1.10.0 and Shape Shifter Curse Addon 8.0.0-beta.3. Pages that are still being translated link to the complete Chinese reference.

@@ -1,6 +1,6 @@
 # SSC 形态文档模板
 
-本目录以 `docs/ssc/axolotl.md` 为完成范例，为其余幻形者诅咒（Shape Shifter Curse，SSC）形态保留待填写骨架。模板不参与站点构建；完成核对后，应把相应章节合并到正式形态页，而不是直接发布占位内容。
+本目录以 `docs/mods/shape-shifter-curse/forms/axolotl.md` 为完成范例，为其余幻形者诅咒（Shape Shifter Curse，SSC）形态保留待填写骨架。模板不参与站点构建；完成核对后，应把相应章节合并到正式形态页，而不是直接发布占位内容。
 
 ## 美西螈范例包含的内容
 

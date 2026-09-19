@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: 幻形者诅咒 Wiki
-description: 幻形者诅咒与幻形者诅咒扩展包的非官方文档
+title:幻形者诅咒Wiki
+description:幻形者诅咒与幻形者诅咒扩展包的非官方文档
 ---
 
-# 幻形者诅咒 Wiki
+#幻形者诅咒Wiki
 
-幻形者诅咒（Shape Shifter Curse，SSC）与幻形者诅咒扩展包（Shape Shifter Curse Addon，SSCA）的社区维护文档。
+幻形者诅咒（Shape Shifter Curse）与幻形者诅咒扩展包（Shape Shifter Curse Addon）的社区维护文档。
 
 本站支持中文与 English。使用右上角的语言菜单切换，或直接进入 [English documentation](pathname:///en/)。
 
@@ -16,14 +16,14 @@ description: 幻形者诅咒与幻形者诅咒扩展包的非官方文档
 
 ## 从这里开始
 
-- [安装与依赖](getting-started/installation)：安装 Minecraft 1.20.1 Fabric、SSC 和 SSCA。
+- [安装与依赖](getting-started/installation)：安装 Minecraft 1.20.1 Fabric、幻形者诅咒和幻形者诅咒扩展包。
 - [第一次变身](getting-started/first-transformation)：找到咒文生物，取得并激活首个转化效果。
-- [核心玩法](gameplay/transformative-effect)：理解转化效果、诅咒之月、本能值和阶段推进。
+- [核心玩法](mods/shape-shifter-curse/systems/transformative-effect)：理解转化效果、诅咒之月、本能值和阶段推进。
 - [版本与兼容性](reference/versions)：确认当前页面适用的版本。
 
 ## 文档范围
 
-首发内容以 Minecraft 1.20.1 Fabric、SSC 1.10.0 和 SSCA 8.0.0-beta.3 为基线。每页会标注验证状态、验证日期和来源 commit。
+首发内容以 Minecraft 1.20.1 Fabric、幻形者诅咒1.10.0 和幻形者诅咒扩展包8.0.0-beta.3 为基线。每页会标注验证状态、验证日期和来源 commit。
 
 ## 文档状态
 

@@ -1,12 +1,12 @@
 ---
 title: 配置与兼容性
 sidebar_position: 2
-description: SSC 与 SSCA 当前配置文件、默认值和服务端生效范围
+description:幻形者诅咒与幻形者诅咒扩展包当前配置文件、默认值和服务端生效范围
 ---
 
 # 配置与兼容性
 
-本页对应 SSC commit `c0f0bbb9` 和 SSCA commit `e42a62aa`。设置前先判断自己遇到的是哪一类问题：世界规则由服务器决定，界面位置和按键只影响本机，技能伤害与范围目前大多写在技能本身。[^source]
+本页对应幻形者诅咒commit `c0f0bbb9` 和幻形者诅咒扩展包commit `e42a62aa`。设置前先判断自己遇到的是哪一类问题：世界规则由服务器决定，界面位置和按键只影响本机，技能伤害与范围目前大多写在技能本身。[^source]
 
 ## 配置入口
 
@@ -14,12 +14,12 @@ description: SSC 与 SSCA 当前配置文件、默认值和服务端生效范围
 
 | 模组 | 配置名                       | 作用域                     |
 | ---- | ---------------------------- | -------------------------- |
-| SSC  | `shape-shifter-curse-common` | 双端 / 服务器规则          |
-| SSC  | `shape-shifter-curse-client` | 本地显示和工具             |
-| SSCA | `ssc_addon_server`           | 服务端权威规则             |
-| SSCA | `ssc_addon_client`           | 本地 HUD、按键和颜色编辑器 |
+|幻形者诅咒 | `shape-shifter-curse-common` | 双端 / 服务器规则          |
+|幻形者诅咒 | `shape-shifter-curse-client` | 本地显示和工具             |
+|幻形者诅咒扩展包| `ssc_addon_server`           | 服务端权威规则             |
+|幻形者诅咒扩展包| `ssc_addon_client`           | 本地 HUD、按键和颜色编辑器 |
 
-## SSC 公共配置
+##幻形者诅咒公共配置
 
 ### 咒文生物出现频率
 
@@ -57,7 +57,7 @@ description: SSC 与 SSCA 当前配置文件、默认值和服务端生效范围
 
 `enablePatronFormSystem`、各类 Data/Resource Pack URL、Patron Data URL 和检查间隔仍留在配置类中，但源码已标为 `[Obsolete]`。新服务器不应围绕这些字段建立部署方案。
 
-## SSC 客户端配置
+##幻形者诅咒客户端配置
 
 这些设置只改变自己的画面和操作体验，联机时也不会替其他玩家修改。
 
@@ -85,7 +85,7 @@ Instinct、Mana 和物品存储条使用 1–9 九宫格锚点加 X/Y 偏移。�
 
 客户端配置还保留 Patron 授权文件 URL 和自定义 UUID 字段。它们不应被理解为服务器权限配置。
 
-## SSCA 服务端配置
+##幻形者诅咒扩展包服务端配置
 
 当前生效的服务端设置集中在三种体验上。
 
@@ -96,21 +96,21 @@ Instinct、Mana 和物品存储条使用 1–9 九宫格锚点加 X/Y 偏移。�
 | 全服停用某项技能       | 空，全部开放 | 填入技能 ID 后，相关形态失去对应能力                               | `disabledSkills`   |
 
 :::danger
-不要使用旧的平衡参数表 SSCA 服务端配置类明确说明：雪狐、悦灵、阿努比斯狼和物品的旧平衡参数从未被代码读取，现已移除。源码中仅有私有旧结构作为说明，实际数值仍在能力 JSON 或 Java 类中。旧 Wiki 若声称可以通过这些配置改变伤害、范围或冷却，应视为过时。
+不要使用旧的平衡参数表幻形者诅咒扩展包服务端配置类明确说明：雪狐、悦灵、阿努比斯狼和物品的旧平衡参数从未被代码读取，现已移除。源码中仅有私有旧结构作为说明，实际数值仍在能力 JSON 或 Java 类中。旧 Wiki 若声称可以通过这些配置改变伤害、范围或冷却，应视为过时。
 :::
 
-## SSCA 客户端配置
+##幻形者诅咒扩展包客户端配置
 
 | 想改变的操作             | 默认体验       | 可选效果                               | 查找字段                 |
 | ------------------------ | -------------- | -------------------------------------- | ------------------------ |
 | 是否显示技能冷却条       | 显示           | 关闭后隐藏整条冷却界面                 | `showCdBar`              |
 | 冷却条是否显示秒数       | 显示           | 关闭后只看进度长度                     | `showCdSeconds`          |
 | 契灵瞬移落点             | 朝准星方向选择 | 平台模式会按另一套落点规则寻找位置     | `mancianimaTeleportMode` |
-| 是否启用 SSCA 外观编辑器 | 关闭           | 开启后可使用颜色编辑和 20 个本地预设槽 | `enableColorEditor`      |
+| 是否启用幻形者诅咒扩展包外观编辑器 | 关闭           | 开启后可使用颜色编辑和 20 个本地预设槽 | `enableColorEditor`      |
 
 冷却条默认以锚点 `8`、主条偏移 `(-98, -21)`、副条偏移 `(98, -21)` 左右对称显示。位置由可视化编辑界面维护，不直接暴露在普通 AutoConfig 页面。
 
-SSCA 还按形态保存特殊键位配置。启用后，该形态的主 / 副技能不再同步 SSC 的通用技能键，而使用玩家指定按键。
+幻形者诅咒扩展包还按形态保存特殊键位配置。启用后，该形态的主 / 副技能不再同步幻形者诅咒的通用技能键，而使用玩家指定按键。
 
 ## 排障顺序
 
@@ -132,4 +132,4 @@ flowchart TD
   L --> C
 ```
 
-[^source]: 源码核对：SSC `CommonConfig.java`、`ClientConfig.java`；SSCA `SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。
+[^source]: 源码核对：幻形者诅咒`CommonConfig.java`、`ClientConfig.java`；幻形者诅咒扩展包`SSCAddonServerConfig.java`、`SSCAddonClientConfig.java`。

@@ -5,90 +5,94 @@
   },
   "sidebar.tutorialSidebar.category.入门": {
     "message": "Getting started",
-    "description": "The label for category '入门' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '入门'"
   },
-  "sidebar.tutorialSidebar.category.核心玩法": {
-    "message": "Core gameplay",
-    "description": "The label for category '核心玩法' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.幻形者诅咒": {
+    "message": "Shape Shifter Curse",
+    "description": "The label for category '幻形者诅咒'"
   },
-  "sidebar.tutorialSidebar.category.幻形者诅咒（SSC）形态": {
-    "message": "Shape Shifter Curse (SSC) forms",
-    "description": "The label for category '幻形者诅咒（SSC）形态' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.形态": {
+    "message": "Forms",
+    "description": "The label for category '形态'"
+  },
+  "sidebar.tutorialSidebar.category.物品": {
+    "message": "Items",
+    "description": "The label for category '物品'"
+  },
+  "sidebar.tutorialSidebar.category.系统": {
+    "message": "Systems",
+    "description": "The label for category '系统'"
   },
   "sidebar.tutorialSidebar.category.附属模组": {
     "message": "Addons",
-    "description": "The label for category '附属模组' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '附属模组'"
   },
-  "sidebar.tutorialSidebar.category.幻形者诅咒扩展包（SSCA）": {
-    "message": "Shape Shifter Curse Addon (SSCA)",
-    "description": "The label for category '幻形者诅咒扩展包（SSCA）' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.幻形者诅咒扩展包": {
+    "message": "Shape Shifter Curse Addon",
+    "description": "The label for category '幻形者诅咒扩展包'"
   },
   "sidebar.tutorialSidebar.category.进化路线": {
     "message": "Evolution routes",
-    "description": "The label for category '进化路线' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '进化路线'"
   },
   "sidebar.tutorialSidebar.category.使魔红狐": {
     "message": "Familiar Fox",
-    "description": "The label for category '使魔红狐' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '使魔红狐'"
   },
   "sidebar.tutorialSidebar.category.美西螈": {
     "message": "Axolotl",
-    "description": "The label for category '美西螈' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '美西螈'"
   },
-  "sidebar.tutorialSidebar.category.幻形者诅咒（SSC）终局分支": {
-    "message": "Shape Shifter Curse (SSC) endgame branches",
-    "description": "The label for category '幻形者诅咒（SSC）终局分支' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.本体形态终局分支": {
+    "message": "Base form endgame branches",
+    "description": "The label for category '本体形态终局分支'"
   },
   "sidebar.tutorialSidebar.category.雪狐": {
     "message": "Snow Fox",
-    "description": "The label for category '雪狐' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '雪狐'"
   },
   "sidebar.tutorialSidebar.category.胡狼": {
     "message": "Anubis Wolf",
-    "description": "The label for category '胡狼' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '胡狼'"
   },
   "sidebar.tutorialSidebar.category.蝙蝠": {
     "message": "Bat",
-    "description": "The label for category '蝙蝠' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '蝙蝠'"
   },
   "sidebar.tutorialSidebar.category.豹猫": {
     "message": "Ocelot",
-    "description": "The label for category '豹猫' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '豹猫'"
   },
   "sidebar.tutorialSidebar.category.蜘蛛": {
     "message": "Spider",
-    "description": "The label for category '蜘蛛' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '蜘蛛'"
   },
   "sidebar.tutorialSidebar.category.特殊形态分支": {
     "message": "Special form branches",
-    "description": "The label for category '特殊形态分支' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '特殊形态分支'"
   },
   "sidebar.tutorialSidebar.category.悦灵": {
     "message": "Allay",
-    "description": "The label for category '悦灵' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '悦灵'"
   },
   "sidebar.tutorialSidebar.category.野猫": {
     "message": "Feral Cat",
-    "description": "The label for category '野猫' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '野猫'"
   },
-  "sidebar.tutorialSidebar.category.系统与操作": {
-    "message": "Systems and controls",
-    "description": "The label for category '系统与操作' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.物品与装备": {
-    "message": "Items and equipment",
-    "description": "The label for category '物品与装备' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.剧情": {
+    "message": "Lore",
+    "description": "The label for category '剧情'"
   },
   "sidebar.tutorialSidebar.category.服主手册": {
     "message": "Server admin guide",
-    "description": "The label for category '服主手册' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '服主手册'"
   },
   "sidebar.tutorialSidebar.category.开发者": {
     "message": "Developer",
-    "description": "The label for category '开发者' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '开发者'"
   },
   "sidebar.tutorialSidebar.category.参考": {
     "message": "Reference",
-    "description": "The label for category '参考' in sidebar 'tutorialSidebar'"
+    "description": "The label for category '参考'"
   }
 }
