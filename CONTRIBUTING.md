@@ -4,11 +4,9 @@
 
 ## 准备环境
 
-建议使用 Node.js 22 和项目指定的 pnpm 版本：
+请通过系统包管理器安装 Node.js 和 pnpm，然后执行：
 
 ```bash
-corepack enable
-corepack install
 pnpm install --frozen-lockfile
 pnpm dev
 ```
