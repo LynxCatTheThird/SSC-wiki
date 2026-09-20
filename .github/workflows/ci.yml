@@ -5,6 +5,23 @@ on:
   pull_request:
 
 jobs:
+  style:
+    name: Check documentation and formatting
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Check Markdown spacing
+        run: pnpm lint-md
+      - name: Check code formatting
+        run: pnpm format:check
+
   build:
     name: Build documentation
     runs-on: ubuntu-latest
@@ -16,8 +33,6 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - name: Check Chinese Markdown spacing
-        run: pnpm lint-md
       - name: Check types
         run: pnpm typecheck
       - name: Test

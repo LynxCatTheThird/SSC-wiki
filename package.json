@@ -11,8 +11,10 @@
     "clear": "docusaurus clear",
     "typecheck": "tsc --noEmit",
     "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test src/components/form-model-viewer/viewerState.test.ts",
-    "lint-md": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\"",
-    "lint-md:fix": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\" --fix"
+    "lint-md": "lint-md \"*.md\" \"docs/**/*.md\" \"i18n/**/*.md\"",
+    "lint-md:fix": "lint-md \"*.md\" \"docs/**/*.md\" \"i18n/**/*.md\" --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -37,6 +39,7 @@
     "@docusaurus/types": "3.10.2",
     "@gltf-transform/cli": "^4.5.0",
     "@lint-md/cli": "^2.3.1",
+    "prettier": "^3.9.8",
     "typescript": "~5.9.3"
   },
   "browserslist": {

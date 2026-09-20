@@ -23,4 +23,7 @@ const redirectPage = `<!doctype html>
 </html>
 `;
 
-await writeFile('build/index.html', redirectPage);
+await Promise.all([
+  writeFile('build/index.html', redirectPage),
+  writeFile('build/_redirects', '/ /zh-CN/ 302\n'),
+]);
