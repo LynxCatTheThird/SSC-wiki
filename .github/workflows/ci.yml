@@ -18,9 +18,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Check Markdown spacing
-        run: pnpm lint-md
+        run: pnpm check:docs
       - name: Check code formatting
-        run: pnpm format:check
+        run: pnpm check:format
 
   build:
     name: Build documentation
@@ -34,9 +34,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Check types
-        run: pnpm typecheck
+        run: pnpm check:types
       - name: Lint code
-        run: pnpm lint
+        run: pnpm check:code
       - name: Test
         run: pnpm test
       - name: Build
