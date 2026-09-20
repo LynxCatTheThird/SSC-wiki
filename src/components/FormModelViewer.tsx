@@ -46,7 +46,17 @@ export default function FormModelViewer({
   const [state, dispatch] = useReducer(viewerReducer, stageDefinitions[0]?.id ?? '', createViewerState);
   const activeStage = stageDefinitions.find((stage) => stage.id === state.stageId) ?? stageDefinitions[0];
 
-  const bridge = useModelViewerBridge({
+  const {
+    bindElement,
+    element,
+    loadStage,
+    resetCamera,
+    selectAnimation: selectModelAnimation,
+    updateAppearance: updateModelAppearance,
+    updateAutoRotate,
+    updateCamera: updateModelCamera,
+    updatePlayback,
+  } = useModelViewerBridge({
     onCameraChange: (generation, camera) => dispatch({ type: 'CAMERA_CHANGED', generation, camera }),
     onLoad: (generation, camera, availableAnimations, animation, playing) =>
       dispatch({
@@ -80,25 +90,24 @@ export default function FormModelViewer({
   }, [activeStage, stageDefinitions, state.stageId]);
 
   useEffect(() => {
-    if (!state.moduleReady || !bridge.element || !activeStage) return;
-    void bridge
-      .loadStage(activeStage, state.generation)
+    if (!state.moduleReady || !element || !activeStage) return;
+    void loadStage(activeStage, state.generation)
       .catch(() => dispatch({ type: 'MODEL_FAILED', generation: state.generation }));
-  }, [activeStage, bridge.element, bridge.loadStage, state.generation, state.moduleReady]);
+  }, [activeStage, element, loadStage, state.generation, state.moduleReady]);
 
   useEffect(() => {
-    bridge.updateAppearance(state.appearance);
-  }, [bridge.updateAppearance, state.appearance]);
+    updateModelAppearance(state.appearance);
+  }, [state.appearance, updateModelAppearance]);
 
   useEffect(() => {
-    bridge.updateAutoRotate(state.phase === 'ready' && state.autoRotate);
-  }, [bridge.updateAutoRotate, state.autoRotate, state.phase]);
+    updateAutoRotate(state.phase === 'ready' && state.autoRotate);
+  }, [state.autoRotate, state.phase, updateAutoRotate]);
 
   const updateCamera = (key: keyof CameraSnapshot, value: number) => {
     if (!state.camera) return;
     const camera = { ...state.camera, [key]: value };
     dispatch({ type: 'CAMERA_INPUT', camera });
-    bridge.updateCamera(camera);
+    updateModelCamera(camera);
   };
 
   const updateAppearance = (key: keyof AppearanceSettings, value: number) => {
@@ -108,19 +117,19 @@ export default function FormModelViewer({
   const selectAnimation = (animation: string | null) => {
     const playing = animation != null;
     dispatch({ type: 'SELECT_ANIMATION', animation, playing });
-    bridge.selectAnimation(animation, playing);
+    selectModelAnimation(animation, playing);
   };
 
   const togglePlayback = () => {
     const playing = !state.playing;
     dispatch({ type: 'SET_PLAYING', playing });
-    bridge.updatePlayback(playing);
+    updatePlayback(playing);
   };
 
   const resetView = () => {
     if (!state.homeCamera) return;
     dispatch({ type: 'RESET_VIEW', camera: state.homeCamera });
-    void bridge.resetCamera(state.homeCamera);
+    void resetCamera(state.homeCamera);
   };
 
   const animationOptions = state.availableAnimations.map((value) => ({
@@ -133,7 +142,7 @@ export default function FormModelViewer({
       <div className="form-model-viewer__stage" aria-busy={state.phase === 'registering' || state.phase === 'loading'}>
         {state.moduleReady && activeStage && (
           <model-viewer
-            ref={bridge.bindElement}
+            ref={bindElement}
             poster={activeStage.poster ?? resolvedPoster}
             alt={activeStage.title}
             camera-controls

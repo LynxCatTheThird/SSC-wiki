@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
-import {describe, it} from 'node:test';
-import {createViewerState, viewerReducer} from './viewerState.ts';
-import type {CameraSnapshot} from './types.ts';
+import { describe, it } from 'node:test';
+import { createViewerState, viewerReducer } from './viewerState.ts';
+import type { CameraSnapshot } from './types.ts';
 
 const camera: CameraSnapshot = {
   orbitX: 0,
@@ -26,7 +26,7 @@ describe('viewerReducer', () => {
       homeCamera: camera,
     };
 
-    const next = viewerReducer(ready, {type: 'SELECT_STAGE', stageId: 'second'});
+    const next = viewerReducer(ready, { type: 'SELECT_STAGE', stageId: 'second' });
 
     assert.deepEqual(
       {
@@ -40,20 +40,20 @@ describe('viewerReducer', () => {
         homeCamera: next.homeCamera,
       },
       {
-      phase: 'loading',
-      generation: 1,
-      stageId: 'second',
-      availableAnimations: [],
-      animation: null,
-      playing: false,
-      camera: null,
-      homeCamera: null,
+        phase: 'loading',
+        generation: 1,
+        stageId: 'second',
+        availableAnimations: [],
+        animation: null,
+        playing: false,
+        camera: null,
+        homeCamera: null,
       },
     );
   });
 
   it('ignores completion events from an obsolete model load', () => {
-    const state = {...createViewerState('second'), phase: 'loading' as const, generation: 2};
+    const state = { ...createViewerState('second'), phase: 'loading' as const, generation: 2 };
 
     const next = viewerReducer(state, {
       type: 'MODEL_LOADED',
@@ -68,10 +68,10 @@ describe('viewerReducer', () => {
   });
 
   it('only accepts camera events for the active, ready model', () => {
-    const ready = {...createViewerState('first'), phase: 'ready' as const, generation: 3, camera};
-    const moved = {...camera, orbitX: 45};
+    const ready = { ...createViewerState('first'), phase: 'ready' as const, generation: 3, camera };
+    const moved = { ...camera, orbitX: 45 };
 
-    assert.equal(viewerReducer(ready, {type: 'CAMERA_CHANGED', generation: 2, camera: moved}), ready);
-    assert.equal(viewerReducer(ready, {type: 'CAMERA_CHANGED', generation: 3, camera: moved}).camera, moved);
+    assert.equal(viewerReducer(ready, { type: 'CAMERA_CHANGED', generation: 2, camera: moved }), ready);
+    assert.equal(viewerReducer(ready, { type: 'CAMERA_CHANGED', generation: 3, camera: moved }).camera, moved);
   });
 });

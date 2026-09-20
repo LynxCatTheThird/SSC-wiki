@@ -1,5 +1,5 @@
-import type {AppearanceSettings, CameraSnapshot} from './types.ts';
-import {DEFAULT_APPEARANCE} from './types.ts';
+import type { AppearanceSettings, CameraSnapshot } from './types.ts';
+import { DEFAULT_APPEARANCE } from './types.ts';
 
 export type ViewerPhase = 'registering' | 'loading' | 'ready' | 'error';
 
@@ -20,9 +20,9 @@ export type ViewerState = {
 };
 
 export type ViewerAction =
-  | {type: 'REGISTERED'}
-  | {type: 'REGISTRATION_FAILED'}
-  | {type: 'SELECT_STAGE'; stageId: string}
+  | { type: 'REGISTERED' }
+  | { type: 'REGISTRATION_FAILED' }
+  | { type: 'SELECT_STAGE'; stageId: string }
   | {
     type: 'MODEL_LOADED';
     generation: number;
@@ -31,15 +31,15 @@ export type ViewerAction =
     animation: string | null;
     playing: boolean;
   }
-  | {type: 'MODEL_FAILED'; generation: number}
-  | {type: 'CAMERA_CHANGED'; generation: number; camera: CameraSnapshot}
-  | {type: 'CAMERA_INPUT'; camera: CameraSnapshot}
-  | {type: 'SELECT_ANIMATION'; animation: string | null; playing: boolean}
-  | {type: 'SET_PLAYING'; playing: boolean}
-  | {type: 'SET_AUTO_ROTATE'; autoRotate: boolean}
-  | {type: 'SET_APPEARANCE'; appearance: AppearanceSettings}
-  | {type: 'RESET_VIEW'; camera: CameraSnapshot}
-  | {type: 'TOGGLE_SETTINGS'};
+  | { type: 'MODEL_FAILED'; generation: number }
+  | { type: 'CAMERA_CHANGED'; generation: number; camera: CameraSnapshot }
+  | { type: 'CAMERA_INPUT'; camera: CameraSnapshot }
+  | { type: 'SELECT_ANIMATION'; animation: string | null; playing: boolean }
+  | { type: 'SET_PLAYING'; playing: boolean }
+  | { type: 'SET_AUTO_ROTATE'; autoRotate: boolean }
+  | { type: 'SET_APPEARANCE'; appearance: AppearanceSettings }
+  | { type: 'RESET_VIEW'; camera: CameraSnapshot }
+  | { type: 'TOGGLE_SETTINGS' };
 
 export function createViewerState(stageId: string): ViewerState {
   return {
@@ -62,9 +62,9 @@ export function createViewerState(stageId: string): ViewerState {
 export function viewerReducer(state: ViewerState, action: ViewerAction): ViewerState {
   switch (action.type) {
     case 'REGISTERED':
-      return {...state, moduleReady: true, phase: 'loading', error: null};
+      return { ...state, moduleReady: true, phase: 'loading', error: null };
     case 'REGISTRATION_FAILED':
-      return {...state, phase: 'error', error: 'registration'};
+      return { ...state, phase: 'error', error: 'registration' };
     case 'SELECT_STAGE':
       if (action.stageId === state.stageId) return state;
       return {
@@ -93,23 +93,23 @@ export function viewerReducer(state: ViewerState, action: ViewerAction): ViewerS
       };
     case 'MODEL_FAILED':
       if (action.generation !== state.generation) return state;
-      return {...state, phase: 'error', error: 'model'};
+      return { ...state, phase: 'error', error: 'model' };
     case 'CAMERA_CHANGED':
       if (action.generation !== state.generation || state.phase !== 'ready') return state;
-      return {...state, camera: action.camera};
+      return { ...state, camera: action.camera };
     case 'CAMERA_INPUT':
-      return {...state, camera: action.camera};
+      return { ...state, camera: action.camera };
     case 'SELECT_ANIMATION':
-      return {...state, animation: action.animation, playing: action.playing};
+      return { ...state, animation: action.animation, playing: action.playing };
     case 'SET_PLAYING':
-      return {...state, playing: action.playing};
+      return { ...state, playing: action.playing };
     case 'SET_AUTO_ROTATE':
-      return {...state, autoRotate: action.autoRotate};
+      return { ...state, autoRotate: action.autoRotate };
     case 'SET_APPEARANCE':
-      return {...state, appearance: action.appearance};
+      return { ...state, appearance: action.appearance };
     case 'RESET_VIEW':
-      return {...state, camera: action.camera, autoRotate: false};
+      return { ...state, camera: action.camera, autoRotate: false };
     case 'TOGGLE_SETTINGS':
-      return {...state, settingsOpen: !state.settingsOpen};
+      return { ...state, settingsOpen: !state.settingsOpen };
   }
 }
