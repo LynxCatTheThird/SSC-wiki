@@ -6,7 +6,7 @@
   "description": "Unofficial Shape Shifter Curse and Shape Shifter Curse Addon documentation",
   "scripts": {
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "NODE_OPTIONS=--no-experimental-webstorage docusaurus build",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "typecheck": "tsc --noEmit",

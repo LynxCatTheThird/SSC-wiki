@@ -8,7 +8,7 @@ description: Unofficial documentation for Shape Shifter Curse and Shape Shifter 
 
 Community-maintained documentation for Shape Shifter Curse and Shape Shifter Curse Addon.
 
-This site is available in Chinese and English. Use the language menu in the top-right corner, or open the [中文文档](pathname:///zh-CN/).
+This site is available in Chinese and English. Use the language menu in the top-right corner, or open the <a href="/zh-CN/">中文文档</a>.
 
 :::warning Unofficial documentation
 This site is not affiliated with the mod authors. Check the exact jar, release notes, and source code for the version installed in your world.

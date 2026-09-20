@@ -19,4 +19,4 @@ Shape Shifter Curse Addon adds 22 registered special forms. The complete route d
 | Allay        | Fallen Allay SP     | Allay SP            |
 | Feral Cat    | Nightmare           | Feral Cat SP        |
 
-See the [Chinese full catalog](pathname:///zh-CN/addons/ssca/forms/overview) for the verified Mermaid diagram, IDs, and skill values.
+See the <a href="/zh-CN/addons/ssca/forms/overview">Chinese full catalog</a> for the verified Mermaid diagram, IDs, and skill values.

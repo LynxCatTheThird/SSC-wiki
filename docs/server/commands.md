@@ -25,7 +25,7 @@ Minecraft 权限等级 `2` 通常意味着管理员 / 开启作弊权限。命�
 
 `set_*` 与 `transform_to_*` 不完全等价：后者会经过变身管理器并表现出对应的转化过程。日常管理优先使用 `transform_to_*`，数据修复时才考虑直接设置。
 
-例如，把玩家 Steve 通过正常动画变成蝙蝠第一阶段，应输入：
+例如，把玩家 Steve 通过正常动画变成蝙蝠初始阶段，应输入：
 
 ```text
 /shape_shifter_curse transform_to_form Steve shape-shifter-curse:bat_0

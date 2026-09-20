@@ -9,4 +9,4 @@ Shape Shifter Curse Addon has two entry patterns. Evolved Familiar Fox and Evolv
 
 The Moon Marrow Cross normally requires a Cursed Moon night and selects the moon branch. The evolution stone selects the alternate branch. Special forms cannot be reset with an ordinary inhibitor; a failed attempt follows the result listed on the route page.
 
-Use the [Chinese route diagram](pathname:///zh-CN/addons/ssca/systems/evolution) for the complete conditions and node-by-node skill list.
+Use the <a href="/zh-CN/addons/ssca/systems/evolution">Chinese route diagram</a> for the complete conditions and node-by-node skill list.

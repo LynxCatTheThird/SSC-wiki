@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Your first transformation
 
-Shape Shifter Curse begins with a transformation effect. Find the anomalous creature described by the in-game book, defeat it, and collect the dropped effect item. Use the item while the target form is available; the first transformation starts at stage 0.
+Shape Shifter Curse begins with a transformation effect. Find the anomalous creature described by the in-game book, defeat it, and collect the dropped effect item. Use the item while the target form is available; the first transformation starts at the initial stage (`*_0`).
 
 Stages advance through experience and the form's own conditions. Read [forms and stages](../ssc/systems/forms-and-stages) before entering combat: some forms need instinct, a minimum stage, or a specific environment.
 

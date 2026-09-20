@@ -6,4 +6,4 @@ title: SP Axolotl Form
 
 This English page is being translated from the verified Chinese reference. It keeps the same route and permalink so English readers can navigate the complete documentation set.
 
-For the current mechanics, recipes, restrictions, skill values, and source notes, read the [Chinese reference](pathname:///zh-CN/addons/ssca/forms/routes/axolotl/sp.md). The translated page will be updated when the corresponding source verification is complete.
+For the current mechanics, recipes, restrictions, skill values, and source notes, read the <a href="/zh-CN/addons/ssca/forms/routes/axolotl/sp">Chinese reference</a>. The translated page will be updated when the corresponding source verification is complete.

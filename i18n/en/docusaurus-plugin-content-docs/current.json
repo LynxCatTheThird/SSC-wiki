@@ -11,17 +11,17 @@
     "message": "Shape Shifter Curse",
     "description": "The label for category '幻形者诅咒'"
   },
-  "sidebar.tutorialSidebar.category.形态": {
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-forms": {
     "message": "Forms",
-    "description": "The label for category '形态'"
+    "description": "The label for category '形态', with the stable key 'shape-shifter-curse-forms'"
   },
-  "sidebar.tutorialSidebar.category.物品": {
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-items": {
     "message": "Items",
-    "description": "The label for category '物品'"
+    "description": "The label for category '物品', with the stable key 'shape-shifter-curse-items'"
   },
-  "sidebar.tutorialSidebar.category.系统": {
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-systems": {
     "message": "Systems",
-    "description": "The label for category '系统'"
+    "description": "The label for category '系统', with the stable key 'shape-shifter-curse-systems'"
   },
   "sidebar.tutorialSidebar.category.附属模组": {
     "message": "Addons",
@@ -35,49 +35,61 @@
     "message": "Evolution routes",
     "description": "The label for category '进化路线'"
   },
-  "sidebar.tutorialSidebar.category.使魔红狐": {
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-addon-forms": {
+    "message": "Forms",
+    "description": "The label for category '形态', with the stable key 'shape-shifter-curse-addon-forms'"
+  },
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-addon-items": {
+    "message": "Items",
+    "description": "The label for category '物品', with the stable key 'shape-shifter-curse-addon-items'"
+  },
+  "sidebar.tutorialSidebar.category.shape-shifter-curse-addon-systems": {
+    "message": "Systems",
+    "description": "The label for category '系统', with the stable key 'shape-shifter-curse-addon-systems'"
+  },
+  "sidebar.tutorialSidebar.category.使魔红狐形态": {
     "message": "Familiar Fox",
-    "description": "The label for category '使魔红狐'"
+    "description": "The label for category '使魔红狐形态'"
   },
-  "sidebar.tutorialSidebar.category.美西螈": {
+  "sidebar.tutorialSidebar.category.美西螈形态": {
     "message": "Axolotl",
-    "description": "The label for category '美西螈'"
+    "description": "The label for category '美西螈形态'"
   },
-  "sidebar.tutorialSidebar.category.本体形态终局分支": {
-    "message": "Base form endgame branches",
-    "description": "The label for category '本体形态终局分支'"
+  "sidebar.tutorialSidebar.category.幻形者诅咒形态终局分支": {
+    "message": "Shape Shifter Curse form endgame branches",
+    "description": "The label for category '幻形者诅咒形态终局分支'"
   },
-  "sidebar.tutorialSidebar.category.雪狐": {
+  "sidebar.tutorialSidebar.category.雪狐形态": {
     "message": "Snow Fox",
-    "description": "The label for category '雪狐'"
+    "description": "The label for category '雪狐形态'"
   },
-  "sidebar.tutorialSidebar.category.胡狼": {
+  "sidebar.tutorialSidebar.category.胡狼形态": {
     "message": "Anubis Wolf",
-    "description": "The label for category '胡狼'"
+    "description": "The label for category '胡狼形态'"
   },
-  "sidebar.tutorialSidebar.category.蝙蝠": {
+  "sidebar.tutorialSidebar.category.蝙蝠形态": {
     "message": "Bat",
-    "description": "The label for category '蝙蝠'"
+    "description": "The label for category '蝙蝠形态'"
   },
-  "sidebar.tutorialSidebar.category.豹猫": {
+  "sidebar.tutorialSidebar.category.豹猫形态": {
     "message": "Ocelot",
-    "description": "The label for category '豹猫'"
+    "description": "The label for category '豹猫形态'"
   },
-  "sidebar.tutorialSidebar.category.蜘蛛": {
+  "sidebar.tutorialSidebar.category.蜘蛛形态": {
     "message": "Spider",
-    "description": "The label for category '蜘蛛'"
+    "description": "The label for category '蜘蛛形态'"
   },
   "sidebar.tutorialSidebar.category.特殊形态分支": {
     "message": "Special form branches",
     "description": "The label for category '特殊形态分支'"
   },
-  "sidebar.tutorialSidebar.category.悦灵": {
+  "sidebar.tutorialSidebar.category.悦灵形态": {
     "message": "Allay",
-    "description": "The label for category '悦灵'"
+    "description": "The label for category '悦灵形态'"
   },
-  "sidebar.tutorialSidebar.category.野猫": {
+  "sidebar.tutorialSidebar.category.野猫形态": {
     "message": "Feral Cat",
-    "description": "The label for category '野猫'"
+    "description": "The label for category '野猫形态'"
   },
   "sidebar.tutorialSidebar.category.剧情": {
     "message": "Lore",

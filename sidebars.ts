@@ -94,7 +94,7 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                   type: "category",
-                  label: "本体形态终局分支",
+                  label: "幻形者诅咒形态终局分支",
                   items: [
                     {
                       type: "category",

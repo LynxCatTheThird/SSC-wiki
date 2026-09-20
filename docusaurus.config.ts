@@ -28,6 +28,10 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN', 'en'],
+    localeConfigs: {
+      'zh-CN': { baseUrl: '/zh-CN/' },
+      en: { baseUrl: '/en/' },
+    },
   },
   presets: [
     [

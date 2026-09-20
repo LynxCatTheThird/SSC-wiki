@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useReducer } from 'react';
 import { translate } from '@docusaurus/Translate';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import ViewerControls from './form-model-viewer/ViewerControls';
 import type { AppearanceSettings, CameraSnapshot, StageDefinition, ViewPreset } from './form-model-viewer/types';
 import { ensureModelViewerDefined, useModelViewerBridge } from './form-model-viewer/useModelViewerBridge';
@@ -29,12 +30,19 @@ export default function FormModelViewer({
   stages,
   animations = {},
 }: FormModelViewerProps) {
+  const { withBaseUrl } = useBaseUrlUtils();
+  const resolvedPoster = poster ? withBaseUrl(poster) : undefined;
   const stageDefinitions = useMemo<StageDefinition[]>(() => {
     if (stages) {
-      return Object.entries(stages).map(([id, stage]) => ({ id, ...stage }));
+      return Object.entries(stages).map(([id, stage]) => ({
+        id,
+        ...stage,
+        model: withBaseUrl(stage.model),
+        poster: stage.poster ? withBaseUrl(stage.poster) : undefined,
+      }));
     }
-    return model ? [{ id: '__model__', label: title, title, model, poster }] : [];
-  }, [model, poster, stages, title]);
+    return model ? [{ id: '__model__', label: title, title, model: withBaseUrl(model), poster: resolvedPoster }] : [];
+  }, [model, resolvedPoster, stages, title, withBaseUrl]);
   const [state, dispatch] = useReducer(viewerReducer, stageDefinitions[0]?.id ?? '', createViewerState);
   const activeStage = stageDefinitions.find((stage) => stage.id === state.stageId) ?? stageDefinitions[0];
 
@@ -126,7 +134,7 @@ export default function FormModelViewer({
         {state.moduleReady && activeStage && (
           <model-viewer
             ref={bridge.bindElement}
-            poster={activeStage.poster ?? poster}
+            poster={activeStage.poster ?? resolvedPoster}
             alt={activeStage.title}
             camera-controls
             touch-action="pan-y"
