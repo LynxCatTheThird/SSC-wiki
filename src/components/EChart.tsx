@@ -30,31 +30,37 @@ type Props = {
 
 export default function EChart({ ariaLabel, option = {} }: Props) {
   const elementRef = useRef<HTMLDivElement>(null);
+  const chartRef = useRef<echarts.ECharts | null>(null);
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    let disposed = false;
     let resizeObserver: ResizeObserver | undefined;
-    let chart: echarts.ECharts | undefined;
 
     if (elementRef.current) {
-      chart = echarts.init(elementRef.current, colorMode === 'dark' ? 'dark' : undefined, {
+      const chart = echarts.init(elementRef.current, colorMode === 'dark' ? 'dark' : undefined, {
         renderer: 'svg',
       });
-      chart.setOption({
-        backgroundColor: 'transparent',
-        textStyle: { fontFamily: 'system-ui, sans-serif' },
-        ...option,
-      });
+      chartRef.current = chart;
       resizeObserver = new ResizeObserver(() => chart?.resize());
       resizeObserver.observe(elementRef.current);
     }
 
     return () => {
-      disposed = true;
       resizeObserver?.disconnect();
-      chart?.dispose();
+      chartRef.current?.dispose();
+      chartRef.current = null;
     };
+  }, [colorMode]);
+
+  useEffect(() => {
+    chartRef.current?.setOption(
+      {
+        backgroundColor: 'transparent',
+        textStyle: { fontFamily: 'system-ui, sans-serif' },
+        ...option,
+      },
+      { notMerge: true },
+    );
   }, [colorMode, option]);
 
   return <div aria-label={ariaLabel} className="doc-chart" ref={elementRef} role="img" />;

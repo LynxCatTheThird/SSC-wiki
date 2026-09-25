@@ -1,16 +1,24 @@
 {
-  "name": "ssc-wiki",
+  "name": "shape-shifter-curse-wiki",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.22.0",
   "description": "Unofficial Shape Shifter Curse and Shape Shifter Curse Addon documentation",
   "scripts": {
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "lint-md": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\"",
-    "lint-md:fix": "lint-md \"docs/**/*.md\" \"i18n/**/*.md\" --fix"
+    "dev": "docusaurus start",
+    "build": "NODE_OPTIONS=--no-experimental-webstorage docusaurus build && node scripts/write-root-redirect.mjs",
+    "preview": "docusaurus serve",
+    "clean": "docusaurus clear",
+    "check": "pnpm check:types && pnpm check:code && pnpm check:docs && pnpm check:format",
+    "check:types": "tsc --noEmit",
+    "check:code": "eslint .",
+    "check:docs": "lint-md \"*.md\" \"docs/**/*.md\" \"i18n/**/*.md\"",
+    "check:format": "prettier --check .",
+    "fix": "pnpm fix:code && pnpm fix:docs && pnpm fix:format",
+    "fix:code": "eslint . --fix",
+    "fix:docs": "lint-md \"*.md\" \"docs/**/*.md\" \"i18n/**/*.md\" --fix",
+    "fix:format": "prettier --write .",
+    "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test src/components/form-model-viewer/viewerState.test.ts",
+    "verify": "pnpm check && pnpm test && pnpm build"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -33,9 +41,16 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
+    "@eslint/js": "^10.0.1",
     "@gltf-transform/cli": "^4.5.0",
     "@lint-md/cli": "^2.3.1",
-    "typescript": "~7.0.2"
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.11.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.8",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.70.0"
   },
   "browserslist": {
     "production": [

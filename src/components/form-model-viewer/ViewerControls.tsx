@@ -1,6 +1,7 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import SelectControl from './SelectControl';
-import type {AppearanceSettings, CameraSnapshot, StageDefinition} from './types';
+import type { AppearanceSettings, CameraSnapshot, StageDefinition } from './types';
 
 export const STATIC_ANIMATION = '__static__';
 
@@ -8,7 +9,7 @@ type ViewerControlsProps = {
   stages: StageDefinition[];
   stageId: string;
   animation: string | null;
-  animations: Array<{value: string; label: string}>;
+  animations: Array<{ value: string; label: string }>;
   playing: boolean;
   autoRotate: boolean;
   ready: boolean;
@@ -47,48 +48,68 @@ export default function ViewerControls({
   onAppearanceChange,
   onReset,
 }: ViewerControlsProps) {
-  return <>
-    <div className="form-model-viewer__controls">
-      {stages.length > 1 && <SelectControl
-        label="阶段"
-        value={stageId}
-        options={stages.map((stage) => ({value: stage.id, label: stage.label}))}
-        onChange={onStageChange}
-      />}
-      <SelectControl
-        label="动作"
-        value={animation ?? STATIC_ANIMATION}
-        options={[{value: STATIC_ANIMATION, label: '静止'}, ...animations]}
-        disabled={!ready}
-        onChange={(value) => onAnimationChange(value === STATIC_ANIMATION ? null : value)}
-      />
-      <button type="button" disabled={!ready || animation == null} onClick={onPlaybackToggle}>
-        {playing ? '暂停' : '播放'}
-      </button>
-      <label className="form-model-viewer__toggle">
-        <input
-          type="checkbox"
-          checked={autoRotate}
+  return (
+    <>
+      <div className="form-model-viewer__controls">
+        {stages.length > 1 && (
+          <SelectControl
+            label={translate({ id: 'formModelViewer.stage', message: '阶段' })}
+            value={stageId}
+            options={stages.map((stage) => ({ value: stage.id, label: stage.label }))}
+            onChange={onStageChange}
+          />
+        )}
+        <SelectControl
+          label={translate({ id: 'formModelViewer.animation', message: '动作' })}
+          value={animation ?? STATIC_ANIMATION}
+          options={[
+            { value: STATIC_ANIMATION, label: translate({ id: 'formModelViewer.static', message: '静止' }) },
+            ...animations,
+          ]}
           disabled={!ready}
-          onChange={(event) => onAutoRotateChange(event.target.checked)}
+          onChange={(value) => onAnimationChange(value === STATIC_ANIMATION ? null : value)}
         />
-        自动旋转
-      </label>
-      <button type="button" disabled={!ready} onClick={onSettingsToggle} aria-expanded={settingsOpen}>参数</button>
-    </div>
+        <button type="button" disabled={!ready || animation == null} onClick={onPlaybackToggle}>
+          {playing
+            ? translate({ id: 'formModelViewer.pause', message: '暂停' })
+            : translate({ id: 'formModelViewer.play', message: '播放' })}
+        </button>
+        <label className="form-model-viewer__toggle">
+          <input
+            type="checkbox"
+            checked={autoRotate}
+            disabled={!ready}
+            onChange={(event) => onAutoRotateChange(event.target.checked)}
+          />
+          {translate({ id: 'formModelViewer.autoRotate', message: '自动旋转' })}
+        </label>
+        <button type="button" disabled={!ready} onClick={onSettingsToggle} aria-expanded={settingsOpen}>
+          {translate({ id: 'formModelViewer.settings', message: '参数' })}
+        </button>
+      </div>
 
-    {settingsOpen && camera && homeCamera && <CameraSettings
-      camera={camera}
-      homeCamera={homeCamera}
-      appearance={appearance}
-      onCameraChange={onCameraChange}
-      onAppearanceChange={onAppearanceChange}
-      onReset={onReset}
-    />}
-  </>;
+      {settingsOpen && camera && homeCamera && (
+        <CameraSettings
+          camera={camera}
+          homeCamera={homeCamera}
+          appearance={appearance}
+          onCameraChange={onCameraChange}
+          onAppearanceChange={onAppearanceChange}
+          onReset={onReset}
+        />
+      )}
+    </>
+  );
 }
 
-function CameraSettings({camera, homeCamera, appearance, onCameraChange, onAppearanceChange, onReset}: {
+function CameraSettings({
+  camera,
+  homeCamera,
+  appearance,
+  onCameraChange,
+  onAppearanceChange,
+  onReset,
+}: {
   camera: CameraSnapshot;
   homeCamera: CameraSnapshot;
   appearance: AppearanceSettings;
@@ -107,37 +128,139 @@ function CameraSettings({camera, homeCamera, appearance, onCameraChange, onAppea
   const distanceMin = Math.min(homeCamera.distance * 0.35, camera.distance);
   const distanceMax = Math.max(homeCamera.distance * 3, camera.distance);
 
-  return <div className="form-model-viewer__settings">
-    <fieldset>
-      <legend>画幅位置</legend>
-      <Range label="水平位置 X" value={camera.targetX} {...targetX} step={0.01} unit="m" digits={2} onChange={(value) => onCameraChange('targetX', value)} />
-      <Range label="垂直位置 Y" value={camera.targetY} {...targetY} step={0.01} unit="m" digits={2} onChange={(value) => onCameraChange('targetY', value)} />
-      <Range label="纵深位置 Z" value={camera.targetZ} {...targetZ} step={0.01} unit="m" digits={2} onChange={(value) => onCameraChange('targetZ', value)} />
-    </fieldset>
-    <fieldset>
-      <legend>观察角度</legend>
-      <Range label="水平角度" value={camera.orbitX} min={-180} max={180} step={1} unit="°" onChange={(value) => onCameraChange('orbitX', value)} />
-      <Range label="俯仰角度" value={camera.orbitY} min={5} max={175} step={1} unit="°" onChange={(value) => onCameraChange('orbitY', value)} />
-    </fieldset>
-    <fieldset>
-      <legend>镜头</legend>
-      <Range label="镜头距离 R" value={camera.distance} min={distanceMin} max={distanceMax} step={0.01} unit="m" digits={2} onChange={(value) => onCameraChange('distance', value)} />
-      <Range label="镜头视野" value={camera.fieldOfView} min={12} max={55} step={1} unit="°" onChange={(value) => onCameraChange('fieldOfView', value)} />
-    </fieldset>
-    <fieldset>
-      <legend>光照与运动</legend>
-      <Range label="曝光" value={appearance.exposure} min={0.25} max={2} step={0.05} digits={2} onChange={(value) => onAppearanceChange('exposure', value)} />
-      <Range label="阴影浓度" value={appearance.shadowIntensity} min={0} max={1} step={0.05} digits={2} onChange={(value) => onAppearanceChange('shadowIntensity', value)} />
-      <Range label="阴影柔度" value={appearance.shadowSoftness} min={0} max={1} step={0.05} digits={2} onChange={(value) => onAppearanceChange('shadowSoftness', value)} />
-      <Range label="旋转速度" value={appearance.rotationSpeed} min={4} max={60} step={1} unit="°/s" onChange={(value) => onAppearanceChange('rotationSpeed', value)} />
-    </fieldset>
-    <div className="form-model-viewer__settings-actions">
-      <button type="button" onClick={onReset}>恢复当前阶段默认视图</button>
+  return (
+    <div className="form-model-viewer__settings">
+      <fieldset>
+        <legend>{translate({ id: 'formModelViewer.framing', message: '画幅位置' })}</legend>
+        <Range
+          label={translate({ id: 'formModelViewer.targetX', message: '水平位置 X' })}
+          value={camera.targetX}
+          {...targetX}
+          step={0.01}
+          unit="m"
+          digits={2}
+          onChange={(value) => onCameraChange('targetX', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.targetY', message: '垂直位置 Y' })}
+          value={camera.targetY}
+          {...targetY}
+          step={0.01}
+          unit="m"
+          digits={2}
+          onChange={(value) => onCameraChange('targetY', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.targetZ', message: '纵深位置 Z' })}
+          value={camera.targetZ}
+          {...targetZ}
+          step={0.01}
+          unit="m"
+          digits={2}
+          onChange={(value) => onCameraChange('targetZ', value)}
+        />
+      </fieldset>
+      <fieldset>
+        <legend>{translate({ id: 'formModelViewer.viewAngle', message: '观察角度' })}</legend>
+        <Range
+          label={translate({ id: 'formModelViewer.orbitX', message: '水平角度' })}
+          value={camera.orbitX}
+          min={-180}
+          max={180}
+          step={1}
+          unit="°"
+          onChange={(value) => onCameraChange('orbitX', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.orbitY', message: '俯仰角度' })}
+          value={camera.orbitY}
+          min={5}
+          max={175}
+          step={1}
+          unit="°"
+          onChange={(value) => onCameraChange('orbitY', value)}
+        />
+      </fieldset>
+      <fieldset>
+        <legend>{translate({ id: 'formModelViewer.camera', message: '镜头' })}</legend>
+        <Range
+          label={translate({ id: 'formModelViewer.distance', message: '镜头距离 R' })}
+          value={camera.distance}
+          min={distanceMin}
+          max={distanceMax}
+          step={0.01}
+          unit="m"
+          digits={2}
+          onChange={(value) => onCameraChange('distance', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.fieldOfView', message: '镜头视野' })}
+          value={camera.fieldOfView}
+          min={12}
+          max={55}
+          step={1}
+          unit="°"
+          onChange={(value) => onCameraChange('fieldOfView', value)}
+        />
+      </fieldset>
+      <fieldset>
+        <legend>{translate({ id: 'formModelViewer.lightingAndMotion', message: '光照与运动' })}</legend>
+        <Range
+          label={translate({ id: 'formModelViewer.exposure', message: '曝光' })}
+          value={appearance.exposure}
+          min={0.25}
+          max={2}
+          step={0.05}
+          digits={2}
+          onChange={(value) => onAppearanceChange('exposure', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.shadowIntensity', message: '阴影浓度' })}
+          value={appearance.shadowIntensity}
+          min={0}
+          max={1}
+          step={0.05}
+          digits={2}
+          onChange={(value) => onAppearanceChange('shadowIntensity', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.shadowSoftness', message: '阴影柔度' })}
+          value={appearance.shadowSoftness}
+          min={0}
+          max={1}
+          step={0.05}
+          digits={2}
+          onChange={(value) => onAppearanceChange('shadowSoftness', value)}
+        />
+        <Range
+          label={translate({ id: 'formModelViewer.rotationSpeed', message: '旋转速度' })}
+          value={appearance.rotationSpeed}
+          min={4}
+          max={60}
+          step={1}
+          unit="°/s"
+          onChange={(value) => onAppearanceChange('rotationSpeed', value)}
+        />
+      </fieldset>
+      <div className="form-model-viewer__settings-actions">
+        <button type="button" onClick={onReset}>
+          {translate({ id: 'formModelViewer.resetView', message: '恢复当前阶段默认视图' })}
+        </button>
+      </div>
     </div>
-  </div>;
+  );
 }
 
-function Range({label, value, min, max, step, unit = '', digits = 0, onChange}: {
+function Range({
+  label,
+  value,
+  min,
+  max,
+  step,
+  unit = '',
+  digits = 0,
+  onChange,
+}: {
   label: string;
   value: number;
   min: number;
@@ -147,9 +270,21 @@ function Range({label, value, min, max, step, unit = '', digits = 0, onChange}: 
   digits?: number;
   onChange: (value: number) => void;
 }) {
-  return <label className="form-model-viewer__range">
-    <span>{label}</span>
-    <input type="range" min={min} max={max} step={step} value={value} onChange={(event) => onChange(Number(event.target.value))} />
-    <output>{value.toFixed(digits)}{unit}</output>
-  </label>;
+  return (
+    <label className="form-model-viewer__range">
+      <span>{label}</span>
+      <input
+        type="range"
+        min={min}
+        max={max}
+        step={step}
+        value={value}
+        onChange={(event) => onChange(Number(event.target.value))}
+      />
+      <output>
+        {value.toFixed(digits)}
+        {unit}
+      </output>
+    </label>
+  );
 }

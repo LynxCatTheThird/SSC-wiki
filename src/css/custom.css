@@ -31,12 +31,19 @@
   display: block;
   width: 100%;
   height: 29rem;
-  --poster-color: transparent;
+  /* Keep the host, poster and WebGL canvas visually continuous during
+   * custom-element registration and the first render after scrolling. */
+  background-color: var(--ifm-color-emphasis-100);
+  --poster-color: var(--ifm-color-emphasis-100);
+  /* The component's 5px progress bar fades out after our loading overlay,
+   * otherwise it briefly appears as a dark strip at the top of the stage. */
+  --progress-bar-height: 0px;
 }
 
 .form-model-viewer__fallback {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: grid;
   min-height: 29rem;
   place-content: center;
