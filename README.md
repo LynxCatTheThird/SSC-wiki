@@ -1,8 +1,8 @@
-# SSC Wiki
+# 幻形者诅咒 Wiki
 
-SSC 与 SSCA 的[非官方中文Wiki](https://ssc.lynx3.me/)。
+幻形者诅咒（Shape Shifter Curse）与幻形者诅咒扩展包（Shape Shifter Curse Addon）的[非官方中文 Wiki](https://ssc.lynx3.me/)。
 
 ```bash
 pnpm install
-pnpm start
+pnpm dev
 ```

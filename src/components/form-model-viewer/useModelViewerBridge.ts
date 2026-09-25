@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type {
   AppearanceSettings,
   CameraChangeSource,
@@ -6,7 +6,7 @@ import type {
   ModelViewerElement,
   StageDefinition,
 } from './types';
-import {DEFAULT_VIEW} from './types';
+import { DEFAULT_VIEW } from './types';
 
 type BridgeCallbacks = {
   onCameraChange: (generation: number, camera: CameraSnapshot, source: CameraChangeSource) => void;
@@ -58,7 +58,7 @@ function readCamera(viewer: ModelViewerElement): CameraSnapshot | null {
 }
 
 function setViewPreset(viewer: ModelViewerElement, stage: StageDefinition) {
-  const preset = {...DEFAULT_VIEW, ...stage.view};
+  const preset = { ...DEFAULT_VIEW, ...stage.view };
   viewer.cameraOrbit = preset.cameraOrbit;
   viewer.cameraTarget = preset.cameraTarget;
   viewer.fieldOfView = preset.fieldOfView;
@@ -69,7 +69,7 @@ function setAnimation(viewer: ModelViewerElement, animation: string | null, play
   viewer.currentTime = 0;
   viewer.animationName = animation ?? undefined;
   viewer.currentTime = 0;
-  if (animation && playing) viewer.play?.({repetitions: Infinity, pingpong: false});
+  if (animation && playing) viewer.play?.({ repetitions: Infinity, pingpong: false });
 }
 
 function sameLoad(current: ActiveLoad | null, expected: ActiveLoad, viewer: ModelViewerElement) {
@@ -92,7 +92,7 @@ export function useModelViewerBridge(callbacks: BridgeCallbacks) {
 
     const onCameraChange = (event: Event) => {
       if (cameraFrameRef.current != null) return;
-      const source = (event as CustomEvent<{source?: CameraChangeSource}>).detail?.source ?? 'none';
+      const source = (event as CustomEvent<{ source?: CameraChangeSource }>).detail?.source ?? 'none';
       cameraFrameRef.current = window.requestAnimationFrame(() => {
         cameraFrameRef.current = null;
         const activeLoad = activeLoadRef.current;
@@ -153,7 +153,7 @@ export function useModelViewerBridge(callbacks: BridgeCallbacks) {
 
   const loadStage = useCallback(async (stage: StageDefinition, generation: number) => {
     if (!element) return;
-    const load: ActiveLoad = {generation, src: stage.model, stage};
+    const load: ActiveLoad = { generation, src: stage.model, stage };
     activeLoadRef.current = load;
     element.autoRotate = false;
     setAnimation(element, null, false);
@@ -201,7 +201,7 @@ export function useModelViewerBridge(callbacks: BridgeCallbacks) {
 
   const updatePlayback = useCallback((playing: boolean) => {
     if (!element) return;
-    if (playing) element.play?.({repetitions: Infinity, pingpong: false});
+    if (playing) element.play?.({ repetitions: Infinity, pingpong: false });
     else element.pause?.();
   }, [element]);
 

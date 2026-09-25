@@ -53,13 +53,13 @@ export type ModelViewerElement = HTMLElement & {
   autoRotateDelay?: number;
   rotationPerSecond?: string;
   readonly updateComplete?: Promise<unknown>;
-  getCameraOrbit?: () => {theta: number; phi: number; radius: number};
-  getCameraTarget?: () => {x: number; y: number; z: number};
+  getCameraOrbit?: () => { theta: number; phi: number; radius: number };
+  getCameraTarget?: () => { x: number; y: number; z: number };
   getFieldOfView?: () => number;
   jumpCameraToGoal?: () => void;
   updateFraming?: () => Promise<void>;
   pause?: () => void;
-  play?: (options?: {repetitions: number; pingpong: boolean}) => void;
+  play?: (options?: { repetitions: number; pingpong: boolean }) => void;
   resetTurntableRotation?: (theta?: number) => void;
 };
 

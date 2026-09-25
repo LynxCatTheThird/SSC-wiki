@@ -6,14 +6,15 @@ import remarkBooleanTableCells from './src/remark/booleanTableCells';
 import LocalSearch from '@easyops-cn/docusaurus-search-local';
 
 const config: Config = {
-  title: 'SSC Wiki',
-  tagline: 'Shape Shifter Curse 与 SSCA 的非官方中文文档',
+  title: '幻形者诅咒 Wiki',
+  tagline: '幻形者诅咒与幻形者诅咒扩展包的非官方中文文档',
   favicon: 'img/favicon.svg',
   url: 'https://ssc-wiki.pages.dev',
   baseUrl: '/',
   organizationName: 'ssc-community',
   projectName: 'ssc-wiki',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   markdown: {
     hooks: { onBrokenMarkdownLinks: 'throw' },
     mermaid: true,
@@ -27,6 +28,10 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN', 'en'],
+    localeConfigs: {
+      'zh-CN': { baseUrl: '/zh-CN/' },
+      en: { baseUrl: '/en/' },
+    },
   },
   presets: [
     [
@@ -37,7 +42,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: process.env.NODE_ENV === 'production',
-          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/',
+          editUrl: 'https://github.com/LynxCatTheThird/SSC-wiki/edit/main/',
           remarkPlugins: [remarkMath, remarkBooleanTableCells],
           rehypePlugins: [rehypeKatex],
         },
@@ -66,7 +71,11 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: 'img/ssc-social-card.svg',
+    image: 'img/shape-shifter-curse-social-card.svg',
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 6,
+    },
     colorMode: {
       // Docusaurus requires a light/dark fallback; this flag follows OS preference.
       defaultMode: 'light',
@@ -74,8 +83,8 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'SSC Wiki',
-      logo: { alt: 'SSC Wiki', src: 'img/logo.svg' },
+      title: '幻形者诅咒 Wiki',
+      logo: { alt: '幻形者诅咒 Wiki', src: 'img/logo.svg' },
       items: [
         { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: '文档' },
         { to: '/reference/versions', label: '版本与兼容性', position: 'left' },
@@ -89,9 +98,9 @@ const config: Config = {
         {
           title: '项目来源',
           items: [
-            { label: 'SSC GitHub', href: 'https://github.com/onixary/shape-shifter-curse-fabric' },
+            { label: '幻形者诅咒 GitHub', href: 'https://github.com/onixary/shape-shifter-curse-fabric' },
             {
-              label: 'SSCA GitHub',
+              label: '幻形者诅咒扩展包 GitHub',
               href: 'https://github.com/MangZai-120/shape-shifter-curse-addon',
             },
           ],
@@ -103,7 +112,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: 'SSC Wiki 是社区维护的非官方文档。',
+      copyright: '幻形者诅咒 Wiki 是社区维护的非官方文档。',
     },
     prism: { additionalLanguages: ['java', 'json', 'bash', 'yaml'] },
   } satisfies Preset.ThemeConfig,
